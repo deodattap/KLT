@@ -1,151 +1,232 @@
+/* =========================================
+   RESET
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,
-body {
-    width: 100%;
-    min-height: 100%;
-}
 
-body {
-    background: #e7e7e5;
-    color: #111;
-    font-family: Arial, Helvetica, sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
 
-/* =========================
-   MAIN PAGE
-========================= */
-
-.page {
+body {
     width: 100%;
+
     min-height: 100vh;
 
-    padding: 12px;
+    background: #e5e5e3;
 
-    background: #f8f8f6;
+    color: #111;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
 }
 
 
-/* =========================
+
+/* =========================================
    NAVBAR
-========================= */
+========================================= */
 
 .navbar {
-    width: 100%;
-    height: 48px;
 
-    border: 1px solid #aaa;
+    width: calc(100% - 24px);
+
+    height: 54px;
+
+    margin: 12px;
+
+    padding: 0 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #bdbdbd;
+
     border-radius: 30px;
 
-    padding: 0 18px;
-
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    background: #fff;
+    position: relative;
+
+    z-index: 10;
 }
 
+
+/* LOGO */
 
 .logo {
+
+    width: 60px;
+
     font-size: 10px;
+
     font-weight: 900;
+
     line-height: 9px;
+
+    letter-spacing: -0.5px;
 }
+
 
 .logo span {
+
     display: block;
+
 }
 
+
+
+/* NAV LINKS */
 
 nav {
+
     display: flex;
+
     align-items: center;
-    gap: 40px;
+
+    justify-content: center;
+
+    gap: 42px;
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
 }
 
+
 nav a {
+
     color: #111;
+
     text-decoration: none;
 
     font-size: 10px;
-    font-weight: 500;
+
+    white-space: nowrap;
 }
 
 
-.actions {
+
+/* RIGHT SIDE */
+
+.nav-right {
+
     display: flex;
+
     align-items: center;
-    gap: 15px;
+
+    gap: 14px;
 }
 
 
 .search {
+
     width: 120px;
+
     height: 30px;
 
-    background: #f1f1ef;
     border-radius: 20px;
 
+    background: #f1f1ef;
+
     display: flex;
+
     align-items: center;
-    gap: 6px;
+
+    gap: 5px;
 
     padding: 0 12px;
 
-    font-size: 10px;
     color: #999;
+
+    font-size: 10px;
 }
 
 
-.actions button {
+.nav-right button {
+
     border: none;
+
     background: transparent;
 
-    font-size: 22px;
+    font-size: 21px;
 
     cursor: pointer;
+
+    color: #111;
 }
 
 
-/* =========================
-   MAIN GRID
-========================= */
 
-.layout {
+/* =========================================
+   MAIN CONTAINER
+========================================= */
 
-    width: 100%;
+.container {
 
-    margin-top: 10px;
+    width: calc(100% - 24px);
+
+    margin: 0 12px 12px;
 
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    grid-template-rows: calc(70vh - 30px) 28vh;
+    gap: 8px;
 
-    gap: 7px;
+    /*
+       This gives the website the
+       full available screen height,
+       but does NOT prevent scrolling.
+    */
 
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 78px);
 }
 
 
-/* =========================
-   INTRO CARD
-========================= */
 
-.intro {
+/* =========================================
+   LEFT COLUMN
+========================================= */
+
+.left-column {
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-rows: 2fr 1fr;
+
+    gap: 8px;
+}
+
+
+
+/* =========================================
+   TEXT CARD
+========================================= */
+
+.text-card {
+
+    min-height: 500px;
 
     background: #d7d7d3;
 
     border-radius: 22px;
 
-    padding: 45px;
+    padding: clamp(30px, 4vw, 65px);
 
     position: relative;
 
@@ -153,14 +234,18 @@ nav a {
 }
 
 
-.title {
-    position: relative;
+
+/* HEADING */
+
+.heading {
+
+    width: 100%;
 }
 
 
-.title h1 {
+.heading h1 {
 
-    font-size: clamp(40px, 5vw, 85px);
+    font-size: clamp(42px, 5.2vw, 88px);
 
     line-height: 0.88;
 
@@ -170,44 +255,126 @@ nav a {
 }
 
 
-.arrow {
 
-    position: absolute;
+/* FIRST LINE */
 
-    top: 0;
+.first-line {
 
-    left: 23%;
+    display: flex;
 
-    font-size: clamp(45px, 5vw, 85px);
+    align-items: center;
 
-    font-weight: 300;
+    gap: 25px;
 }
 
 
-.intro p {
+.arrow {
+
+    font-size: clamp(42px, 5vw, 80px);
+
+    font-weight: 300;
+
+    line-height: 1;
+}
+
+
+
+/* DESCRIPTION */
+
+.text-card p {
 
     position: absolute;
 
-    left: 45px;
-    bottom: 45px;
+    left: clamp(30px, 4vw, 65px);
 
-    max-width: 330px;
+    bottom: clamp(30px, 4vw, 55px);
 
-    font-size: 12px;
+    max-width: 390px;
+
+    font-size: 13px;
 
     line-height: 1.5;
 }
 
 
-/* =========================
-   HERO IMAGE
-========================= */
+
+/* =========================================
+   SMALL CARDS
+========================================= */
+
+.small-cards {
+
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+}
+
+
+.small-card {
+
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 220px;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    background: #ccc;
+}
+
+
+.small-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+
+/* SMALL CARD TEXT */
+
+.card-title {
+
+    position: absolute;
+
+    left: 25px;
+
+    bottom: 22px;
+
+    color: white;
+
+    font-size: clamp(18px, 2vw, 30px);
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    z-index: 2;
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
 
-    grid-column: 2;
+    min-width: 0;
 
-    grid-row: 1 / 3;
+    min-height: 728px;
 
     border-radius: 22px;
 
@@ -222,59 +389,74 @@ nav a {
 .hero img {
 
     width: 100%;
+
     height: 100%;
 
-    display: block;
-
     object-fit: cover;
+
+    display: block;
 }
 
 
-/* =========================
-   SHOP BUTTON
-========================= */
 
-.shop {
+/* =========================================
+   SHOP BUTTON
+========================================= */
+
+.shop-button {
 
     position: absolute;
 
-    top: 55%;
+    top: 58%;
 
     left: 55%;
 
     transform: translate(-50%, -50%);
 
-    width: 70px;
-    height: 70px;
+    width: 82px;
 
-    border-radius: 50%;
+    height: 82px;
 
     border: none;
 
-    background: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.78);
 
     color: white;
 
-    font-size: 9px;
+    display: flex;
 
-    font-weight: bold;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1;
 
     cursor: pointer;
 }
 
 
-/* =========================
-   HERO BUTTONS
-========================= */
 
-.hero-buttons {
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-actions {
 
     position: absolute;
 
-    bottom: 18px;
+    left: 25px;
 
-    left: 18px;
-    right: 18px;
+    right: 25px;
+
+    bottom: 20px;
 
     display: flex;
 
@@ -284,18 +466,14 @@ nav a {
 }
 
 
-.learn,
-.contact {
+.learn-button,
+.contact-button {
 
-    height: 38px;
+    height: 42px;
 
     border: none;
 
     border-radius: 25px;
-
-    padding: 0 15px;
-
-    font-size: 9px;
 
     display: flex;
 
@@ -303,24 +481,30 @@ nav a {
 
     justify-content: space-between;
 
-    gap: 15px;
+    padding: 0 10px 0 18px;
+
+    font-size: 9px;
 
     cursor: pointer;
 }
 
 
-.learn {
+
+/* LEARN */
+
+.learn-button {
+
+    width: 180px;
 
     background: white;
-
-    width: 160px;
 }
 
 
-.learn span {
+.learn-button b {
 
-    width: 25px;
-    height: 25px;
+    width: 27px;
+
+    height: 27px;
 
     border-radius: 50%;
 
@@ -333,167 +517,247 @@ nav a {
     align-items: center;
 
     justify-content: center;
+
+    font-size: 14px;
 }
 
 
-.contact {
 
-    width: 150px;
+/* CONTACT */
 
-    background: rgba(255, 255, 255, 0.75);
+.contact-button {
+
+    width: 160px;
+
+    background: rgba(255, 255, 255, 0.78);
 }
 
 
-/* =========================
-   SMALL IMAGE CARDS
-========================= */
+.contact-button b {
 
-.small-card {
-
-    position: relative;
-
-    border-radius: 22px;
-
-    overflow: hidden;
-
-    background: #ccc;
+    font-size: 10px;
 }
 
 
-.small-card img {
 
-    width: 100%;
-    height: 100%;
+/* =========================================
+   LARGE LAPTOP
+========================================= */
 
-    object-fit: cover;
-
-    display: block;
-}
-
-
-.small-card h2 {
-
-    position: absolute;
-
-    left: 25px;
-
-    bottom: 20px;
-
-    color: white;
-
-    font-size: clamp(18px, 2vw, 30px);
-
-    font-weight: 900;
-
-    letter-spacing: -1px;
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
     nav {
-        gap: 15px;
+
+        gap: 25px;
+
     }
+
 
     nav a {
-        font-size: 8px;
+
+        font-size: 9px;
+
     }
+
 
     .search {
-        width: 80px;
+
+        width: 90px;
+
     }
 
-    .intro {
-        padding: 30px;
+
+    .text-card {
+
+        padding: 35px;
+
     }
 
-    .intro p {
-        left: 30px;
-        bottom: 30px;
+
+    .text-card p {
+
+        left: 35px;
+
     }
 
 }
 
 
-/* =========================
-   MOBILE
-========================= */
 
-@media (max-width: 650px) {
+/* =========================================
+   TABLET
+========================================= */
 
-    .page {
-        padding: 7px;
-    }
+@media (max-width: 800px) {
 
     .navbar {
-        height: 42px;
-        padding: 0 12px;
+
+        height: 50px;
+
     }
+
 
     nav {
+
         display: none;
+
     }
 
-    .search {
-        display: none;
-    }
 
-    .layout {
+    .container {
 
         grid-template-columns: 1fr;
 
-        grid-template-rows:
-            45vh
-            55vh
-            25vh
-            25vh;
-
-        min-height: auto;
     }
 
 
-    .intro {
-        grid-column: 1;
-        grid-row: 1;
+    .left-column {
 
-        padding: 25px;
+        grid-template-rows: auto auto;
+
     }
 
 
     .hero {
-        grid-column: 1;
-        grid-row: 2;
+
+        min-height: 650px;
+
     }
 
 
-    .small-card:nth-of-type(3) {
-        grid-column: 1;
-        grid-row: 3;
+    .text-card {
+
+        min-height: 450px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 550px) {
+
+    .navbar {
+
+        width: calc(100% - 14px);
+
+        margin: 7px;
+
+        padding: 0 13px;
+
     }
 
 
-    .small-card:nth-of-type(4) {
-        grid-column: 1;
-        grid-row: 4;
+    .container {
+
+        width: calc(100% - 14px);
+
+        margin: 0 7px 7px;
+
     }
 
 
-    .title h1 {
+    .nav-right {
+
+        gap: 8px;
+
+    }
+
+
+    .search {
+
+        display: none;
+
+    }
+
+
+    .text-card {
+
+        min-height: 420px;
+
+        padding: 28px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .heading h1 {
+
+        font-size: 44px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .arrow {
+
         font-size: 45px;
+
     }
 
 
-    .intro p {
-        left: 25px;
-        bottom: 25px;
+    .text-card p {
 
-        max-width: 250px;
+        left: 28px;
+
+        bottom: 28px;
+
+        max-width: 260px;
 
         font-size: 10px;
+
+    }
+
+
+    .small-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .small-card {
+
+        min-height: 240px;
+
+    }
+
+
+    .hero {
+
+        min-height: 600px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .hero-actions {
+
+        left: 12px;
+
+        right: 12px;
+
+    }
+
+
+    .learn-button {
+
+        width: 50%;
+
+    }
+
+
+    .contact-button {
+
+        width: 50%;
+
     }
 
 }

@@ -1,60 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>KLT</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-    <div class="page">
 
-        <!-- NAVBAR -->
-        <header class="navbar">
+    <!-- ================= NAVBAR ================= -->
 
-            <div class="logo">
-                <span>PUREM</span>
-                <span>ODA</span>
+    <header class="navbar">
+
+        <div class="logo">
+            <span>PUREM</span>
+            <span>ODA</span>
+        </div>
+
+
+        <nav>
+
+            <a href="#">WOMENSWEAR</a>
+            <a href="#">MENSWEAR</a>
+            <a href="#">KIDS</a>
+            <a href="#">SALE</a>
+            <a href="#">DISCOVER</a>
+
+        </nav>
+
+
+        <div class="nav-right">
+
+            <div class="search">
+                <span>⌕</span>
+                <span>Search</span>
             </div>
 
-            <nav>
-                <a href="#">WOMENSWEAR</a>
-                <a href="#">MENSWEAR</a>
-                <a href="#">KIDS</a>
-                <a href="#">SALE</a>
-                <a href="#">DISCOVER</a>
-            </nav>
+            <button>♡</button>
 
-            <div class="actions">
+            <button>♧</button>
 
-                <div class="search">
-                    <span>⌕</span>
-                    <span>Search</span>
-                </div>
+        </div>
 
-                <button>♡</button>
-                <button>♧</button>
-
-            </div>
-
-        </header>
+    </header>
 
 
-        <!-- WEBSITE CONTENT -->
-        <main class="layout">
 
-            <!-- LEFT TEXT SECTION -->
-            <section class="intro">
+    <!-- ================= MAIN ================= -->
 
-                <div class="title">
+    <main class="container">
 
-                    <h1>FOR</h1>
 
-                    <div class="arrow">→</div>
+        <!-- LEFT COLUMN -->
+
+        <div class="left-column">
+
+
+            <!-- TEXT CARD -->
+
+            <section class="text-card">
+
+                <div class="heading">
+
+                    <div class="first-line">
+
+                        <h1>FOR</h1>
+
+                        <span class="arrow">→</span>
+
+                    </div>
+
 
                     <h1>EVERYONE BUT</h1>
 
@@ -62,64 +86,121 @@
 
                 </div>
 
+
                 <p>
+
                     We establish personal relationships with our boutiques,
                     to make sure each is vetted for a stress-free shopping
                     experience
+
                 </p>
 
             </section>
 
 
-            <!-- LARGE IMAGE -->
-            <section class="hero">
 
-                <img src="assets/1.jpg" alt="Main fashion image">
+            <!-- SMALL CARDS -->
 
-                <button class="shop">
-                    SHOP<br>
-                    NOW
+            <div class="small-cards">
+
+
+                <!-- CARD 2 -->
+
+                <section class="small-card">
+
+                    <img
+                        src="assets/2.jpg"
+                        alt="Fashion"
+                    >
+
+                    <div class="card-title">
+                        #RIP STOP
+                    </div>
+
+                </section>
+
+
+
+                <!-- CARD 3 -->
+
+                <section class="small-card">
+
+                    <img
+                        src="assets/3.jpg"
+                        alt="Fashion"
+                    >
+
+                    <div class="card-title">
+                        #INSULATED
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- RIGHT COLUMN -->
+
+        <section class="hero">
+
+
+            <img
+                src="assets/1.jpg"
+                alt="Fashion model"
+            >
+
+
+            <!-- SHOP BUTTON -->
+
+            <button class="shop-button">
+
+                <span>SHOP</span>
+                <span>NOW</span>
+
+            </button>
+
+
+
+            <!-- HERO BOTTOM BUTTONS -->
+
+            <div class="hero-actions">
+
+
+                <button class="learn-button">
+
+                    <span>LEARN MORE</span>
+
+                    <b>↓</b>
+
                 </button>
 
-                <div class="hero-buttons">
-
-                    <button class="learn">
-                        LEARN MORE
-                        <span>↓</span>
-                    </button>
-
-                    <button class="contact">
-                        CONTACT US
-                        <span>✉</span>
-                    </button>
-
-                </div>
-
-            </section>
 
 
-            <!-- BOTTOM LEFT IMAGE -->
-            <section class="small-card">
+                <button class="contact-button">
 
-                <img src="assets/2.jpg" alt="Fashion image">
+                    <span>CONTACT US</span>
 
-                <h2>#RIP STOP</h2>
+                    <b>✉</b>
 
-            </section>
+                </button>
 
 
-            <!-- BOTTOM RIGHT IMAGE -->
-            <section class="small-card">
+            </div>
 
-                <img src="assets/3.jpg" alt="Fashion image">
 
-                <h2>#INSULATED</h2>
+        </section>
 
-            </section>
 
-        </main>
+    </main>
 
-    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
