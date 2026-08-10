@@ -761,3 +761,2774 @@ nav a {
     }
 
 }
+
+/* =========================================================
+   KLT MENSWEAR PAGE
+========================================================= */
+
+
+/* =========================================
+   SHOP NAVBAR
+========================================= */
+
+.shop-navbar {
+
+    width: calc(100% - 24px);
+
+    height: 54px;
+
+    margin: 12px;
+
+    padding: 0 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #bdbdbd;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+.shop-logo {
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+
+.shop-nav {
+
+    display: flex;
+
+    gap: 38px;
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+.shop-nav a {
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    position: relative;
+}
+
+
+.shop-nav a.active {
+
+    font-weight: 700;
+}
+
+
+.shop-nav a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: -7px;
+
+    height: 1px;
+
+    background: #111;
+}
+
+
+/* NAV RIGHT */
+
+.shop-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.shop-search {
+
+    width: 120px;
+
+    height: 30px;
+
+    border-radius: 20px;
+
+    background: #f1f1ef;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 0 12px;
+
+    color: #999;
+
+    font-size: 10px;
+}
+
+
+.shop-actions button {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 21px;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================================
+   MENS PAGE
+========================================= */
+
+.mens-page {
+
+    width: calc(100% - 24px);
+
+    margin: 0 12px 30px;
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.mens-hero {
+
+    width: 100%;
+
+    height: 78vh;
+
+    min-height: 600px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #ccc;
+}
+
+
+.mens-hero img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* DARK OVERLAY */
+
+.mens-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.42),
+            transparent 55%
+        );
+}
+
+
+/* HERO CONTENT */
+
+.mens-hero-content {
+
+    position: absolute;
+
+    z-index: 2;
+
+    left: 45px;
+
+    bottom: 45px;
+
+    color: white;
+
+    max-width: 500px;
+}
+
+
+.eyebrow {
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+
+.mens-hero-content h1 {
+
+    font-size: clamp(65px, 11vw, 170px);
+
+    line-height: 0.8;
+
+    letter-spacing: -8px;
+
+    font-weight: 900;
+
+    margin-bottom: 28px;
+}
+
+
+.hero-description {
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    max-width: 250px;
+
+    margin-bottom: 22px;
+}
+
+
+.explore-button {
+
+    height: 44px;
+
+    padding: 0 8px 0 18px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+.explore-button span {
+
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================================
+   CATEGORY SECTION
+========================================= */
+
+.category-section {
+
+    margin-top: 70px;
+
+    border-top: 1px solid #aaa;
+
+    border-bottom: 1px solid #aaa;
+}
+
+
+.section-heading {
+
+    padding: 18px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.section-heading h2 {
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.section-heading span {
+
+    font-size: 9px;
+
+    color: #777;
+}
+
+
+.categories {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    border-top: 1px solid #aaa;
+}
+
+
+.categories a {
+
+    min-height: 85px;
+
+    padding: 18px;
+
+    color: #111;
+
+    text-decoration: none;
+
+    border-right: 1px solid #aaa;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.categories a:last-child {
+
+    border-right: none;
+}
+
+
+.categories span {
+
+    font-size: 9px;
+
+    color: #888;
+}
+
+
+
+/* =========================================
+   PRODUCTS
+========================================= */
+
+.products-section {
+
+    margin-top: 100px;
+}
+
+
+.product-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+.product-heading p {
+
+    font-size: 9px;
+
+    color: #777;
+
+    margin-bottom: 8px;
+}
+
+
+.product-heading h2 {
+
+    font-size: clamp(35px, 5vw, 70px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+}
+
+
+.product-heading a {
+
+    color: #111;
+
+    font-size: 9px;
+
+    text-decoration: none;
+}
+
+
+
+/* =========================================
+   PRODUCT GRID
+========================================= */
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.product-card {
+
+    min-width: 0;
+}
+
+
+.product-image {
+
+    height: 430px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #ddd;
+}
+
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+.product-card:hover
+.product-image img {
+
+    transform: scale(1.04);
+}
+
+
+/* WISHLIST */
+
+.wishlist {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 34px;
+
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.85);
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+/* NEW TAG */
+
+.product-tag {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 15px;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 8px;
+}
+
+
+
+/* PRODUCT INFO */
+
+.product-info {
+
+    padding: 14px 2px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+
+.product-info h3 {
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+
+.product-info p {
+
+    font-size: 9px;
+
+    color: #888;
+}
+
+
+.product-info strong {
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+
+/* =========================================
+   EDITORIAL
+========================================= */
+
+.mens-editorial {
+
+    margin-top: 120px;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    min-height: 650px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    background: #d7d7d3;
+}
+
+
+.editorial-image {
+
+    min-height: 650px;
+}
+
+
+.editorial-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.editorial-content {
+
+    padding: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.editorial-content > p:first-child {
+
+    font-size: 9px;
+
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+
+.editorial-content h2 {
+
+    font-size: clamp(45px, 5vw, 80px);
+
+    line-height: 0.88;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 35px;
+}
+
+
+.editorial-text {
+
+    max-width: 270px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-bottom: 35px;
+}
+
+
+.editorial-content a {
+
+    color: #111;
+
+    font-size: 9px;
+
+    text-decoration: none;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.shop-footer {
+
+    margin-top: 120px;
+
+    padding: 50px 0;
+
+    border-top: 1px solid #999;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr 2fr;
+
+    gap: 30px;
+}
+
+
+.footer-logo {
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+
+.shop-footer p {
+
+    font-size: 9px;
+
+    margin-bottom: 12px;
+}
+
+
+.footer-big {
+
+    font-size: clamp(50px, 8vw, 120px);
+
+    line-height: 0.8;
+
+    font-weight: 900;
+
+    letter-spacing: -6px;
+
+    text-align: right;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .shop-nav {
+
+        gap: 20px;
+
+    }
+
+
+    .shop-nav a {
+
+        font-size: 8px;
+
+    }
+
+
+    .product-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .categories {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+
+    .categories a:nth-child(3) {
+
+        border-right: none;
+
+    }
+
+
+    .mens-editorial {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .editorial-image {
+
+        height: 500px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .shop-navbar {
+
+        width: calc(100% - 14px);
+
+        margin: 7px;
+
+        padding: 0 12px;
+
+    }
+
+
+    .shop-nav {
+
+        display: none;
+
+    }
+
+
+    .shop-search {
+
+        display: none;
+
+    }
+
+
+    .mens-page {
+
+        width: calc(100% - 14px);
+
+        margin: 0 7px 20px;
+
+    }
+
+
+    .mens-hero {
+
+        height: 75vh;
+
+        min-height: 500px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .mens-hero-content {
+
+        left: 25px;
+
+        bottom: 25px;
+
+    }
+
+
+    .mens-hero-content h1 {
+
+        font-size: 60px;
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .categories {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .categories a {
+
+        border-bottom: 1px solid #aaa;
+
+    }
+
+
+    .product-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 7px;
+
+    }
+
+
+    .product-image {
+
+        height: 280px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .product-heading {
+
+        align-items: flex-end;
+
+    }
+
+
+    .product-heading h2 {
+
+        font-size: 38px;
+
+    }
+
+
+    .product-heading a {
+
+        display: none;
+
+    }
+
+
+    .mens-editorial {
+
+        margin-top: 70px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .editorial-content {
+
+        padding: 35px;
+
+    }
+
+
+    .shop-footer {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .footer-big {
+
+        grid-column: 1 / -1;
+
+        text-align: left;
+
+        margin-top: 30px;
+
+    }
+
+}
+
+/* =========================================================
+   KLT WOMENSWEAR
+========================================================= */
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.womens-page {
+
+    width: calc(100% - 24px);
+
+    margin: 0 12px 30px;
+
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.womens-hero {
+
+    width: 100%;
+
+    height: 78vh;
+
+    min-height: 600px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #d7d7d3;
+
+}
+
+
+.womens-hero img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.womens-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.38),
+            transparent 58%
+        );
+
+}
+
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.womens-hero-content {
+
+    position: absolute;
+
+    z-index: 2;
+
+    left: 45px;
+
+    bottom: 45px;
+
+    color: white;
+
+    max-width: 560px;
+
+}
+
+
+.womens-hero-content .eyebrow {
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.womens-hero-content h1 {
+
+    font-size: clamp(60px, 10vw, 155px);
+
+    line-height: 0.82;
+
+    letter-spacing: -8px;
+
+    font-weight: 900;
+
+    margin-bottom: 28px;
+
+}
+
+
+.womens-hero-content .hero-description {
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    max-width: 280px;
+
+    margin-bottom: 22px;
+
+}
+
+
+
+/* =========================================
+   WOMENS EDITORIAL
+========================================= */
+
+.womens-editorial {
+
+    margin-top: 120px;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    min-height: 650px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    background: #d7d7d3;
+
+}
+
+
+.womens-editorial-content {
+
+    padding: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.womens-editorial-content > p:first-child {
+
+    font-size: 9px;
+
+    color: #777;
+
+    margin-bottom: 30px;
+
+}
+
+
+.womens-editorial-content h2 {
+
+    font-size: clamp(45px, 5vw, 80px);
+
+    line-height: 0.88;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.womens-editorial-content .editorial-text {
+
+    max-width: 270px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-bottom: 35px;
+
+}
+
+
+.womens-editorial-content a {
+
+    color: #111;
+
+    font-size: 9px;
+
+    text-decoration: none;
+
+}
+
+
+.womens-editorial-image {
+
+    min-height: 650px;
+
+}
+
+
+.womens-editorial-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .womens-editorial {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .womens-editorial-image {
+
+        height: 500px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .womens-page {
+
+        width: calc(100% - 14px);
+
+        margin: 0 7px 20px;
+
+    }
+
+
+    .womens-hero {
+
+        height: 75vh;
+
+        min-height: 500px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .womens-hero-content {
+
+        left: 25px;
+
+        bottom: 25px;
+
+    }
+
+
+    .womens-hero-content h1 {
+
+        font-size: 58px;
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .womens-editorial {
+
+        margin-top: 70px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .womens-editorial-content {
+
+        padding: 35px;
+
+    }
+
+
+    .womens-editorial-image {
+
+        min-height: 450px;
+
+    }
+
+}
+
+/* =========================================================
+   KLT SALE PAGE
+========================================================= */
+
+
+/* =========================================
+   SALE PAGE
+========================================= */
+
+.sale-page {
+
+    width: calc(100% - 24px);
+
+    margin: 0 12px 30px;
+
+}
+
+
+
+/* =========================================
+   SALE HERO
+========================================= */
+
+.sale-hero {
+
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+}
+
+
+.sale-hero-left {
+
+    background: #d7d7d3;
+
+    border-radius: 24px;
+
+    padding: 55px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.sale-hero-left > p:first-child {
+
+    font-size: 10px;
+
+    color: #777;
+
+    margin-bottom: 35px;
+}
+
+
+.sale-hero-left h1 {
+
+    font-size: clamp(80px, 12vw, 190px);
+
+    line-height: 0.75;
+
+    letter-spacing: -10px;
+
+    font-weight: 900;
+}
+
+
+.sale-number {
+
+    position: absolute;
+
+    right: 45px;
+
+    bottom: 80px;
+
+    font-size: clamp(70px, 9vw, 140px);
+
+    font-weight: 900;
+
+    letter-spacing: -8px;
+
+    line-height: 0.8;
+}
+
+
+.sale-description {
+
+    position: absolute;
+
+    left: 55px;
+
+    bottom: 55px;
+
+    max-width: 220px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+
+/* SALE HERO IMAGE */
+
+.sale-hero-right {
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #ccc;
+}
+
+
+.sale-hero-right img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.sale-circle {
+
+    position: absolute;
+
+    right: 30px;
+
+    top: 30px;
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.85);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.sale-filter {
+
+    margin-top: 55px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #aaa;
+
+    border-bottom: 1px solid #aaa;
+
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.sale-filter button {
+
+    border: 1px solid #999;
+
+    background: transparent;
+
+    border-radius: 20px;
+
+    padding: 10px 18px;
+
+    font-size: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.sale-filter button:hover,
+.sale-filter-active {
+
+    background: #111 !important;
+
+    color: white;
+
+    border-color: #111 !important;
+}
+
+
+
+/* =========================================
+   SALE PRODUCTS
+========================================= */
+
+.sale-products {
+
+    margin-top: 100px;
+}
+
+
+.sale-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 35px;
+}
+
+
+.sale-heading p {
+
+    font-size: 9px;
+
+    color: #777;
+
+    margin-bottom: 10px;
+}
+
+
+.sale-heading h2 {
+
+    font-size: clamp(45px, 6vw, 90px);
+
+    line-height: 0.82;
+
+    letter-spacing: -5px;
+
+    font-weight: 900;
+}
+
+
+.sale-heading > span {
+
+    font-size: 9px;
+
+    color: #777;
+}
+
+
+
+/* =========================================
+   SALE GRID
+========================================= */
+
+.sale-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px 10px;
+}
+
+
+.sale-card {
+
+    min-width: 0;
+}
+
+
+.sale-image {
+
+    height: 480px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #ddd;
+}
+
+
+.sale-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+.sale-card:hover .sale-image img {
+
+    transform: scale(1.04);
+}
+
+
+
+/* DISCOUNT */
+
+.discount {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    background: #111;
+
+    color: white;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+}
+
+
+
+/* SALE INFO */
+
+.sale-info {
+
+    padding: 14px 2px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.sale-info h3 {
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+
+.sale-info p {
+
+    color: #888;
+
+    font-size: 9px;
+}
+
+
+.sale-info strong {
+
+    display: block;
+
+    font-size: 10px;
+}
+
+
+.sale-info del {
+
+    display: block;
+
+    color: #999;
+
+    font-size: 9px;
+
+    margin-top: 4px;
+}
+
+
+
+/* =========================================
+   FINAL BANNER
+========================================= */
+
+.sale-banner {
+
+    margin-top: 120px;
+
+    min-height: 300px;
+
+    padding: 50px;
+
+    border-radius: 24px;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.sale-banner p:first-child {
+
+    font-size: 9px;
+
+    color: #999;
+
+    margin-bottom: 15px;
+}
+
+
+.sale-banner h2 {
+
+    font-size: clamp(50px, 7vw, 100px);
+
+    line-height: 0.8;
+
+    letter-spacing: -6px;
+}
+
+
+.sale-banner > p {
+
+    max-width: 200px;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #bbb;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .sale-hero {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .sale-hero-left {
+
+        min-height: 500px;
+
+    }
+
+
+    .sale-hero-right {
+
+        height: 600px;
+
+    }
+
+
+    .sale-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .sale-image {
+
+        height: 400px;
+
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .sale-page {
+
+        width: calc(100% - 14px);
+
+        margin: 0 7px 20px;
+
+    }
+
+
+    .sale-hero-left {
+
+        min-height: 430px;
+
+        padding: 30px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .sale-hero-left h1 {
+
+        font-size: 90px;
+
+        letter-spacing: -6px;
+
+    }
+
+
+    .sale-number {
+
+        right: 25px;
+
+        bottom: 100px;
+
+        font-size: 70px;
+
+    }
+
+
+    .sale-description {
+
+        left: 30px;
+
+        bottom: 30px;
+
+    }
+
+
+    .sale-hero-right {
+
+        height: 500px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .sale-filter {
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+
+    }
+
+
+    .sale-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 20px 7px;
+
+    }
+
+
+    .sale-image {
+
+        height: 280px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .sale-heading h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    .sale-heading > span {
+
+        display: none;
+
+    }
+
+
+    .sale-banner {
+
+        margin-top: 70px;
+
+        min-height: 300px;
+
+        padding: 30px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: flex-end;
+
+        border-radius: 18px;
+
+    }
+
+}
+
+/* =========================================================
+   KLT DISCOVER PAGE
+========================================================= */
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.discover-page {
+
+    width: calc(100% - 24px);
+
+    margin: 0 12px 30px;
+
+}
+
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.discover-intro {
+
+    min-height: 680px;
+
+    background: #d7d7d3;
+
+    border-radius: 24px;
+
+    padding: 45px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.discover-intro-small {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 9px;
+
+    color: #777;
+}
+
+
+.discover-intro-title {
+
+    position: absolute;
+
+    left: 45px;
+
+    bottom: 65px;
+}
+
+
+.discover-intro-title h1 {
+
+    font-size: clamp(65px, 10vw, 160px);
+
+    line-height: 0.78;
+
+    letter-spacing: -8px;
+
+    font-weight: 900;
+}
+
+
+.discover-intro-description {
+
+    position: absolute;
+
+    right: 45px;
+
+    bottom: 65px;
+
+    width: 250px;
+}
+
+
+.discover-intro-description p {
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+
+.discover-intro-description span {
+
+    font-size: 8px;
+
+    color: #777;
+}
+
+
+
+/* =========================================
+   FEATURE STORY
+========================================= */
+
+.discover-feature {
+
+    margin-top: 100px;
+
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    min-height: 700px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    background: #d7d7d3;
+}
+
+
+.discover-feature-image {
+
+    min-height: 700px;
+}
+
+
+.discover-feature-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.discover-feature-content {
+
+    padding: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.story-number {
+
+    font-size: 9px;
+
+    color: #777;
+
+    margin-bottom: 35px;
+}
+
+
+.discover-feature-content h2 {
+
+    font-size: clamp(45px, 5vw, 80px);
+
+    line-height: 0.86;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 35px;
+}
+
+
+.discover-feature-content > p:not(.story-number) {
+
+    max-width: 290px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+.discover-feature-content a {
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.discover-section-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+
+.discover-section-heading p {
+
+    font-size: 9px;
+
+    color: #777;
+
+    margin-bottom: 10px;
+}
+
+
+.discover-section-heading h2 {
+
+    font-size: clamp(40px, 5vw, 75px);
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+    font-weight: 900;
+}
+
+
+.discover-section-heading > span {
+
+    font-size: 9px;
+
+    color: #777;
+}
+
+
+
+/* =========================================
+   COLLECTIONS
+========================================= */
+
+.discover-collections {
+
+    margin-top: 120px;
+}
+
+
+.collection-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+.collection-card {
+
+    height: 600px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #ccc;
+}
+
+
+.collection-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+
+.collection-card:hover img {
+
+    transform: scale(1.04);
+}
+
+
+.collection-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.55),
+            transparent 55%
+        );
+}
+
+
+.collection-overlay {
+
+    position: absolute;
+
+    z-index: 2;
+
+    left: 25px;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    color: white;
+}
+
+
+.collection-overlay p {
+
+    font-size: 9px;
+
+    margin-bottom: 12px;
+
+    opacity: 0.7;
+}
+
+
+.collection-overlay h3 {
+
+    font-size: 25px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 15px;
+}
+
+
+.collection-overlay span {
+
+    font-size: 8px;
+}
+
+
+
+/* =========================================
+   JOURNAL
+========================================= */
+
+.discover-journal {
+
+    margin-top: 130px;
+}
+
+
+.journal-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+.journal-card {
+
+    min-width: 0;
+}
+
+
+.journal-image {
+
+    height: 420px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: #ddd;
+}
+
+
+.journal-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+.journal-card:hover
+.journal-image img {
+
+    transform: scale(1.04);
+}
+
+
+.journal-info {
+
+    padding: 15px 2px;
+}
+
+
+.journal-info > span {
+
+    font-size: 8px;
+
+    color: #888;
+}
+
+
+.journal-info h3 {
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    letter-spacing: -0.7px;
+
+    margin: 12px 0 18px;
+}
+
+
+.journal-info a {
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 9px;
+}
+
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.discover-about {
+
+    margin-top: 130px;
+
+    min-height: 600px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    background: #111;
+
+    color: white;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+}
+
+
+.about-left {
+
+    padding: 45px;
+
+    font-size: 9px;
+
+    color: #888;
+}
+
+
+.about-right {
+
+    padding: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.about-right h2 {
+
+    font-size: clamp(45px, 6vw, 90px);
+
+    line-height: 0.82;
+
+    letter-spacing: -6px;
+
+    margin-bottom: 45px;
+}
+
+
+.about-right p {
+
+    max-width: 400px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #bbb;
+
+    margin-bottom: 35px;
+}
+
+
+.about-right a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 9px;
+}
+
+
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+
+.discover-newsletter {
+
+    margin-top: 130px;
+
+    min-height: 450px;
+
+    padding: 55px;
+
+    border-radius: 24px;
+
+    background: #d7d7d3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.discover-newsletter > p {
+
+    font-size: 9px;
+
+    color: #777;
+}
+
+
+.discover-newsletter h2 {
+
+    font-size: clamp(55px, 8vw, 120px);
+
+    line-height: 0.8;
+
+    letter-spacing: -7px;
+}
+
+
+.discover-newsletter form {
+
+    display: flex;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    border-bottom: 1px solid #777;
+
+    padding-bottom: 10px;
+}
+
+
+.discover-newsletter input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 10px;
+}
+
+
+.discover-newsletter button {
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .discover-feature {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .discover-feature-image {
+
+        height: 550px;
+
+    }
+
+
+    .collection-grid,
+    .journal-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .collection-card {
+
+        height: 500px;
+
+    }
+
+
+    .discover-about {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .about-left {
+
+        padding-bottom: 0;
+
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .discover-page {
+
+        width: calc(100% - 14px);
+
+        margin: 0 7px 20px;
+
+    }
+
+
+    .discover-intro {
+
+        min-height: 600px;
+
+        padding: 30px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .discover-intro-title {
+
+        left: 30px;
+
+        bottom: 100px;
+
+    }
+
+
+    .discover-intro-title h1 {
+
+        font-size: 60px;
+
+        letter-spacing: -4px;
+
+    }
+
+
+    .discover-intro-description {
+
+        left: 30px;
+
+        right: auto;
+
+        bottom: 30px;
+
+        width: 250px;
+
+    }
+
+
+    .discover-feature {
+
+        margin-top: 70px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .discover-feature-image {
+
+        min-height: 450px;
+
+        height: 450px;
+
+    }
+
+
+    .discover-feature-content {
+
+        padding: 35px;
+
+        min-height: 500px;
+
+    }
+
+
+    .collection-grid,
+    .journal-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .collection-card {
+
+        height: 500px;
+
+    }
+
+
+    .journal-image {
+
+        height: 400px;
+
+    }
+
+
+    .discover-about {
+
+        margin-top: 80px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .about-right {
+
+        padding: 35px;
+
+    }
+
+
+    .discover-newsletter {
+
+        margin-top: 80px;
+
+        min-height: 400px;
+
+        padding: 30px;
+
+        border-radius: 18px;
+
+    }
+
+}
