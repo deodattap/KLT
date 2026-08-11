@@ -169,7 +169,6 @@ nav a {
 }
 
 
-
 /* =========================================
    MAIN CONTAINER
 ========================================= */
@@ -186,13 +185,8 @@ nav a {
 
     gap: 8px;
 
-    /*
-       This gives the website the
-       full available screen height,
-       but does NOT prevent scrolling.
-    */
+    height: 620px;
 
-    min-height: calc(100vh - 78px);
 }
 
 
@@ -207,9 +201,10 @@ nav a {
 
     display: grid;
 
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1.7fr 1fr;
 
     gap: 8px;
+
 }
 
 
@@ -220,7 +215,7 @@ nav a {
 
 .text-card {
 
-    min-height: 500px;
+    min-height: 0;
 
     background: #d7d7d3;
 
@@ -231,15 +226,19 @@ nav a {
     position: relative;
 
     overflow: hidden;
+
 }
 
 
 
-/* HEADING */
+/* =========================================
+   HEADING
+========================================= */
 
 .heading {
 
     width: 100%;
+
 }
 
 
@@ -252,11 +251,14 @@ nav a {
     font-weight: 900;
 
     letter-spacing: -5px;
+
 }
 
 
 
-/* FIRST LINE */
+/* =========================================
+   FIRST LINE
+========================================= */
 
 .first-line {
 
@@ -265,6 +267,7 @@ nav a {
     align-items: center;
 
     gap: 25px;
+
 }
 
 
@@ -275,11 +278,14 @@ nav a {
     font-weight: 300;
 
     line-height: 1;
+
 }
 
 
 
-/* DESCRIPTION */
+/* =========================================
+   DESCRIPTION
+========================================= */
 
 .text-card p {
 
@@ -294,6 +300,7 @@ nav a {
     font-size: 13px;
 
     line-height: 1.5;
+
 }
 
 
@@ -311,6 +318,7 @@ nav a {
     grid-template-columns: 1fr 1fr;
 
     gap: 8px;
+
 }
 
 
@@ -320,13 +328,14 @@ nav a {
 
     min-width: 0;
 
-    min-height: 220px;
+    min-height: 0;
 
     border-radius: 22px;
 
     overflow: hidden;
 
     background: #ccc;
+
 }
 
 
@@ -339,11 +348,14 @@ nav a {
     object-fit: cover;
 
     display: block;
+
 }
 
 
 
-/* SMALL CARD TEXT */
+/* =========================================
+   SMALL CARD TEXT
+========================================= */
 
 .card-title {
 
@@ -362,6 +374,7 @@ nav a {
     letter-spacing: -1px;
 
     z-index: 2;
+
 }
 
 
@@ -374,7 +387,9 @@ nav a {
 
     min-width: 0;
 
-    min-height: 728px;
+    height: 620px;
+
+    min-height: 0;
 
     border-radius: 22px;
 
@@ -383,6 +398,7 @@ nav a {
     position: relative;
 
     background: #ccc;
+
 }
 
 
@@ -395,6 +411,7 @@ nav a {
     object-fit: cover;
 
     display: block;
+
 }
 
 
@@ -440,6 +457,7 @@ nav a {
     line-height: 1;
 
     cursor: pointer;
+
 }
 
 
@@ -463,6 +481,7 @@ nav a {
     justify-content: flex-end;
 
     gap: 10px;
+
 }
 
 
@@ -486,17 +505,21 @@ nav a {
     font-size: 9px;
 
     cursor: pointer;
+
 }
 
 
 
-/* LEARN */
+/* =========================================
+   LEARN
+========================================= */
 
 .learn-button {
 
     width: 180px;
 
     background: white;
+
 }
 
 
@@ -519,23 +542,28 @@ nav a {
     justify-content: center;
 
     font-size: 14px;
+
 }
 
 
 
-/* CONTACT */
+/* =========================================
+   CONTACT
+========================================= */
 
 .contact-button {
 
     width: 160px;
 
     background: rgba(255, 255, 255, 0.78);
+
 }
 
 
 .contact-button b {
 
     font-size: 10px;
+
 }
 
 
@@ -608,6 +636,8 @@ nav a {
 
         grid-template-columns: 1fr;
 
+        height: auto;
+
     }
 
 
@@ -620,7 +650,9 @@ nav a {
 
     .hero {
 
-        min-height: 650px;
+        height: 600px;
+
+        min-height: 0;
 
     }
 
@@ -657,6 +689,8 @@ nav a {
         width: calc(100% - 14px);
 
         margin: 0 7px 7px;
+
+        height: auto;
 
     }
 
@@ -731,7 +765,9 @@ nav a {
 
     .hero {
 
-        min-height: 600px;
+        height: 560px;
+
+        min-height: 0;
 
         border-radius: 18px;
 
@@ -4230,6 +4266,520 @@ summary::after {
     .recommended-heading a {
 
         display: none;
+
+    }
+
+}
+
+/* =========================================================
+   FINAL HOMEPAGE FIX
+   KLT HERO GRID
+========================================================= */
+
+
+/* MAIN GRID */
+
+.container {
+
+    width: calc(100% - 24px);
+
+    margin: 0 12px 12px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+    height: 680px;
+
+    min-height: 0;
+
+}
+
+
+
+/* LEFT SIDE */
+
+.left-column {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-rows: 2fr 1fr;
+
+    gap: 8px;
+
+}
+
+
+
+/* TEXT CARD */
+
+.text-card {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 0;
+
+    box-sizing: border-box;
+
+    background: #d7d7d3;
+
+    border-radius: 22px;
+
+    padding: 45px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+/* HEADING */
+
+.heading h1 {
+
+    margin: 0;
+
+    font-size: clamp(45px, 5vw, 82px);
+
+    line-height: 0.88;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+}
+
+
+.first-line {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+.arrow {
+
+    font-size: clamp(45px, 5vw, 80px);
+
+    line-height: 1;
+
+}
+
+
+
+/* DESCRIPTION */
+
+.text-card p {
+
+    position: absolute;
+
+    left: 45px;
+
+    bottom: 45px;
+
+    max-width: 400px;
+
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* BOTTOM TWO IMAGES */
+
+.small-cards {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+
+}
+
+
+.small-card {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #ccc;
+
+}
+
+
+.small-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+/* SMALL IMAGE TEXT */
+
+.card-title {
+
+    position: absolute;
+
+    left: 20px;
+
+    bottom: 20px;
+
+    z-index: 2;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+}
+
+
+
+/* =========================================================
+   RIGHT HERO
+========================================================= */
+
+.hero {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #ccc;
+
+}
+
+
+.hero img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+/* SHOP BUTTON */
+
+.shop-button {
+
+    position: absolute;
+
+    top: 55%;
+
+    left: 55%;
+
+    transform: translate(-50%, -50%);
+
+    width: 82px;
+
+    height: 82px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.78);
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+}
+
+
+
+/* HERO BOTTOM BUTTONS */
+
+.hero-actions {
+
+    position: absolute;
+
+    left: 25px;
+
+    right: 25px;
+
+    bottom: 20px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+}
+
+
+.learn-button,
+.contact-button {
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 10px 0 18px;
+
+    font-size: 9px;
+
+}
+
+
+.learn-button {
+
+    width: 180px;
+
+    background: white;
+
+}
+
+
+.learn-button b {
+
+    width: 27px;
+
+    height: 27px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.contact-button {
+
+    width: 160px;
+
+    background: rgba(255,255,255,0.78);
+
+}
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .container {
+
+        grid-template-columns: 1fr;
+
+        height: auto;
+
+    }
+
+
+    .left-column {
+
+        height: auto;
+
+        grid-template-rows: 450px 250px;
+
+    }
+
+
+    .text-card {
+
+        height: 100%;
+
+    }
+
+
+    .small-cards {
+
+        height: 100%;
+
+    }
+
+
+    .hero {
+
+        height: 600px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .container {
+
+        width: calc(100% - 14px);
+
+        margin: 0 7px 7px;
+
+    }
+
+
+    .left-column {
+
+        grid-template-rows: 420px 500px;
+
+    }
+
+
+    .text-card {
+
+        padding: 28px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .heading h1 {
+
+        font-size: 44px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .text-card p {
+
+        left: 28px;
+
+        bottom: 28px;
+
+        max-width: 270px;
+
+        font-size: 10px;
+
+    }
+
+
+    .small-cards {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .small-card {
+
+        border-radius: 18px;
+
+    }
+
+
+    .hero {
+
+        height: 560px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .hero-actions {
+
+        left: 12px;
+
+        right: 12px;
+
+    }
+
+
+    .learn-button,
+    .contact-button {
+
+        width: 50%;
 
     }
 
