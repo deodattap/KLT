@@ -16,6 +16,7 @@
 
 <body>
 
+
     <!-- ================= NAVBAR ================= -->
 
     <header class="shop-navbar">
@@ -49,15 +50,19 @@
         <div class="shop-actions">
 
             <div class="shop-search">
+
                 <span>⌕</span>
                 <span>Search</span>
+
             </div>
 
-            <button id="wishlistNav">
+
+            <button aria-label="Wishlist">
                 ♡
             </button>
 
-            <button id="bagNav">
+
+            <button aria-label="Shopping bag">
                 ♧
             </button>
 
@@ -67,23 +72,30 @@
 
 
 
+
     <!-- ================= PRODUCT ================= -->
 
     <main class="product-page">
 
 
-        <!-- LEFT : IMAGE -->
+        <!-- ================= GALLERY ================= -->
 
         <section class="product-gallery">
+
 
             <div class="product-main-image">
 
                 <img
-                    src="assets/1.jpg"
-                    alt="Relaxed Essential"
+                    id="productImage"
+                    src=""
+                    alt="Product"
                 >
 
-                <span class="product-badge">
+
+                <span
+                    class="product-badge"
+                    id="productBadge"
+                >
                     NEW
                 </span>
 
@@ -95,8 +107,9 @@
                 <button class="thumbnail active">
 
                     <img
-                        src="assets/1.jpg"
-                        alt=""
+                        id="thumb1"
+                        src=""
+                        alt="Product"
                     >
 
                 </button>
@@ -105,8 +118,9 @@
                 <button class="thumbnail">
 
                     <img
-                        src="assets/2.jpg"
-                        alt=""
+                        id="thumb2"
+                        src=""
+                        alt="Product"
                     >
 
                 </button>
@@ -115,19 +129,22 @@
                 <button class="thumbnail">
 
                     <img
-                        src="assets/3.jpg"
-                        alt=""
+                        id="thumb3"
+                        src=""
+                        alt="Product"
                     >
 
                 </button>
 
             </div>
 
+
         </section>
 
 
 
-        <!-- RIGHT : PRODUCT INFORMATION -->
+
+        <!-- ================= PRODUCT DETAILS ================= -->
 
         <section class="product-details">
 
@@ -135,46 +152,50 @@
             <div class="product-top">
 
 
-                <p class="product-category">
-                    KLT / MENSWEAR
+                <p
+                    class="product-category"
+                    id="productCategory"
+                >
+                    KLT
                 </p>
 
 
-                <h1>
-                    RELAXED
-                    <br>
-                    ESSENTIAL
+                <h1 id="productName">
+                    PRODUCT
                 </h1>
 
 
-                <div class="product-price">
-
-                    ₹1,999
-
+                <div
+                    class="product-price"
+                    id="productPrice"
+                >
+                    ₹0
                 </div>
 
 
-                <p class="product-description">
-
-                    An everyday essential designed
-                    with a relaxed silhouette and
-                    effortless proportions.
-
+                <p
+                    class="product-description"
+                    id="productDescription"
+                >
+                    Product description.
                 </p>
+
 
             </div>
 
 
 
-            <!-- SIZE -->
+            <!-- ================= SIZE ================= -->
 
             <div class="size-section">
+
 
                 <div class="size-heading">
 
                     <span>
                         SELECT SIZE
                     </span>
+
 
                     <a href="#">
                         SIZE GUIDE
@@ -187,7 +208,9 @@
 
                     <button>S</button>
 
-                    <button class="selected">M</button>
+                    <button class="selected">
+                        M
+                    </button>
 
                     <button>L</button>
 
@@ -199,7 +222,8 @@
 
 
 
-            <!-- ADD TO BAG -->
+
+            <!-- ================= ADD TO BAG ================= -->
 
             <button
                 class="add-to-bag"
@@ -218,22 +242,22 @@
 
 
 
-            <!-- WISHLIST -->
+
+            <!-- ================= WISHLIST ================= -->
 
             <button
                 class="add-wishlist"
                 id="addWishlist"
             >
 
-                ♡
-
-                ADD TO WISHLIST
+                ♡ ADD TO WISHLIST
 
             </button>
 
 
 
-            <!-- PRODUCT INFO -->
+
+            <!-- ================= INFORMATION ================= -->
 
             <div class="product-information">
 
@@ -244,14 +268,9 @@
                         DETAILS
                     </summary>
 
-                    <p>
 
-                        Relaxed fit
-                        <br>
-                        Lightweight construction
-                        <br>
-                        Everyday styling
-
+                    <p id="productDetails">
+                        Product details.
                     </p>
 
                 </details>
@@ -263,12 +282,10 @@
                         MATERIAL
                     </summary>
 
-                    <p>
 
-                        Premium cotton blend.
-                        Soft hand feel with
-                        breathable construction.
-
+                    <p id="productMaterial">
+                        Premium quality construction
+                        designed for everyday wear.
                     </p>
 
                 </details>
@@ -279,6 +296,7 @@
                     <summary>
                         SHIPPING & RETURNS
                     </summary>
+
 
                     <p>
 
@@ -302,7 +320,8 @@
 
 
 
-    <!-- ================= YOU MAY LIKE ================= -->
+
+    <!-- ================= RECOMMENDED ================= -->
 
     <section class="recommended">
 
@@ -315,10 +334,13 @@
                     KLT / YOU MAY LIKE
                 </p>
 
+
                 <h2>
+
                     COMPLETE
                     <br>
                     THE LOOK.
+
                 </h2>
 
             </div>
@@ -332,57 +354,28 @@
 
 
 
+
         <div class="recommended-grid">
 
 
             <article class="recommended-card">
 
-                <a href="product.html">
+                <a href="product.html?product=mens-02">
 
                     <div class="recommended-image">
 
                         <img
-                            src="assets/2.jpg"
-                            alt=""
+                            src="assets/mens/product-02.jpg"
+                            alt="Relaxed T-Shirt"
                         >
 
                     </div>
 
-                    <div class="recommended-info">
-
-                        <span>
-                            EVERYDAY SHIRT
-                        </span>
-
-                        <strong>
-                            ₹2,499
-                        </strong>
-
-                    </div>
-
-                </a>
-
-            </article>
-
-
-
-            <article class="recommended-card">
-
-                <a href="product.html">
-
-                    <div class="recommended-image">
-
-                        <img
-                            src="assets/3.jpg"
-                            alt=""
-                        >
-
-                    </div>
 
                     <div class="recommended-info">
 
                         <span>
-                            DAILY CLASSIC
+                            RELAXED T-SHIRT
                         </span>
 
                         <strong>
@@ -397,27 +390,62 @@
 
 
 
+
             <article class="recommended-card">
 
-                <a href="product.html">
+                <a href="product.html?product=womens-06">
 
                     <div class="recommended-image">
 
                         <img
-                            src="assets/1.jpg"
-                            alt=""
+                            src="assets/womens/product-06.jpg"
+                            alt="Knit Button-Up"
                         >
 
                     </div>
 
+
                     <div class="recommended-info">
 
                         <span>
-                            STATEMENT LAYER
+                            KNIT BUTTON-UP
                         </span>
 
                         <strong>
-                            ₹3,499
+                            ₹2,499
+                        </strong>
+
+                    </div>
+
+                </a>
+
+            </article>
+
+
+
+
+            <article class="recommended-card">
+
+                <a href="product.html?product=mens-06">
+
+                    <div class="recommended-image">
+
+                        <img
+                            src="assets/mens/product-06.jpg"
+                            alt="Utility Set"
+                        >
+
+                    </div>
+
+
+                    <div class="recommended-info">
+
+                        <span>
+                            UTILITY SET
+                        </span>
+
+                        <strong>
+                            ₹4,499
                         </strong>
 
                     </div>
@@ -434,9 +462,11 @@
 
 
 
+
     <!-- ================= FOOTER ================= -->
 
     <footer class="shop-footer">
+
 
         <div class="footer-logo">
             KLT
@@ -469,11 +499,222 @@
 
         </div>
 
+
     </footer>
 
 
 
-    <script src="script.js"></script>
+
+    <!-- =====================================================
+         PRODUCT DATA
+    ====================================================== -->
+
+    <script>
+
+        const products = {
+
+            "mens-01": {
+                name: "OVERSIZED SHIRT",
+                category: "KLT / MENSWEAR",
+                price: "₹2,499",
+                image: "assets/mens/product-01.jpg",
+                description: "A relaxed oversized shirt designed for everyday styling.",
+                details: "Relaxed fit<br>Everyday silhouette<br>Easy layering"
+            },
+
+
+            "mens-02": {
+                name: "RELAXED T-SHIRT",
+                category: "KLT / MENSWEAR",
+                price: "₹1,799",
+                image: "assets/mens/product-02.jpg",
+                description: "An effortless everyday T-shirt with a comfortable relaxed fit.",
+                details: "Relaxed fit<br>Soft everyday construction<br>Easy styling"
+            },
+
+
+            "mens-03": {
+                name: "UTILITY JACKET",
+                category: "KLT / MENSWEAR",
+                price: "₹3,999",
+                image: "assets/mens/product-03.jpg",
+                description: "A structured utility jacket built for everyday movement.",
+                details: "Structured fit<br>Utility-inspired design<br>Layering piece"
+            },
+
+
+            "mens-04": {
+                name: "WIDE-LEG PANTS",
+                category: "KLT / MENSWEAR",
+                price: "₹2,699",
+                image: "assets/mens/product-04.jpg",
+                description: "Relaxed wide-leg pants designed with an effortless silhouette.",
+                details: "Wide-leg fit<br>Relaxed silhouette<br>Everyday comfort"
+            },
+
+
+            "mens-05": {
+                name: "KNIT SWEATSHIRT",
+                category: "KLT / MENSWEAR",
+                price: "₹2,999",
+                image: "assets/mens/product-05.jpg",
+                description: "A soft knit layer designed for comfortable everyday wear.",
+                details: "Relaxed fit<br>Soft knit construction<br>Easy layering"
+            },
+
+
+            "mens-06": {
+                name: "UTILITY SET",
+                category: "KLT / MENSWEAR",
+                price: "₹4,499",
+                image: "assets/mens/product-06.jpg",
+                description: "A complete coordinated set combining utility and everyday style.",
+                details: "Complete set<br>Relaxed silhouette<br>Coordinated styling"
+            },
+
+
+            "womens-01": {
+                name: "OVERSIZED TOP",
+                category: "KLT / WOMENSWEAR",
+                price: "₹1,999",
+                image: "assets/womens/product-01.jpg",
+                description: "A relaxed oversized top designed for effortless everyday styling.",
+                details: "Relaxed silhouette<br>Comfortable fit<br>Everyday styling"
+            },
+
+
+            "womens-02": {
+                name: "STATEMENT JACKET",
+                category: "KLT / WOMENSWEAR",
+                price: "₹3,499",
+                image: "assets/womens/product-02.jpg",
+                description: "A statement jacket with a strong structured silhouette.",
+                details: "Structured fit<br>Statement silhouette<br>Layering piece"
+            },
+
+
+            "womens-03": {
+                name: "WIDE-LEG PANTS",
+                category: "KLT / WOMENSWEAR",
+                price: "₹2,699",
+                image: "assets/womens/product-03.jpg",
+                description: "Wide-leg pants designed with a relaxed and fluid silhouette.",
+                details: "Wide-leg fit<br>Relaxed silhouette<br>Everyday comfort"
+            },
+
+
+            "womens-04": {
+                name: "MINIMAL DRESS",
+                category: "KLT / WOMENSWEAR",
+                price: "₹2,999",
+                image: "assets/womens/product-04.jpg",
+                description: "A clean minimal dress designed for effortless movement.",
+                details: "Easy silhouette<br>Minimal design<br>Everyday styling"
+            },
+
+
+            "womens-05": {
+                name: "SOFT KNIT",
+                category: "KLT / WOMENSWEAR",
+                price: "₹2,799",
+                image: "assets/womens/product-05.jpg",
+                description: "A soft knit layer designed for comfortable everyday wear.",
+                details: "Soft construction<br>Relaxed fit<br>Comfortable layering"
+            },
+
+
+            "womens-06": {
+                name: "KNIT BUTTON-UP",
+                category: "KLT / WOMENSWEAR",
+                price: "₹2,499",
+                image: "assets/womens/product-06.jpg",
+                description: "A relaxed knit button-up combining comfort with a clean silhouette.",
+                details: "Relaxed fit<br>Knit construction<br>Button-up design"
+            }
+
+        };
+
+
+
+
+        /* =====================================================
+           GET PRODUCT FROM URL
+        ====================================================== */
+
+        const urlParams =
+            new URLSearchParams(window.location.search);
+
+        const productId =
+            urlParams.get("product");
+
+
+
+        /* =====================================================
+           LOAD PRODUCT
+        ====================================================== */
+
+        const product =
+            products[productId];
+
+
+
+        if (product) {
+
+
+            document.getElementById("productImage").src =
+                product.image;
+
+
+            document.getElementById("productImage").alt =
+                product.name;
+
+
+            document.getElementById("thumb1").src =
+                product.image;
+
+
+            document.getElementById("thumb2").src =
+                product.image;
+
+
+            document.getElementById("thumb3").src =
+                product.image;
+
+
+            document.getElementById("productName").textContent =
+                product.name;
+
+
+            document.getElementById("productCategory").textContent =
+                product.category;
+
+
+            document.getElementById("productPrice").textContent =
+                product.price;
+
+
+            document.getElementById("productDescription").textContent =
+                product.description;
+
+
+            document.getElementById("productDetails").innerHTML =
+                product.details;
+
+
+            document.title =
+                "KLT — " + product.name;
+
+        }
+
+
+        else {
+
+            console.log("No product selected.");
+
+        }
+
+    </script>
+
 
 </body>
 
