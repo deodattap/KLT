@@ -53,7 +53,9 @@
 
                 <span>⌕</span>
 
-                <span>Search</span>
+                <span>
+                    Search
+                </span>
 
             </div>
 
@@ -73,42 +75,50 @@
 
 
 
+
     <!-- ================= SALE PAGE ================= -->
 
     <main class="sale-page">
 
 
-        <!-- ================= SALE HERO ================= -->
+        <!-- ================= HERO ================= -->
 
         <section class="sale-hero">
 
 
+            <!-- LEFT -->
+
             <div class="sale-hero-left">
 
-                <p>
-                    KLT / 04
+
+                <p class="sale-eyebrow">
+                    KLT / 03
                 </p>
 
 
-                <h1>
+                <div class="sale-title">
 
-                    SALE
+                    <h1>
+                        SALE
+                    </h1>
 
-                </h1>
+                    <span>
+                        →
+                    </span>
+
+                </div>
 
 
-                <div class="sale-number">
-
+                <div class="sale-percent">
                     50%
-
                 </div>
 
 
                 <p class="sale-description">
 
                     Selected pieces.
-                    Reduced prices.
-                    Same KLT attitude.
+                    <br>
+                    Reduced for a limited time.
 
                 </p>
 
@@ -117,21 +127,46 @@
 
 
 
+
+            <!-- RIGHT -->
+
             <div class="sale-hero-right">
 
+
                 <img
-                    src="assets/2.jpg"
-                    alt="KLT Sale"
+                    src="assets/sale/hero.jpg"
+                    alt="KLT Sale Collection"
                 >
 
 
                 <div class="sale-circle">
 
-                    UP TO
-                    <br>
-                    50% OFF
+                    <span>
+                        SHOP
+                    </span>
+
+                    <span>
+                        NOW
+                    </span>
 
                 </div>
+
+
+                <a
+                    href="#sale-products"
+                    class="sale-shop-button"
+                >
+
+                    <span>
+                        SHOP SALE
+                    </span>
+
+
+                    <b>
+                        ↓
+                    </b>
+
+                </a>
 
             </div>
 
@@ -140,27 +175,31 @@
 
 
 
-        <!-- ================= SALE FILTER ================= -->
+
+        <!-- ================= FILTERS ================= -->
 
         <section class="sale-filter">
 
 
-            <button class="sale-filter-active">
+            <button
+                class="sale-filter-active"
+                data-filter="all"
+            >
                 ALL
             </button>
 
 
-            <button>
+            <button data-filter="mens">
                 MENSWEAR
             </button>
 
 
-            <button>
+            <button data-filter="womens">
                 WOMENSWEAR
             </button>
 
 
-            <button>
+            <button data-filter="under">
                 UNDER ₹2000
             </button>
 
@@ -169,18 +208,24 @@
 
 
 
+
         <!-- ================= SALE PRODUCTS ================= -->
 
-        <section class="sale-products">
+        <section
+            class="sale-products"
+            id="sale-products"
+        >
 
 
             <div class="sale-heading">
+
 
                 <div>
 
                     <p>
                         01 / SELECTED PIECES
                     </p>
+
 
                     <h2>
                         LESS,
@@ -192,366 +237,474 @@
 
 
                 <span>
-                    08 ITEMS
+                    06 PIECES
                 </span>
 
+
             </div>
+
 
 
 
             <div class="sale-grid">
 
 
-                <!-- PRODUCT 1 -->
+                <!-- SALE 01 -->
 
-                <article class="sale-card">
+                <article
+                    class="sale-card"
+                    data-category="mens"
+                    data-price="1399"
+                >
 
-                    <div class="sale-image">
+                    <a
+                        href="product.html?product=sale-01"
+                        class="sale-product-link"
+                    >
 
-                        <img
-                            src="assets/1.jpg"
-                            alt="Sale product"
-                        >
+                        <div class="sale-image">
 
-
-                        <span class="discount">
-                            -30%
-                        </span>
-
-
-                        <button class="wishlist">
-                            ♡
-                        </button>
-
-                    </div>
+                            <img
+                                src="assets/sale/sale-01.jpg"
+                                alt="KLT Sale Product 01"
+                            >
 
 
-                    <div class="sale-info">
+                            <span class="discount">
+                                -30%
+                            </span>
 
-                        <div>
 
-                            <h3>
-                                RELAXED ESSENTIAL
-                            </h3>
-
-                            <p>
-                                Menswear
-                            </p>
+                            <button
+                                class="wishlist"
+                                type="button"
+                                onclick="event.preventDefault()"
+                            >
+                                ♡
+                            </button>
 
                         </div>
 
 
-                        <div>
+                        <div class="sale-info">
 
-                            <strong>
-                                ₹1,399
-                            </strong>
 
-                            <del>
-                                ₹1,999
-                            </del>
+                            <div>
+
+                                <h3>
+                                    RELAXED ESSENTIAL
+                                </h3>
+
+                                <p>
+                                    MENSWEAR
+                                </p>
+
+                            </div>
+
+
+                            <div class="sale-price">
+
+                                <strong>
+                                    ₹1,399
+                                </strong>
+
+                                <del>
+                                    ₹1,999
+                                </del>
+
+                            </div>
+
 
                         </div>
 
-                    </div>
+                    </a>
 
                 </article>
 
 
 
-                <!-- PRODUCT 2 -->
 
-                <article class="sale-card">
+                <!-- SALE 02 -->
 
-                    <div class="sale-image">
+                <article
+                    class="sale-card"
+                    data-category="womens"
+                    data-price="1499"
+                >
 
-                        <img
-                            src="assets/2.jpg"
-                            alt="Sale product"
-                        >
+                    <a
+                        href="product.html?product=sale-02"
+                        class="sale-product-link"
+                    >
 
+                        <div class="sale-image">
 
-                        <span class="discount">
-                            -40%
-                        </span>
-
-
-                        <button class="wishlist">
-                            ♡
-                        </button>
-
-                    </div>
+                            <img
+                                src="assets/sale/sale-02.jpg"
+                                alt="KLT Sale Product 02"
+                            >
 
 
-                    <div class="sale-info">
-
-                        <div>
-
-                            <h3>
-                                EVERYDAY LAYER
-                            </h3>
-
-                            <p>
-                                Womenswear
-                            </p>
-
-                        </div>
+                            <span class="discount">
+                                -40%
+                            </span>
 
 
-                        <div>
-
-                            <strong>
-                                ₹1,499
-                            </strong>
-
-                            <del>
-                                ₹2,499
-                            </del>
+                            <button
+                                class="wishlist"
+                                type="button"
+                                onclick="event.preventDefault()"
+                            >
+                                ♡
+                            </button>
 
                         </div>
 
-                    </div>
+
+                        <div class="sale-info">
+
+
+                            <div>
+
+                                <h3>
+                                    EVERYDAY LAYER
+                                </h3>
+
+                                <p>
+                                    WOMENSWEAR
+                                </p>
+
+                            </div>
+
+
+                            <div class="sale-price">
+
+                                <strong>
+                                    ₹1,499
+                                </strong>
+
+                                <del>
+                                    ₹2,499
+                                </del>
+
+                            </div>
+
+
+                        </div>
+
+                    </a>
 
                 </article>
 
 
 
-                <!-- PRODUCT 3 -->
 
-                <article class="sale-card">
+                <!-- SALE 03 -->
 
-                    <div class="sale-image">
+                <article
+                    class="sale-card"
+                    data-category="mens"
+                    data-price="1799"
+                >
 
-                        <img
-                            src="assets/3.jpg"
-                            alt="Sale product"
-                        >
+                    <a
+                        href="product.html?product=sale-03"
+                        class="sale-product-link"
+                    >
 
+                        <div class="sale-image">
 
-                        <span class="discount">
-                            -25%
-                        </span>
-
-
-                        <button class="wishlist">
-                            ♡
-                        </button>
-
-                    </div>
+                            <img
+                                src="assets/sale/sale-03.jpg"
+                                alt="KLT Sale Product 03"
+                            >
 
 
-                    <div class="sale-info">
-
-                        <div>
-
-                            <h3>
-                                DAILY CLASSIC
-                            </h3>
-
-                            <p>
-                                Unisex
-                            </p>
-
-                        </div>
+                            <span class="discount">
+                                -30%
+                            </span>
 
 
-                        <div>
-
-                            <strong>
-                                ₹1,349
-                            </strong>
-
-                            <del>
-                                ₹1,799
-                            </del>
+                            <button
+                                class="wishlist"
+                                type="button"
+                                onclick="event.preventDefault()"
+                            >
+                                ♡
+                            </button>
 
                         </div>
 
-                    </div>
+
+                        <div class="sale-info">
+
+
+                            <div>
+
+                                <h3>
+                                    DAILY CLASSIC
+                                </h3>
+
+                                <p>
+                                    MENSWEAR
+                                </p>
+
+                            </div>
+
+
+                            <div class="sale-price">
+
+                                <strong>
+                                    ₹1,799
+                                </strong>
+
+                                <del>
+                                    ₹2,599
+                                </del>
+
+                            </div>
+
+
+                        </div>
+
+                    </a>
 
                 </article>
 
 
 
-                <!-- PRODUCT 4 -->
 
-                <article class="sale-card">
+                <!-- SALE 04 -->
 
-                    <div class="sale-image">
+                <article
+                    class="sale-card"
+                    data-category="womens"
+                    data-price="1749"
+                >
 
-                        <img
-                            src="assets/1.jpg"
-                            alt="Sale product"
-                        >
+                    <a
+                        href="product.html?product=sale-04"
+                        class="sale-product-link"
+                    >
 
+                        <div class="sale-image">
 
-                        <span class="discount">
-                            -50%
-                        </span>
-
-
-                        <button class="wishlist">
-                            ♡
-                        </button>
-
-                    </div>
+                            <img
+                                src="assets/sale/sale-04.jpg"
+                                alt="KLT Sale Product 04"
+                            >
 
 
-                    <div class="sale-info">
-
-                        <div>
-
-                            <h3>
-                                STATEMENT LAYER
-                            </h3>
-
-                            <p>
-                                Menswear
-                            </p>
-
-                        </div>
+                            <span class="discount">
+                                -50%
+                            </span>
 
 
-                        <div>
-
-                            <strong>
-                                ₹1,749
-                            </strong>
-
-                            <del>
-                                ₹3,499
-                            </del>
+                            <button
+                                class="wishlist"
+                                type="button"
+                                onclick="event.preventDefault()"
+                            >
+                                ♡
+                            </button>
 
                         </div>
 
-                    </div>
+
+                        <div class="sale-info">
+
+
+                            <div>
+
+                                <h3>
+                                    SIGNATURE PIECE
+                                </h3>
+
+                                <p>
+                                    WOMENSWEAR
+                                </p>
+
+                            </div>
+
+
+                            <div class="sale-price">
+
+                                <strong>
+                                    ₹1,749
+                                </strong>
+
+                                <del>
+                                    ₹3,499
+                                </del>
+
+                            </div>
+
+
+                        </div>
+
+                    </a>
 
                 </article>
 
 
 
-                <!-- PRODUCT 5 -->
 
-                <article class="sale-card">
+                <!-- SALE 05 -->
 
-                    <div class="sale-image">
+                <article
+                    class="sale-card"
+                    data-category="mens"
+                    data-price="1299"
+                >
 
-                        <img
-                            src="assets/2.jpg"
-                            alt="Sale product"
-                        >
+                    <a
+                        href="product.html?product=sale-05"
+                        class="sale-product-link"
+                    >
 
+                        <div class="sale-image">
 
-                        <span class="discount">
-                            -35%
-                        </span>
-
-
-                        <button class="wishlist">
-                            ♡
-                        </button>
-
-                    </div>
+                            <img
+                                src="assets/sale/sale-05.jpg"
+                                alt="KLT Sale Product 05"
+                            >
 
 
-                    <div class="sale-info">
-
-                        <div>
-
-                            <h3>
-                                SOFT FORM TOP
-                            </h3>
-
-                            <p>
-                                Womenswear
-                            </p>
-
-                        </div>
+                            <span class="discount">
+                                -35%
+                            </span>
 
 
-                        <div>
-
-                            <strong>
-                                ₹1,299
-                            </strong>
-
-                            <del>
-                                ₹1,999
-                            </del>
+                            <button
+                                class="wishlist"
+                                type="button"
+                                onclick="event.preventDefault()"
+                            >
+                                ♡
+                            </button>
 
                         </div>
 
-                    </div>
+
+                        <div class="sale-info">
+
+
+                            <div>
+
+                                <h3>
+                                    CLEAN FORM
+                                </h3>
+
+                                <p>
+                                    MENSWEAR
+                                </p>
+
+                            </div>
+
+
+                            <div class="sale-price">
+
+                                <strong>
+                                    ₹1,299
+                                </strong>
+
+                                <del>
+                                    ₹1,999
+                                </del>
+
+                            </div>
+
+
+                        </div>
+
+                    </a>
 
                 </article>
 
 
 
-                <!-- PRODUCT 6 -->
 
-                <article class="sale-card">
+                <!-- SALE 06 -->
 
-                    <div class="sale-image">
+                <article
+                    class="sale-card"
+                    data-category="womens"
+                    data-price="1399"
+                >
 
-                        <img
-                            src="assets/3.jpg"
-                            alt="Sale product"
-                        >
+                    <a
+                        href="product.html?product=sale-06"
+                        class="sale-product-link"
+                    >
 
+                        <div class="sale-image">
 
-                        <span class="discount">
-                            -30%
-                        </span>
-
-
-                        <button class="wishlist">
-                            ♡
-                        </button>
-
-                    </div>
+                            <img
+                                src="assets/sale/sale-06.jpg"
+                                alt="KLT Sale Product 06"
+                            >
 
 
-                    <div class="sale-info">
-
-                        <div>
-
-                            <h3>
-                                CLEAN FORM
-                            </h3>
-
-                            <p>
-                                Unisex
-                            </p>
-
-                        </div>
+                            <span class="discount">
+                                -30%
+                            </span>
 
 
-                        <div>
-
-                            <strong>
-                                ₹1,399
-                            </strong>
-
-                            <del>
-                                ₹1,999
-                            </del>
+                            <button
+                                class="wishlist"
+                                type="button"
+                                onclick="event.preventDefault()"
+                            >
+                                ♡
+                            </button>
 
                         </div>
 
-                    </div>
+
+                        <div class="sale-info">
+
+
+                            <div>
+
+                                <h3>
+                                    SOFT FORM
+                                </h3>
+
+                                <p>
+                                    WOMENSWEAR
+                                </p>
+
+                            </div>
+
+
+                            <div class="sale-price">
+
+                                <strong>
+                                    ₹1,399
+                                </strong>
+
+                                <del>
+                                    ₹1,999
+                                </del>
+
+                            </div>
+
+
+                        </div>
+
+                    </a>
 
                 </article>
-
 
 
             </div>
-
 
         </section>
 
 
 
-        <!-- ================= SALE BANNER ================= -->
+
+        <!-- ================= FINAL STATEMENT ================= -->
 
         <section class="sale-banner">
 
@@ -559,12 +712,16 @@
             <div>
 
                 <p>
-                    FINAL EDIT
+                    KLT / LAST CHANCE
                 </p>
 
 
                 <h2>
-                    LAST CHANCE.
+
+                    LESS.
+                    <br>
+                    BUT BETTER.
+
                 </h2>
 
             </div>
@@ -573,13 +730,16 @@
             <p>
 
                 Limited quantities.
+                <br>
                 Once they're gone,
+                <br>
                 they're gone.
 
             </p>
 
 
         </section>
+
 
 
 
@@ -596,7 +756,9 @@
             <div>
 
                 <p>MENSWEAR</p>
+
                 <p>WOMENSWEAR</p>
+
                 <p>SALE</p>
 
             </div>
@@ -605,7 +767,9 @@
             <div>
 
                 <p>DISCOVER</p>
+
                 <p>CONTACT</p>
+
                 <p>INSTAGRAM</p>
 
             </div>
@@ -624,6 +788,105 @@
 
 
     </main>
+
+
+
+
+    <!-- ================= FILTER SCRIPT ================= -->
+
+    <script>
+
+        const filterButtons =
+            document.querySelectorAll(".sale-filter button");
+
+        const saleCards =
+            document.querySelectorAll(".sale-card");
+
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", function () {
+
+
+                filterButtons.forEach(btn => {
+
+                    btn.classList.remove(
+                        "sale-filter-active"
+                    );
+
+                });
+
+
+                this.classList.add(
+                    "sale-filter-active"
+                );
+
+
+                const filter =
+                    this.dataset.filter;
+
+
+                saleCards.forEach(card => {
+
+
+                    const category =
+                        card.dataset.category;
+
+
+                    const price =
+                        Number(card.dataset.price);
+
+
+                    let show = false;
+
+
+                    if (filter === "all") {
+
+                        show = true;
+
+                    }
+
+
+                    if (
+                        filter === "mens" &&
+                        category === "mens"
+                    ) {
+
+                        show = true;
+
+                    }
+
+
+                    if (
+                        filter === "womens" &&
+                        category === "womens"
+                    ) {
+
+                        show = true;
+
+                    }
+
+
+                    if (
+                        filter === "under" &&
+                        price < 2000
+                    ) {
+
+                        show = true;
+
+                    }
+
+
+                    card.style.display =
+                        show ? "" : "none";
+
+                });
+
+            });
+
+        });
+
+    </script>
 
 
 </body>

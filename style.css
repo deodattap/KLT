@@ -29,7 +29,6 @@ body {
 }
 
 
-
 /* =========================================
    NAVBAR
 ========================================= */
@@ -85,7 +84,6 @@ body {
 }
 
 
-
 /* NAV LINKS */
 
 nav {
@@ -116,7 +114,6 @@ nav a {
 
     white-space: nowrap;
 }
-
 
 
 /* RIGHT SIDE */
@@ -190,7 +187,6 @@ nav a {
 }
 
 
-
 /* =========================================
    LEFT COLUMN
 ========================================= */
@@ -206,7 +202,6 @@ nav a {
     gap: 8px;
 
 }
-
 
 
 /* =========================================
@@ -228,7 +223,6 @@ nav a {
     overflow: hidden;
 
 }
-
 
 
 /* =========================================
@@ -253,7 +247,6 @@ nav a {
     letter-spacing: -5px;
 
 }
-
 
 
 /* =========================================
@@ -282,7 +275,6 @@ nav a {
 }
 
 
-
 /* =========================================
    DESCRIPTION
 ========================================= */
@@ -302,7 +294,6 @@ nav a {
     line-height: 1.5;
 
 }
-
 
 
 /* =========================================
@@ -352,7 +343,6 @@ nav a {
 }
 
 
-
 /* =========================================
    SMALL CARD TEXT
 ========================================= */
@@ -376,7 +366,6 @@ nav a {
     z-index: 2;
 
 }
-
 
 
 /* =========================================
@@ -413,7 +402,6 @@ nav a {
     display: block;
 
 }
-
 
 
 /* =========================================
@@ -459,7 +447,6 @@ nav a {
     cursor: pointer;
 
 }
-
 
 
 /* =========================================
@@ -509,7 +496,6 @@ nav a {
 }
 
 
-
 /* =========================================
    LEARN
 ========================================= */
@@ -546,7 +532,6 @@ nav a {
 }
 
 
-
 /* =========================================
    CONTACT
 ========================================= */
@@ -565,7 +550,6 @@ nav a {
     font-size: 10px;
 
 }
-
 
 
 /* =========================================
@@ -609,7 +593,6 @@ nav a {
     }
 
 }
-
 
 
 /* =========================================
@@ -664,7 +647,6 @@ nav a {
     }
 
 }
-
 
 
 /* =========================================
@@ -951,7 +933,6 @@ nav a {
 }
 
 
-
 /* =========================================
    MENS PAGE
 ========================================= */
@@ -962,7 +943,6 @@ nav a {
 
     margin: 0 12px 30px;
 }
-
 
 
 /* =========================================
@@ -1118,7 +1098,6 @@ nav a {
 }
 
 
-
 /* =========================================
    CATEGORY SECTION
 ========================================= */
@@ -1210,7 +1189,6 @@ nav a {
 }
 
 
-
 /* =========================================
    PRODUCTS
 ========================================= */
@@ -1263,7 +1241,6 @@ nav a {
 
     text-decoration: none;
 }
-
 
 
 /* =========================================
@@ -1370,7 +1347,6 @@ nav a {
 }
 
 
-
 /* PRODUCT INFO */
 
 .product-info {
@@ -1409,7 +1385,6 @@ nav a {
 
     white-space: nowrap;
 }
-
 
 
 /* =========================================
@@ -1508,7 +1483,6 @@ nav a {
 }
 
 
-
 /* =========================================
    FOOTER
 ========================================= */
@@ -1560,7 +1534,6 @@ nav a {
 
     text-align: right;
 }
-
 
 
 /* =========================================
@@ -1620,7 +1593,6 @@ nav a {
     }
 
 }
-
 
 
 /* =========================================
@@ -1801,7 +1773,6 @@ nav a {
 }
 
 
-
 /* =========================================
    HERO
 ========================================= */
@@ -1854,7 +1825,6 @@ nav a {
         );
 
 }
-
 
 
 /* =========================================
@@ -1915,7 +1885,6 @@ nav a {
     margin-bottom: 22px;
 
 }
-
 
 
 /* =========================================
@@ -2022,7 +1991,6 @@ nav a {
 }
 
 
-
 /* =========================================
    TABLET
 ========================================= */
@@ -2043,7 +2011,6 @@ nav a {
     }
 
 }
-
 
 
 /* =========================================
@@ -2115,636 +2082,6 @@ nav a {
 }
 
 /* =========================================================
-   KLT SALE PAGE
-========================================================= */
-
-
-/* =========================================
-   SALE PAGE
-========================================= */
-
-.sale-page {
-
-    width: calc(100% - 24px);
-
-    margin: 0 12px 30px;
-
-}
-
-
-
-/* =========================================
-   SALE HERO
-========================================= */
-
-.sale-hero {
-
-    min-height: 650px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 8px;
-}
-
-
-.sale-hero-left {
-
-    background: #d7d7d3;
-
-    border-radius: 24px;
-
-    padding: 55px;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-
-.sale-hero-left > p:first-child {
-
-    font-size: 10px;
-
-    color: #777;
-
-    margin-bottom: 35px;
-}
-
-
-.sale-hero-left h1 {
-
-    font-size: clamp(80px, 12vw, 190px);
-
-    line-height: 0.75;
-
-    letter-spacing: -10px;
-
-    font-weight: 900;
-}
-
-
-.sale-number {
-
-    position: absolute;
-
-    right: 45px;
-
-    bottom: 80px;
-
-    font-size: clamp(70px, 9vw, 140px);
-
-    font-weight: 900;
-
-    letter-spacing: -8px;
-
-    line-height: 0.8;
-}
-
-
-.sale-description {
-
-    position: absolute;
-
-    left: 55px;
-
-    bottom: 55px;
-
-    max-width: 220px;
-
-    font-size: 12px;
-
-    line-height: 1.5;
-}
-
-
-
-/* SALE HERO IMAGE */
-
-.sale-hero-right {
-
-    border-radius: 24px;
-
-    overflow: hidden;
-
-    position: relative;
-
-    background: #ccc;
-}
-
-
-.sale-hero-right img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-
-.sale-circle {
-
-    position: absolute;
-
-    right: 30px;
-
-    top: 30px;
-
-    width: 90px;
-
-    height: 90px;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.85);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    flex-direction: column;
-
-    text-align: center;
-
-    font-size: 9px;
-
-    font-weight: 700;
-}
-
-
-
-/* =========================================
-   FILTER
-========================================= */
-
-.sale-filter {
-
-    margin-top: 55px;
-
-    padding: 15px 0;
-
-    border-top: 1px solid #aaa;
-
-    border-bottom: 1px solid #aaa;
-
-    display: flex;
-
-    gap: 8px;
-}
-
-
-.sale-filter button {
-
-    border: 1px solid #999;
-
-    background: transparent;
-
-    border-radius: 20px;
-
-    padding: 10px 18px;
-
-    font-size: 9px;
-
-    cursor: pointer;
-
-    transition: 0.2s;
-}
-
-
-.sale-filter button:hover,
-.sale-filter-active {
-
-    background: #111 !important;
-
-    color: white;
-
-    border-color: #111 !important;
-}
-
-
-
-/* =========================================
-   SALE PRODUCTS
-========================================= */
-
-.sale-products {
-
-    margin-top: 100px;
-}
-
-
-.sale-heading {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-end;
-
-    margin-bottom: 35px;
-}
-
-
-.sale-heading p {
-
-    font-size: 9px;
-
-    color: #777;
-
-    margin-bottom: 10px;
-}
-
-
-.sale-heading h2 {
-
-    font-size: clamp(45px, 6vw, 90px);
-
-    line-height: 0.82;
-
-    letter-spacing: -5px;
-
-    font-weight: 900;
-}
-
-
-.sale-heading > span {
-
-    font-size: 9px;
-
-    color: #777;
-}
-
-
-
-/* =========================================
-   SALE GRID
-========================================= */
-
-.sale-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px 10px;
-}
-
-
-.sale-card {
-
-    min-width: 0;
-}
-
-
-.sale-image {
-
-    height: 480px;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    position: relative;
-
-    background: #ddd;
-}
-
-
-.sale-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.5s ease;
-}
-
-
-.sale-card:hover .sale-image img {
-
-    transform: scale(1.04);
-}
-
-
-
-/* DISCOUNT */
-
-.discount {
-
-    position: absolute;
-
-    top: 15px;
-
-    left: 15px;
-
-    background: #111;
-
-    color: white;
-
-    padding: 7px 10px;
-
-    border-radius: 20px;
-
-    font-size: 8px;
-}
-
-
-
-/* SALE INFO */
-
-.sale-info {
-
-    padding: 14px 2px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 15px;
-}
-
-
-.sale-info h3 {
-
-    font-size: 10px;
-
-    margin-bottom: 5px;
-}
-
-
-.sale-info p {
-
-    color: #888;
-
-    font-size: 9px;
-}
-
-
-.sale-info strong {
-
-    display: block;
-
-    font-size: 10px;
-}
-
-
-.sale-info del {
-
-    display: block;
-
-    color: #999;
-
-    font-size: 9px;
-
-    margin-top: 4px;
-}
-
-
-
-/* =========================================
-   FINAL BANNER
-========================================= */
-
-.sale-banner {
-
-    margin-top: 120px;
-
-    min-height: 300px;
-
-    padding: 50px;
-
-    border-radius: 24px;
-
-    background: #111;
-
-    color: white;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-between;
-
-    gap: 30px;
-}
-
-
-.sale-banner p:first-child {
-
-    font-size: 9px;
-
-    color: #999;
-
-    margin-bottom: 15px;
-}
-
-
-.sale-banner h2 {
-
-    font-size: clamp(50px, 7vw, 100px);
-
-    line-height: 0.8;
-
-    letter-spacing: -6px;
-}
-
-
-.sale-banner > p {
-
-    max-width: 200px;
-
-    font-size: 11px;
-
-    line-height: 1.5;
-
-    color: #bbb;
-}
-
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-    .sale-hero {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .sale-hero-left {
-
-        min-height: 500px;
-
-    }
-
-
-    .sale-hero-right {
-
-        height: 600px;
-
-    }
-
-
-    .sale-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-
-    .sale-image {
-
-        height: 400px;
-
-    }
-
-}
-
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .sale-page {
-
-        width: calc(100% - 14px);
-
-        margin: 0 7px 20px;
-
-    }
-
-
-    .sale-hero-left {
-
-        min-height: 430px;
-
-        padding: 30px;
-
-        border-radius: 18px;
-
-    }
-
-
-    .sale-hero-left h1 {
-
-        font-size: 90px;
-
-        letter-spacing: -6px;
-
-    }
-
-
-    .sale-number {
-
-        right: 25px;
-
-        bottom: 100px;
-
-        font-size: 70px;
-
-    }
-
-
-    .sale-description {
-
-        left: 30px;
-
-        bottom: 30px;
-
-    }
-
-
-    .sale-hero-right {
-
-        height: 500px;
-
-        border-radius: 18px;
-
-    }
-
-
-    .sale-filter {
-
-        overflow-x: auto;
-
-        white-space: nowrap;
-
-    }
-
-
-    .sale-grid {
-
-        grid-template-columns:
-            1fr 1fr;
-
-        gap: 20px 7px;
-
-    }
-
-
-    .sale-image {
-
-        height: 280px;
-
-        border-radius: 14px;
-
-    }
-
-
-    .sale-heading h2 {
-
-        font-size: 42px;
-
-    }
-
-
-    .sale-heading > span {
-
-        display: none;
-
-    }
-
-
-    .sale-banner {
-
-        margin-top: 70px;
-
-        min-height: 300px;
-
-        padding: 30px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        justify-content: flex-end;
-
-        border-radius: 18px;
-
-    }
-
-}
-
-/* =========================================================
    KLT DISCOVER PAGE
 ========================================================= */
 
@@ -2760,7 +2097,6 @@ nav a {
     margin: 0 12px 30px;
 
 }
-
 
 
 /* =========================================
@@ -2848,7 +2184,6 @@ nav a {
 
     color: #777;
 }
-
 
 
 /* =========================================
@@ -2953,7 +2288,6 @@ nav a {
 }
 
 
-
 /* =========================================
    SECTION HEADING
 ========================================= */
@@ -2998,7 +2332,6 @@ nav a {
 
     color: #777;
 }
-
 
 
 /* =========================================
@@ -3115,7 +2448,6 @@ nav a {
 }
 
 
-
 /* =========================================
    JOURNAL
 ========================================= */
@@ -3212,7 +2544,6 @@ nav a {
 }
 
 
-
 /* =========================================
    ABOUT
 ========================================= */
@@ -3293,7 +2624,6 @@ nav a {
 
     font-size: 9px;
 }
-
 
 
 /* =========================================
@@ -3378,7 +2708,6 @@ nav a {
 }
 
 
-
 /* =========================================
    TABLET
 ========================================= */
@@ -3429,7 +2758,6 @@ nav a {
     }
 
 }
-
 
 
 /* =========================================
@@ -3710,7 +3038,6 @@ nav a {
 }
 
 
-
 /* =========================================
    PRODUCT DETAILS
 ========================================= */
@@ -3774,7 +3101,6 @@ nav a {
     color: #666;
 
 }
-
 
 
 /* =========================================
@@ -3853,7 +3179,6 @@ nav a {
 }
 
 
-
 /* =========================================
    ADD TO BAG
 ========================================= */
@@ -3905,7 +3230,6 @@ nav a {
 }
 
 
-
 /* =========================================
    WISHLIST
 ========================================= */
@@ -3929,7 +3253,6 @@ nav a {
     cursor: pointer;
 
 }
-
 
 
 /* =========================================
@@ -3999,7 +3322,6 @@ summary::after {
     color: #777;
 
 }
-
 
 
 /* =========================================
@@ -4138,7 +3460,6 @@ summary::after {
 }
 
 
-
 /* =========================================
    TABLET
 ========================================= */
@@ -4178,7 +3499,6 @@ summary::after {
     }
 
 }
-
 
 
 /* =========================================
@@ -4298,7 +3618,6 @@ summary::after {
 }
 
 
-
 /* LEFT SIDE */
 
 .left-column {
@@ -4316,7 +3635,6 @@ summary::after {
     gap: 8px;
 
 }
-
 
 
 /* TEXT CARD */
@@ -4342,7 +3660,6 @@ summary::after {
     overflow: hidden;
 
 }
-
 
 
 /* HEADING */
@@ -4382,7 +3699,6 @@ summary::after {
 }
 
 
-
 /* DESCRIPTION */
 
 .text-card p {
@@ -4402,7 +3718,6 @@ summary::after {
     line-height: 1.5;
 
 }
-
 
 
 /* BOTTOM TWO IMAGES */
@@ -4456,7 +3771,6 @@ summary::after {
 }
 
 
-
 /* SMALL IMAGE TEXT */
 
 .card-title {
@@ -4476,7 +3790,6 @@ summary::after {
     font-weight: 900;
 
 }
-
 
 
 /* =========================================================
@@ -4513,7 +3826,6 @@ summary::after {
     display: block;
 
 }
-
 
 
 /* SHOP BUTTON */
@@ -4557,7 +3869,6 @@ summary::after {
     cursor: pointer;
 
 }
-
 
 
 /* HERO BOTTOM BUTTONS */
@@ -4642,7 +3953,6 @@ summary::after {
 }
 
 
-
 /* =========================================================
    TABLET
 ========================================================= */
@@ -4688,7 +3998,6 @@ summary::after {
     }
 
 }
-
 
 
 /* =========================================================
@@ -4783,4 +4092,409 @@ summary::after {
 
     }
 
+}
+
+/* =========================================================
+   KLT SALE PAGE — FINAL CLEAN VERSION
+========================================================= */
+
+.sale-page {
+    width: calc(100% - 24px);
+    margin: 0 12px 30px;
+    overflow: hidden;
+}
+
+/* ================= SALE HERO ================= */
+
+.sale-hero {
+    width: 100%;
+    height: 720px;
+    display: grid;
+    grid-template-columns: 46% 54%;
+    gap: 8px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.sale-hero-left {
+    position: relative;
+    min-width: 0;
+    height: 720px;
+    padding: 45px 50px;
+    box-sizing: border-box;
+    background: #d7d7d3;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.sale-hero-left > p:first-child {
+    margin: 0;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.sale-hero-left h1 {
+    margin: 72px 0 0;
+    font-size: clamp(80px, 9vw, 145px);
+    line-height: 0.78;
+    letter-spacing: -8px;
+    font-weight: 900;
+}
+
+.sale-number {
+    margin-top: 85px;
+    font-size: clamp(75px, 8vw, 125px);
+    line-height: 0.8;
+    letter-spacing: -7px;
+    font-weight: 900;
+    color: #4f4f4b;
+}
+
+.sale-description {
+    margin: auto 0 0;
+    max-width: 300px;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ================= HERO IMAGE ================= */
+
+.sale-hero-right {
+    position: relative;
+    min-width: 0;
+    height: 720px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #d9d9d5;
+}
+
+.sale-hero-right > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* ================= SALE CIRCLE ================= */
+
+.sale-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: rgba(245, 245, 242, 0.88);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #111;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+/* ================= FILTER ================= */
+
+.sale-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 5%;
+    border-top: 1px solid #c5c5c2;
+    border-bottom: 1px solid #c5c5c2;
+    overflow-x: auto;
+}
+
+.sale-filter button {
+    padding: 11px 20px;
+    border: 1px solid #bdbdb9;
+    border-radius: 30px;
+    background: transparent;
+    color: #111;
+    font-size: 10px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.sale-filter button:hover,
+.sale-filter-active {
+    background: #111 !important;
+    border-color: #111 !important;
+    color: white !important;
+}
+
+/* ================= SALE PRODUCTS ================= */
+
+.sale-products {
+    padding: 100px 5% 120px;
+}
+
+.sale-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.sale-heading p {
+    margin: 0 0 15px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.sale-heading h2 {
+    margin: 0;
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: 0.82;
+    letter-spacing: -5px;
+    font-weight: 900;
+}
+
+.sale-heading > span {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.sale-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 18px;
+}
+
+.sale-card {
+    min-width: 0;
+}
+
+.sale-product-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.sale-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #e0e0dc;
+}
+
+.sale-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sale-card:hover .sale-image img {
+    transform: scale(1.04);
+}
+
+.discount {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #111;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.sale-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+.sale-info h3 {
+    margin: 0 0 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sale-info p {
+    margin: 0;
+    color: #777;
+    font-size: 11px;
+}
+
+.sale-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+    white-space: nowrap;
+}
+
+.sale-price strong {
+    font-size: 14px;
+}
+
+.sale-price del {
+    color: #888;
+    font-size: 11px;
+}
+
+/* ================= FINAL BANNER ================= */
+
+.sale-banner {
+    min-height: 55vh;
+    padding: 90px 5%;
+    box-sizing: border-box;
+    background: #d0d0cc;
+    color: #4f4f4b;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.sale-banner p:first-child {
+    margin: 0 0 25px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.sale-banner h2 {
+    margin: 0;
+    color: #555550;
+    font-size: clamp(65px, 9vw, 135px);
+    line-height: 0.8;
+    letter-spacing: -6px;
+    font-weight: 900;
+}
+
+.sale-banner > p:last-child {
+    max-width: 280px;
+    margin: 0;
+    color: #666661;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .sale-hero {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .sale-hero-left {
+        height: 520px;
+    }
+
+    .sale-hero-right {
+        height: 650px;
+    }
+
+    .sale-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sale-banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .sale-page {
+        width: calc(100% - 14px);
+        margin: 0 7px 20px;
+    }
+
+    .sale-hero-left {
+        height: 430px;
+        padding: 30px;
+        border-radius: 18px;
+    }
+
+    .sale-hero-left h1 {
+        margin-top: 55px;
+        font-size: 75px;
+        letter-spacing: -5px;
+    }
+
+    .sale-number {
+        margin-top: 55px;
+        font-size: 70px;
+        letter-spacing: -5px;
+    }
+
+    .sale-description {
+        max-width: 250px;
+        font-size: 11px;
+    }
+
+    .sale-hero-right {
+        height: 600px;
+        border-radius: 18px;
+    }
+
+    .sale-circle {
+        width: 90px;
+        height: 90px;
+        font-size: 10px;
+    }
+
+    .sale-filter {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sale-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 8px;
+    }
+
+    .sale-products {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .sale-heading {
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .sale-heading h2 {
+        font-size: 50px;
+    }
+
+    .sale-heading > span {
+        display: none;
+    }
+
+    .sale-banner {
+        min-height: 420px;
+        padding: 70px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .sale-banner h2 {
+        font-size: 70px;
+        letter-spacing: -4px;
+    }
 }
