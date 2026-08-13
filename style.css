@@ -2081,821 +2081,6 @@ nav a {
 
 }
 
-/* =========================================================
-   KLT DISCOVER PAGE
-========================================================= */
-
-
-/* =========================================
-   PAGE
-========================================= */
-
-.discover-page {
-
-    width: calc(100% - 24px);
-
-    margin: 0 12px 30px;
-
-}
-
-
-/* =========================================
-   INTRO
-========================================= */
-
-.discover-intro {
-
-    min-height: 680px;
-
-    background: #d7d7d3;
-
-    border-radius: 24px;
-
-    padding: 45px;
-
-    position: relative;
-
-    overflow: hidden;
-
-}
-
-
-.discover-intro-small {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    font-size: 9px;
-
-    color: #777;
-}
-
-
-.discover-intro-title {
-
-    position: absolute;
-
-    left: 45px;
-
-    bottom: 65px;
-}
-
-
-.discover-intro-title h1 {
-
-    font-size: clamp(65px, 10vw, 160px);
-
-    line-height: 0.78;
-
-    letter-spacing: -8px;
-
-    font-weight: 900;
-}
-
-
-.discover-intro-description {
-
-    position: absolute;
-
-    right: 45px;
-
-    bottom: 65px;
-
-    width: 250px;
-}
-
-
-.discover-intro-description p {
-
-    font-size: 12px;
-
-    line-height: 1.5;
-
-    margin-bottom: 25px;
-}
-
-
-.discover-intro-description span {
-
-    font-size: 8px;
-
-    color: #777;
-}
-
-
-/* =========================================
-   FEATURE STORY
-========================================= */
-
-.discover-feature {
-
-    margin-top: 100px;
-
-    display: grid;
-
-    grid-template-columns: 1.3fr 0.7fr;
-
-    min-height: 700px;
-
-    border-radius: 24px;
-
-    overflow: hidden;
-
-    background: #d7d7d3;
-}
-
-
-.discover-feature-image {
-
-    min-height: 700px;
-}
-
-
-.discover-feature-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-
-.discover-feature-content {
-
-    padding: 60px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-
-.story-number {
-
-    font-size: 9px;
-
-    color: #777;
-
-    margin-bottom: 35px;
-}
-
-
-.discover-feature-content h2 {
-
-    font-size: clamp(45px, 5vw, 80px);
-
-    line-height: 0.86;
-
-    letter-spacing: -5px;
-
-    margin-bottom: 35px;
-}
-
-
-.discover-feature-content > p:not(.story-number) {
-
-    max-width: 290px;
-
-    font-size: 12px;
-
-    line-height: 1.6;
-
-    margin-bottom: 35px;
-}
-
-
-.discover-feature-content a {
-
-    color: #111;
-
-    text-decoration: none;
-
-    font-size: 9px;
-
-    display: flex;
-
-    gap: 20px;
-
-    align-items: center;
-}
-
-
-/* =========================================
-   SECTION HEADING
-========================================= */
-
-.discover-section-heading {
-
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-between;
-
-    margin-bottom: 35px;
-}
-
-
-.discover-section-heading p {
-
-    font-size: 9px;
-
-    color: #777;
-
-    margin-bottom: 10px;
-}
-
-
-.discover-section-heading h2 {
-
-    font-size: clamp(40px, 5vw, 75px);
-
-    line-height: 0.85;
-
-    letter-spacing: -5px;
-
-    font-weight: 900;
-}
-
-
-.discover-section-heading > span {
-
-    font-size: 9px;
-
-    color: #777;
-}
-
-
-/* =========================================
-   COLLECTIONS
-========================================= */
-
-.discover-collections {
-
-    margin-top: 120px;
-}
-
-
-.collection-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 10px;
-}
-
-
-.collection-card {
-
-    height: 600px;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    position: relative;
-
-    background: #ccc;
-}
-
-
-.collection-card img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.6s ease;
-}
-
-
-.collection-card:hover img {
-
-    transform: scale(1.04);
-}
-
-
-.collection-card::after {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,0.55),
-            transparent 55%
-        );
-}
-
-
-.collection-overlay {
-
-    position: absolute;
-
-    z-index: 2;
-
-    left: 25px;
-
-    right: 25px;
-
-    bottom: 25px;
-
-    color: white;
-}
-
-
-.collection-overlay p {
-
-    font-size: 9px;
-
-    margin-bottom: 12px;
-
-    opacity: 0.7;
-}
-
-
-.collection-overlay h3 {
-
-    font-size: 25px;
-
-    letter-spacing: -1px;
-
-    margin-bottom: 15px;
-}
-
-
-.collection-overlay span {
-
-    font-size: 8px;
-}
-
-
-/* =========================================
-   JOURNAL
-========================================= */
-
-.discover-journal {
-
-    margin-top: 130px;
-}
-
-
-.journal-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 10px;
-}
-
-
-.journal-card {
-
-    min-width: 0;
-}
-
-
-.journal-image {
-
-    height: 420px;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    background: #ddd;
-}
-
-
-.journal-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.5s ease;
-}
-
-
-.journal-card:hover
-.journal-image img {
-
-    transform: scale(1.04);
-}
-
-
-.journal-info {
-
-    padding: 15px 2px;
-}
-
-
-.journal-info > span {
-
-    font-size: 8px;
-
-    color: #888;
-}
-
-
-.journal-info h3 {
-
-    font-size: 18px;
-
-    line-height: 1;
-
-    letter-spacing: -0.7px;
-
-    margin: 12px 0 18px;
-}
-
-
-.journal-info a {
-
-    color: #111;
-
-    text-decoration: none;
-
-    font-size: 9px;
-}
-
-
-/* =========================================
-   ABOUT
-========================================= */
-
-.discover-about {
-
-    margin-top: 130px;
-
-    min-height: 600px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 2fr;
-
-    background: #111;
-
-    color: white;
-
-    border-radius: 24px;
-
-    overflow: hidden;
-}
-
-
-.about-left {
-
-    padding: 45px;
-
-    font-size: 9px;
-
-    color: #888;
-}
-
-
-.about-right {
-
-    padding: 80px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-
-.about-right h2 {
-
-    font-size: clamp(45px, 6vw, 90px);
-
-    line-height: 0.82;
-
-    letter-spacing: -6px;
-
-    margin-bottom: 45px;
-}
-
-
-.about-right p {
-
-    max-width: 400px;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-
-    color: #bbb;
-
-    margin-bottom: 35px;
-}
-
-
-.about-right a {
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 9px;
-}
-
-
-/* =========================================
-   NEWSLETTER
-========================================= */
-
-.discover-newsletter {
-
-    margin-top: 130px;
-
-    min-height: 450px;
-
-    padding: 55px;
-
-    border-radius: 24px;
-
-    background: #d7d7d3;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-}
-
-
-.discover-newsletter > p {
-
-    font-size: 9px;
-
-    color: #777;
-}
-
-
-.discover-newsletter h2 {
-
-    font-size: clamp(55px, 8vw, 120px);
-
-    line-height: 0.8;
-
-    letter-spacing: -7px;
-}
-
-
-.discover-newsletter form {
-
-    display: flex;
-
-    width: 100%;
-
-    max-width: 500px;
-
-    border-bottom: 1px solid #777;
-
-    padding-bottom: 10px;
-}
-
-
-.discover-newsletter input {
-
-    flex: 1;
-
-    border: none;
-
-    outline: none;
-
-    background: transparent;
-
-    font-size: 10px;
-}
-
-
-.discover-newsletter button {
-
-    border: none;
-
-    background: transparent;
-
-    font-size: 9px;
-
-    cursor: pointer;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-    .discover-feature {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .discover-feature-image {
-
-        height: 550px;
-
-    }
-
-
-    .collection-grid,
-    .journal-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-
-    .collection-card {
-
-        height: 500px;
-
-    }
-
-
-    .discover-about {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .about-left {
-
-        padding-bottom: 0;
-
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-    .discover-page {
-
-        width: calc(100% - 14px);
-
-        margin: 0 7px 20px;
-
-    }
-
-
-    .discover-intro {
-
-        min-height: 600px;
-
-        padding: 30px;
-
-        border-radius: 18px;
-
-    }
-
-
-    .discover-intro-title {
-
-        left: 30px;
-
-        bottom: 100px;
-
-    }
-
-
-    .discover-intro-title h1 {
-
-        font-size: 60px;
-
-        letter-spacing: -4px;
-
-    }
-
-
-    .discover-intro-description {
-
-        left: 30px;
-
-        right: auto;
-
-        bottom: 30px;
-
-        width: 250px;
-
-    }
-
-
-    .discover-feature {
-
-        margin-top: 70px;
-
-        border-radius: 18px;
-
-    }
-
-
-    .discover-feature-image {
-
-        min-height: 450px;
-
-        height: 450px;
-
-    }
-
-
-    .discover-feature-content {
-
-        padding: 35px;
-
-        min-height: 500px;
-
-    }
-
-
-    .collection-grid,
-    .journal-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .collection-card {
-
-        height: 500px;
-
-    }
-
-
-    .journal-image {
-
-        height: 400px;
-
-    }
-
-
-    .discover-about {
-
-        margin-top: 80px;
-
-        border-radius: 18px;
-
-    }
-
-
-    .about-right {
-
-        padding: 35px;
-
-    }
-
-
-    .discover-newsletter {
-
-        margin-top: 80px;
-
-        min-height: 400px;
-
-        padding: 30px;
-
-        border-radius: 18px;
-
-    }
-
-}
 
 /* =========================================================
    KLT PRODUCT PAGE
@@ -4497,4 +3682,872 @@ summary::after {
         font-size: 70px;
         letter-spacing: -4px;
     }
+}
+
+/* =========================================================
+   KLT DISCOVER PAGE
+========================================================= */
+
+.discover-page {
+    width: calc(100% - 24px);
+    margin: 0 12px 30px;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.discover-intro {
+    min-height: 680px;
+
+    padding: 60px 5%;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2.2fr 1fr;
+
+    align-items: center;
+
+    gap: 40px;
+
+    background: #d7d7d3;
+
+    border-radius: 24px;
+
+    margin-top: 10px;
+}
+
+
+.discover-intro-small {
+    align-self: stretch;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.discover-intro-small p,
+.discover-intro-small span {
+    margin: 0;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: #777;
+}
+
+
+.discover-intro-title h1 {
+    margin: 0;
+
+    font-size: clamp(75px, 9vw, 145px);
+
+    line-height: 0.78;
+
+    letter-spacing: -7px;
+
+    font-weight: 900;
+}
+
+
+.discover-intro-description {
+    align-self: stretch;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    gap: 35px;
+}
+
+
+.discover-intro-description p {
+    max-width: 260px;
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #333;
+}
+
+
+.discover-intro-description span {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   CAMPAIGN
+========================================================= */
+
+.discover-campaign {
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.8fr;
+
+    min-height: 720px;
+
+    gap: 50px;
+
+    padding: 120px 5%;
+
+    align-items: center;
+}
+
+
+.discover-campaign-image {
+    height: 680px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #dededb;
+}
+
+
+.discover-campaign-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+
+.discover-campaign-image:hover img {
+    transform: scale(1.03);
+}
+
+
+.discover-campaign-content {
+    max-width: 430px;
+}
+
+
+.discover-campaign-content > p:first-child,
+.discover-section-heading p,
+.discover-design-content > p,
+.discover-collection-content > p {
+    margin: 0 0 22px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.discover-campaign-content h2,
+.discover-design-content h2,
+.discover-collection-content h2 {
+    margin: 0;
+
+    font-size: clamp(55px, 6vw, 95px);
+
+    line-height: 0.82;
+
+    letter-spacing: -5px;
+
+    font-weight: 900;
+}
+
+
+.discover-copy {
+    margin: 45px 0;
+
+    max-width: 350px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.discover-campaign-content a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #111;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #999;
+
+    padding-bottom: 8px;
+}
+
+
+/* =========================================================
+   BEHIND THE SCENES
+========================================================= */
+
+.discover-behind {
+    padding: 110px 5% 130px;
+
+    background: #eeeeeb;
+}
+
+
+.discover-section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 55px;
+}
+
+
+.discover-section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(55px, 7vw, 105px);
+
+    line-height: 0.82;
+
+    letter-spacing: -5px;
+
+    font-weight: 900;
+}
+
+
+.discover-section-heading > span {
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+.discover-bts-grid {
+    display: grid;
+
+    grid-template-columns: 1.6fr 0.8fr;
+
+    gap: 50px;
+
+    align-items: end;
+}
+
+
+.discover-bts-image {
+    height: 650px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+}
+
+
+.discover-bts-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.discover-bts-text {
+    padding-bottom: 30px;
+}
+
+
+.discover-bts-text p {
+    margin: 0 0 35px;
+
+    font-size: clamp(35px, 4vw, 65px);
+
+    line-height: 0.9;
+
+    letter-spacing: -3px;
+
+    font-weight: 800;
+}
+
+
+.discover-bts-text span {
+    display: block;
+
+    max-width: 300px;
+
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DESIGN
+========================================================= */
+
+.discover-design {
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    min-height: 720px;
+
+    align-items: center;
+
+    gap: 90px;
+
+    padding: 120px 8%;
+}
+
+
+.discover-design-image {
+    height: 560px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #dededb;
+}
+
+
+.discover-design-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.discover-design-content {
+    max-width: 500px;
+}
+
+
+.discover-design-content > p:not(:first-child) {
+    margin: 45px 0;
+
+    max-width: 360px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.discover-design-content > span {
+    color: #888;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.discover-details {
+    padding: 110px 5% 130px;
+
+    background: #d7d7d3;
+}
+
+
+.discover-details-grid {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.discover-details-image {
+    height: 600px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+}
+
+
+.discover-details-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.discover-details-copy p {
+    margin: 0 0 40px;
+
+    font-size: clamp(40px, 5vw, 75px);
+
+    line-height: 0.88;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+
+    color: #4f4f4b;
+}
+
+
+.discover-details-copy span {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   LOOKBOOK
+========================================================= */
+
+.discover-lookbook {
+    padding: 120px 5%;
+
+    background: #eeeeeb;
+}
+
+
+.discover-lookbook-image {
+    position: relative;
+
+    height: 760px;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+}
+
+
+.discover-lookbook-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.lookbook-overlay {
+    position: absolute;
+
+    left: 45px;
+
+    bottom: 40px;
+
+    color: white;
+}
+
+
+.lookbook-overlay span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.lookbook-overlay h3 {
+    margin: 0;
+
+    font-size: clamp(45px, 6vw, 90px);
+
+    line-height: 0.82;
+
+    letter-spacing: -5px;
+
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   COLLECTION
+========================================================= */
+
+.discover-collection {
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    min-height: 720px;
+
+    align-items: center;
+
+    gap: 80px;
+
+    padding: 120px 7%;
+
+    background: #d7d7d3;
+}
+
+
+.discover-collection-content {
+    max-width: 430px;
+}
+
+
+.discover-collection-content > p:not(:first-child) {
+    margin: 45px 0;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.discover-collection-image {
+    height: 620px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+}
+
+
+.discover-collection-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.collection-links {
+    display: flex;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+.collection-links a {
+    color: #111;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #999;
+
+    padding-bottom: 7px;
+}
+
+
+/* =========================================================
+   FINAL STATEMENT
+========================================================= */
+
+.discover-final {
+    min-height: 650px;
+
+    padding: 90px 5%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: #cfcfca;
+
+    color: #555550;
+}
+
+
+.discover-final p {
+    margin: 0 0 35px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.discover-final h2 {
+    margin: 0;
+
+    font-size: clamp(75px, 11vw, 170px);
+
+    line-height: 0.78;
+
+    letter-spacing: -8px;
+
+    font-weight: 900;
+}
+
+
+.discover-final span {
+    margin-top: 30px;
+
+    color: #777;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .discover-intro {
+        grid-template-columns: 1fr;
+
+        min-height: 650px;
+
+        gap: 40px;
+
+        padding: 50px;
+    }
+
+
+    .discover-intro-small {
+        flex-direction: row;
+
+        align-items: flex-start;
+    }
+
+
+    .discover-intro-description {
+        gap: 20px;
+    }
+
+
+    .discover-campaign,
+    .discover-design,
+    .discover-collection {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 90px 6%;
+    }
+
+
+    .discover-campaign-image {
+        height: 600px;
+    }
+
+
+    .discover-bts-grid,
+    .discover-details-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .discover-bts-image,
+    .discover-details-image {
+        height: 600px;
+    }
+
+
+    .discover-design-image {
+        height: 600px;
+    }
+
+
+    .discover-collection-image {
+        height: 600px;
+    }
+
+
+    .discover-lookbook-image {
+        height: 650px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .discover-page {
+        width: calc(100% - 14px);
+
+        margin: 0 7px 20px;
+    }
+
+
+    .discover-intro {
+        min-height: 600px;
+
+        padding: 30px;
+
+        border-radius: 18px;
+    }
+
+
+    .discover-intro-title h1 {
+        font-size: 65px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .discover-intro-description p {
+        font-size: 12px;
+    }
+
+
+    .discover-campaign,
+    .discover-design,
+    .discover-collection {
+        padding: 75px 6%;
+    }
+
+
+    .discover-campaign-image,
+    .discover-bts-image,
+    .discover-details-image,
+    .discover-design-image,
+    .discover-collection-image {
+        height: 480px;
+
+        border-radius: 18px;
+    }
+
+
+    .discover-section-heading {
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    .discover-section-heading h2 {
+        font-size: 52px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .discover-section-heading > span {
+        display: none;
+    }
+
+
+    .discover-bts-text p,
+    .discover-details-copy p {
+        font-size: 42px;
+    }
+
+
+    .discover-lookbook {
+        padding: 75px 6%;
+    }
+
+
+    .discover-lookbook-image {
+        height: 520px;
+
+        border-radius: 18px;
+    }
+
+
+    .lookbook-overlay {
+        left: 25px;
+
+        bottom: 25px;
+    }
+
+
+    .lookbook-overlay h3 {
+        font-size: 50px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .discover-final {
+        min-height: 500px;
+
+        padding: 70px 20px;
+    }
+
+
+    .discover-final h2 {
+        font-size: 75px;
+
+        letter-spacing: -5px;
+    }
+
 }
