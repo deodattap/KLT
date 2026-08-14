@@ -4551,3 +4551,72 @@ summary::after {
     }
 
 }
+
+/* =========================================================
+   KLT PRODUCT CARDS — MATCH SALE STYLE
+========================================================= */
+
+.product-card {
+    color: #111;
+}
+
+.product-card a,
+.product-card a:link,
+.product-card a:visited,
+.product-card a:hover,
+.product-card a:active {
+    color: #111;
+    text-decoration: none;
+}
+
+.product-card .product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card .product-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+.product-card .product-info h3 {
+    margin: 0 0 6px;
+    color: #111;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.product-card .product-info p {
+    margin: 0;
+    color: #777;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.product-card .product-info strong {
+    color: #111;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Prevent browser link styling anywhere inside cards */
+
+.product-card h3,
+.product-card h3:hover,
+.product-card p,
+.product-card p:hover,
+.product-card strong,
+.product-card strong:hover {
+    text-decoration: none;
+}
+
+/* Keep card clean on hover */
+
+.product-card:hover a {
+    color: #111;
+}
