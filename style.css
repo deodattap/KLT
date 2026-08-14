@@ -4620,3 +4620,662 @@ summary::after {
 .product-card:hover a {
     color: #111;
 }
+
+/* =========================================================
+   KLT SHOPPING BAG
+========================================================= */
+
+.bag-page {
+    width: 100%;
+    padding: 70px 5vw 100px;
+    box-sizing: border-box;
+}
+
+
+/* ================= BAG HEADER ================= */
+
+.bag-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.bag-header p {
+    margin: 0 0 14px;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    color: #777;
+}
+
+.bag-header h1 {
+    margin: 0;
+    font-size: clamp(42px, 6vw, 82px);
+    line-height: .9;
+    letter-spacing: -3px;
+    font-weight: 500;
+    color: #111;
+}
+
+.bag-header > span {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #777;
+}
+
+
+/* ================= BAG LAYOUT ================= */
+
+.bag-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    gap: 70px;
+    padding-top: 45px;
+    align-items: start;
+}
+
+
+/* ================= BAG ITEMS ================= */
+
+.bag-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bag-item {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 28px;
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #dedede;
+}
+
+.bag-item-image {
+    width: 180px;
+    height: 225px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.bag-item-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ================= ITEM INFO ================= */
+
+.bag-item-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 225px;
+}
+
+.bag-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.bag-category {
+    margin: 0 0 12px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #888;
+}
+
+.bag-item-top h2 {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.1;
+    letter-spacing: .3px;
+    font-weight: 600;
+    color: #111;
+}
+
+.bag-size {
+    margin: 12px 0 0;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    color: #777;
+}
+
+.bag-item-top > strong {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    white-space: nowrap;
+}
+
+
+/* ================= ITEM BOTTOM ================= */
+
+.bag-item-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    height: 38px;
+}
+
+.quantity-control button {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #111;
+}
+
+.quantity-control button:hover {
+    background: #f1f1f1;
+}
+
+.quantity-control span {
+    width: 35px;
+    text-align: center;
+    font-size: 11px;
+    color: #111;
+}
+
+.remove-item {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #777;
+}
+
+.remove-item:hover {
+    color: #111;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.bag-summary {
+    position: sticky;
+    top: 30px;
+    padding: 28px;
+    background: #f1f1f1;
+}
+
+.summary-label {
+    margin: 0 0 30px;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    color: #777;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.summary-row span {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.summary-row strong {
+    font-size: 13px;
+    font-weight: 500;
+    color: #111;
+}
+
+#shipping {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.summary-divider {
+    width: 100%;
+    height: 1px;
+    background: #d1d1d1;
+    margin: 25px 0;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.summary-total span {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    color: #111;
+}
+
+.summary-total strong {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+}
+
+
+/* ================= CHECKOUT ================= */
+
+.checkout-button {
+    width: 100%;
+    height: 58px;
+    border: 0;
+    background: #111;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.checkout-button b {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.checkout-button:hover {
+    background: #2b2b2b;
+}
+
+.shipping-note {
+    margin: 18px 0 0;
+    font-size: 9px;
+    line-height: 1.6;
+    color: #777;
+    text-align: center;
+}
+
+
+/* ================= EMPTY BAG ================= */
+
+.empty-bag {
+    min-height: 430px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.empty-bag p {
+    margin: 0 0 20px;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    color: #777;
+}
+
+.empty-bag h2 {
+    margin: 0;
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: .88;
+    letter-spacing: -3px;
+    font-weight: 500;
+    color: #111;
+}
+
+.empty-bag span {
+    margin-top: 25px;
+    font-size: 11px;
+    color: #777;
+}
+
+.empty-bag a {
+    margin-top: 30px;
+    color: #111;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-bottom: 1px solid #111;
+    padding-bottom: 5px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .bag-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .bag-summary {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .bag-page {
+        padding: 45px 20px 70px;
+    }
+
+    .bag-header {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .bag-header h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .bag-item {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .bag-item-image {
+        width: 110px;
+        height: 145px;
+    }
+
+    .bag-item-info {
+        min-height: 145px;
+    }
+
+    .bag-item-top {
+        gap: 10px;
+    }
+
+    .bag-item-top h2 {
+        font-size: 13px;
+    }
+
+    .bag-item-top > strong {
+        font-size: 12px;
+    }
+
+    .bag-summary {
+        padding: 22px;
+    }
+
+}
+
+/* =========================================================
+   KLT WISHLIST
+========================================================= */
+
+.wishlist-page {
+    width: 100%;
+    padding: 70px 5vw 100px;
+    box-sizing: border-box;
+}
+
+
+/* ================= HEADER ================= */
+
+.wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.wishlist-header p {
+    margin: 0 0 14px;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    color: #777;
+}
+
+.wishlist-header h1 {
+    margin: 0;
+    font-size: clamp(42px, 6vw, 82px);
+    line-height: .9;
+    letter-spacing: -3px;
+    font-weight: 500;
+    color: #111;
+}
+
+.wishlist-header > span {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #777;
+}
+
+
+/* ================= GRID ================= */
+
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 22px;
+    padding-top: 45px;
+}
+
+
+/* ================= CARD ================= */
+
+.wishlist-card {
+    min-width: 0;
+}
+
+.wishlist-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #eee;
+}
+
+.wishlist-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.wishlist-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.wishlist-card:hover .wishlist-image img {
+    transform: scale(1.025);
+}
+
+
+/* ================= REMOVE ================= */
+
+.wishlist-remove {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.9);
+    color: #111;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.wishlist-remove:hover {
+    background: #111;
+    color: white;
+}
+
+
+/* ================= INFO ================= */
+
+.wishlist-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+.wishlist-info p {
+    margin: 0 0 7px;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    color: #888;
+}
+
+.wishlist-info h2 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    color: #111;
+}
+
+.wishlist-info strong {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111;
+    white-space: nowrap;
+}
+
+
+/* ================= ACTIONS ================= */
+
+.wishlist-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 18px;
+}
+
+.wishlist-actions a,
+.wishlist-bag {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+}
+
+.wishlist-actions a {
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid #111;
+    padding-bottom: 4px;
+}
+
+.wishlist-bag {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    color: #777;
+    cursor: pointer;
+}
+
+.wishlist-bag:hover {
+    color: #111;
+}
+
+
+/* ================= EMPTY ================= */
+
+.empty-wishlist {
+    min-height: 500px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.empty-wishlist p {
+    margin: 0 0 20px;
+    font-size: 9px;
+    letter-spacing: 1.7px;
+    color: #777;
+}
+
+.empty-wishlist h2 {
+    margin: 0;
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: .88;
+    letter-spacing: -3px;
+    font-weight: 500;
+    color: #111;
+}
+
+.empty-wishlist span {
+    margin-top: 25px;
+    font-size: 11px;
+    color: #777;
+}
+
+.empty-wishlist a {
+    margin-top: 30px;
+    color: #111;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-bottom: 1px solid #111;
+    padding-bottom: 5px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .wishlist-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 16px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .wishlist-page {
+        padding: 45px 20px 70px;
+    }
+
+    .wishlist-header {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .wishlist-header h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .wishlist-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 30px;
+    }
+
+    .wishlist-actions {
+        margin-top: 15px;
+    }
+
+}

@@ -52,7 +52,10 @@
             <div class="shop-search">
 
                 <span>⌕</span>
-                <span>Search</span>
+
+                <span>
+                    Search
+                </span>
 
             </div>
 
@@ -104,6 +107,7 @@
 
             <div class="thumbnail-row">
 
+
                 <button class="thumbnail active">
 
                     <img
@@ -135,6 +139,7 @@
                     >
 
                 </button>
+
 
             </div>
 
@@ -185,6 +190,7 @@
 
 
 
+
             <!-- ================= SIZE ================= -->
 
             <div class="size-section">
@@ -206,17 +212,49 @@
 
                 <div class="sizes">
 
-                    <button>S</button>
 
-                    <button class="selected">
+                    <button
+                        type="button"
+                        data-size="S"
+                    >
+                        S
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-size="M"
+                    >
                         M
                     </button>
 
-                    <button>L</button>
 
-                    <button>XL</button>
+                    <button
+                        type="button"
+                        data-size="L"
+                    >
+                        L
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-size="XL"
+                    >
+                        XL
+                    </button>
+
 
                 </div>
+
+
+                <p
+                    id="sizeMessage"
+                    style="display:none;"
+                >
+                    Please select a size.
+                </p>
+
 
             </div>
 
@@ -228,17 +266,27 @@
             <button
                 class="add-to-bag"
                 id="addToBag"
+                type="button"
             >
 
                 <span>
                     ADD TO BAG
                 </span>
 
+
                 <span>
                     →
                 </span>
 
             </button>
+
+
+            <p
+                id="bagMessage"
+                style="display:none;"
+            >
+                Added to bag ✓
+            </p>
 
 
 
@@ -248,6 +296,7 @@
             <button
                 class="add-wishlist"
                 id="addWishlist"
+                type="button"
             >
 
                 ♡ ADD TO WISHLIST
@@ -303,6 +352,8 @@
                         Free shipping on orders
                         above ₹2,999.
 
+                        <br><br>
+
                         Easy returns within 7 days.
 
                     </p>
@@ -328,6 +379,7 @@
 
         <div class="recommended-heading">
 
+
             <div>
 
                 <p>
@@ -350,6 +402,7 @@
                 VIEW ALL →
             </a>
 
+
         </div>
 
 
@@ -366,7 +419,7 @@
 
                         <img
                             src="assets/mens/product-02.jpg"
-                            alt="Relaxed T-Shirt"
+                            alt="KLT Easeform Tee"
                         >
 
                     </div>
@@ -375,8 +428,9 @@
                     <div class="recommended-info">
 
                         <span>
-                            RELAXED T-SHIRT
+                            EASEFORM TEE
                         </span>
+
 
                         <strong>
                             ₹1,799
@@ -399,7 +453,7 @@
 
                         <img
                             src="assets/womens/product-06.jpg"
-                            alt="Knit Button-Up"
+                            alt="KLT Buttonline Knit"
                         >
 
                     </div>
@@ -408,8 +462,9 @@
                     <div class="recommended-info">
 
                         <span>
-                            KNIT BUTTON-UP
+                            BUTTONLINE KNIT
                         </span>
+
 
                         <strong>
                             ₹2,499
@@ -432,7 +487,7 @@
 
                         <img
                             src="assets/mens/product-06.jpg"
-                            alt="Utility Set"
+                            alt="KLT Studioform Set"
                         >
 
                     </div>
@@ -441,8 +496,9 @@
                     <div class="recommended-info">
 
                         <span>
-                            UTILITY SET
+                            STUDIOFORM SET
                         </span>
+
 
                         <strong>
                             ₹4,499
@@ -511,125 +567,284 @@
 
     <script>
 
+
         const products = {
 
+
+            /* ================= MENSWEAR ================= */
+
+
             "mens-01": {
-                name: "OVERSIZED SHIRT",
+
+                name: "CORELINE OVERSHIRT",
                 category: "KLT / MENSWEAR",
                 price: "₹2,499",
                 image: "assets/mens/product-01.jpg",
-                description: "A relaxed oversized shirt designed for everyday styling.",
-                details: "Relaxed fit<br>Everyday silhouette<br>Easy layering"
+                badge: "NEW",
+                description: "A relaxed structured layer designed to become an everyday KLT essential.",
+                details: "Relaxed structured fit<br>Everyday layering piece<br>Clean silhouette",
+                material: "Comfort-focused construction designed for everyday wear."
+
             },
 
 
             "mens-02": {
-                name: "RELAXED T-SHIRT",
+
+                name: "EASEFORM TEE",
                 category: "KLT / MENSWEAR",
                 price: "₹1,799",
                 image: "assets/mens/product-02.jpg",
-                description: "An effortless everyday T-shirt with a comfortable relaxed fit.",
-                details: "Relaxed fit<br>Soft everyday construction<br>Easy styling"
+                badge: "",
+                description: "An effortless everyday jersey with a relaxed silhouette and easy movement.",
+                details: "Relaxed fit<br>Everyday jersey<br>Easy styling",
+                material: "Soft everyday fabric selected for comfortable wear."
+
             },
 
 
             "mens-03": {
-                name: "UTILITY JACKET",
+
+                name: "FIELD 03 JACKET",
                 category: "KLT / MENSWEAR",
                 price: "₹3,999",
                 image: "assets/mens/product-03.jpg",
-                description: "A structured utility jacket built for everyday movement.",
-                details: "Structured fit<br>Utility-inspired design<br>Layering piece"
+                badge: "NEW",
+                description: "A functional outer layer bringing utility details into a clean KLT silhouette.",
+                details: "Structured fit<br>Utility-inspired design<br>Layering piece",
+                material: "Durable outer construction designed for everyday layering."
+
             },
 
 
             "mens-04": {
-                name: "WIDE-LEG PANTS",
+
+                name: "WIDELINE TROUSER",
                 category: "KLT / MENSWEAR",
                 price: "₹2,699",
                 image: "assets/mens/product-04.jpg",
-                description: "Relaxed wide-leg pants designed with an effortless silhouette.",
-                details: "Wide-leg fit<br>Relaxed silhouette<br>Everyday comfort"
+                badge: "",
+                description: "Relaxed wide-leg trousers designed around an effortless everyday silhouette.",
+                details: "Wide-leg fit<br>Relaxed silhouette<br>Everyday comfort",
+                material: "Lightweight construction with a comfortable everyday feel."
+
             },
 
 
             "mens-05": {
-                name: "KNIT SWEATSHIRT",
+
+                name: "HEAVYFORM KNIT",
                 category: "KLT / MENSWEAR",
                 price: "₹2,999",
                 image: "assets/mens/product-05.jpg",
-                description: "A soft knit layer designed for comfortable everyday wear.",
-                details: "Relaxed fit<br>Soft knit construction<br>Easy layering"
+                badge: "",
+                description: "A textured knit layer built for comfort, warmth and everyday styling.",
+                details: "Relaxed fit<br>Textured knit construction<br>Easy layering",
+                material: "Soft knit construction designed for comfortable everyday wear."
+
             },
 
 
             "mens-06": {
-                name: "UTILITY SET",
+
+                name: "STUDIOFORM SET",
                 category: "KLT / MENSWEAR",
                 price: "₹4,499",
                 image: "assets/mens/product-06.jpg",
-                description: "A complete coordinated set combining utility and everyday style.",
-                details: "Complete set<br>Relaxed silhouette<br>Coordinated styling"
+                badge: "NEW",
+                description: "A coordinated KLT set combining relaxed proportions with a refined everyday feel.",
+                details: "Complete coordinated set<br>Relaxed silhouette<br>Matching styling",
+                material: "Comfort-focused fabric construction designed for coordinated everyday wear."
+
             },
 
 
+
+
+            /* ================= WOMENSWEAR ================= */
+
+
             "womens-01": {
-                name: "OVERSIZED TOP",
+
+                name: "CLOUDFORM TOP",
                 category: "KLT / WOMENSWEAR",
                 price: "₹1,999",
                 image: "assets/womens/product-01.jpg",
-                description: "A relaxed oversized top designed for effortless everyday styling.",
-                details: "Relaxed silhouette<br>Comfortable fit<br>Everyday styling"
+                badge: "NEW",
+                description: "A soft relaxed top shaped around an effortless everyday silhouette.",
+                details: "Soft relaxed silhouette<br>Comfortable fit<br>Everyday styling",
+                material: "Lightweight construction with a soft comfortable feel."
+
             },
 
 
             "womens-02": {
-                name: "STATEMENT JACKET",
+
+                name: "FRAME 02 JACKET",
                 category: "KLT / WOMENSWEAR",
                 price: "₹3,499",
                 image: "assets/womens/product-02.jpg",
-                description: "A statement jacket with a strong structured silhouette.",
-                details: "Structured fit<br>Statement silhouette<br>Layering piece"
+                badge: "",
+                description: "A structured statement layer designed to bring definition to everyday looks.",
+                details: "Structured fit<br>Statement silhouette<br>Layering piece",
+                material: "Structured outer construction designed for versatile layering."
+
             },
 
 
             "womens-03": {
-                name: "WIDE-LEG PANTS",
+
+                name: "FLUIDLINE TROUSER",
                 category: "KLT / WOMENSWEAR",
                 price: "₹2,699",
                 image: "assets/womens/product-03.jpg",
-                description: "Wide-leg pants designed with a relaxed and fluid silhouette.",
-                details: "Wide-leg fit<br>Relaxed silhouette<br>Everyday comfort"
+                badge: "NEW",
+                description: "Relaxed trousers with a fluid wide-leg shape designed for effortless movement.",
+                details: "Wide-leg fit<br>Fluid silhouette<br>Everyday comfort",
+                material: "Soft flowing construction designed for comfortable movement."
+
             },
 
 
             "womens-04": {
-                name: "MINIMAL DRESS",
+
+                name: "CONTOUR 04 DRESS",
                 category: "KLT / WOMENSWEAR",
                 price: "₹2,999",
                 image: "assets/womens/product-04.jpg",
-                description: "A clean minimal dress designed for effortless movement.",
-                details: "Easy silhouette<br>Minimal design<br>Everyday styling"
+                badge: "",
+                description: "A clean sculpted silhouette designed to move effortlessly through the day.",
+                details: "Sculpted silhouette<br>Minimal design<br>Everyday styling",
+                material: "Comfortable construction with a clean refined finish."
+
             },
 
 
             "womens-05": {
-                name: "SOFT KNIT",
+
+                name: "SOFTFORM KNIT",
                 category: "KLT / WOMENSWEAR",
                 price: "₹2,799",
                 image: "assets/womens/product-05.jpg",
-                description: "A soft knit layer designed for comfortable everyday wear.",
-                details: "Soft construction<br>Relaxed fit<br>Comfortable layering"
+                badge: "",
+                description: "A lightweight textured knit designed for soft layering and everyday ease.",
+                details: "Lightweight knit<br>Relaxed fit<br>Comfortable layering",
+                material: "Soft textured knit construction designed for everyday wear."
+
             },
 
 
             "womens-06": {
-                name: "KNIT BUTTON-UP",
+
+                name: "BUTTONLINE KNIT",
                 category: "KLT / WOMENSWEAR",
                 price: "₹2,499",
                 image: "assets/womens/product-06.jpg",
-                description: "A relaxed knit button-up combining comfort with a clean silhouette.",
-                details: "Relaxed fit<br>Knit construction<br>Button-up design"
+                badge: "NEW",
+                description: "A relaxed button-front knit combining an easy silhouette with considered detail.",
+                details: "Relaxed fit<br>Knit construction<br>Button-front design",
+                material: "Soft knit construction designed for comfortable everyday layering."
+
+            },
+
+
+
+
+            /* ================= SALE ================= */
+
+
+            "sale-01": {
+
+                name: "DEEPFORM SWEAT",
+                category: "KLT / SALE / MENSWEAR",
+                price: "₹1,399",
+                oldPrice: "₹1,999",
+                discount: "-30%",
+                image: "assets/sale/sale-01.jpg",
+                badge: "SALE",
+                description: "A heavyweight relaxed sweatshirt selected from the KLT archive at a reduced price.",
+                details: "Heavyweight construction<br>Relaxed fit<br>Everyday layering",
+                material: "Soft heavyweight fabric designed for comfortable everyday wear."
+
+            },
+
+
+            "sale-02": {
+
+                name: "SOFTLINE KNIT",
+                category: "KLT / SALE / WOMENSWEAR",
+                price: "₹1,499",
+                oldPrice: "₹2,499",
+                discount: "-40%",
+                image: "assets/sale/sale-02.jpg",
+                badge: "SALE",
+                description: "A relaxed textured knit selected for the KLT sale edit.",
+                details: "Relaxed silhouette<br>Textured knit<br>Easy layering",
+                material: "Soft textured knit construction designed for everyday comfort."
+
+            },
+
+
+            "sale-03": {
+
+                name: "STRIPE 02 TEE",
+                category: "KLT / SALE / MENSWEAR",
+                price: "₹1,799",
+                oldPrice: "₹2,599",
+                discount: "-30%",
+                image: "assets/sale/sale-03.jpg",
+                badge: "SALE",
+                description: "A relaxed striped jersey tee bringing an easy graphic rhythm to everyday styling.",
+                details: "Relaxed fit<br>Striped jersey<br>Everyday styling",
+                material: "Comfortable jersey construction designed for everyday movement."
+
+            },
+
+
+            "sale-04": {
+
+                name: "LINEWEAVE KNIT",
+                category: "KLT / SALE / WOMENSWEAR",
+                price: "₹1,749",
+                oldPrice: "₹3,499",
+                discount: "-50%",
+                image: "assets/sale/sale-04.jpg",
+                badge: "SALE",
+                description: "A striped textured knit selected for the KLT limited sale edit.",
+                details: "Relaxed silhouette<br>Striped knit texture<br>Layering piece",
+                material: "Soft textured knit construction designed for comfortable layering."
+
+            },
+
+
+            "sale-05": {
+
+                name: "GREYFORM DENIM",
+                category: "KLT / SALE / MENSWEAR",
+                price: "₹1,299",
+                oldPrice: "₹1,999",
+                discount: "-35%",
+                image: "assets/sale/sale-05.jpg",
+                badge: "SALE",
+                description: "Wide relaxed denim in a washed grey tone, selected for the KLT sale edit.",
+                details: "Wide relaxed fit<br>Washed grey finish<br>Everyday denim",
+                material: "Durable denim construction designed for everyday wear."
+
+            },
+
+
+            "sale-06": {
+
+                name: "WIDELINE DENIM",
+                category: "KLT / SALE / WOMENSWEAR",
+                price: "₹1,399",
+                oldPrice: "₹1,999",
+                discount: "-30%",
+                image: "assets/sale/sale-06.jpg",
+                badge: "SALE",
+                description: "Relaxed wide-leg denim selected for the KLT limited sale edit.",
+                details: "Wide-leg fit<br>Relaxed silhouette<br>Everyday denim",
+                material: "Comfortable denim construction designed for everyday movement."
+
             }
 
         };
@@ -638,7 +853,7 @@
 
 
         /* =====================================================
-           GET PRODUCT FROM URL
+           GET PRODUCT
         ====================================================== */
 
         const urlParams =
@@ -647,16 +862,15 @@
         const productId =
             urlParams.get("product");
 
+        const product =
+            products[productId];
+
+
 
 
         /* =====================================================
            LOAD PRODUCT
         ====================================================== */
-
-        const product =
-            products[productId];
-
-
 
         if (product) {
 
@@ -701,17 +915,234 @@
                 product.details;
 
 
+            document.getElementById("productMaterial").innerHTML =
+                product.material;
+
+
             document.title =
                 "KLT — " + product.name;
 
+
+            const badge =
+                document.getElementById("productBadge");
+
+
+            if (product.badge) {
+
+                badge.textContent =
+                    product.badge;
+
+                badge.style.display =
+                    "block";
+
+            } else {
+
+                badge.style.display =
+                    "none";
+
+            }
+
         }
 
 
-        else {
 
-            console.log("No product selected.");
 
-        }
+        /* =====================================================
+           SIZE SELECTION
+        ====================================================== */
+
+        const sizeButtons =
+            document.querySelectorAll(".sizes button");
+
+
+        let selectedSize = null;
+
+
+        sizeButtons.forEach(button => {
+
+
+            button.addEventListener("click", function () {
+
+
+                sizeButtons.forEach(btn => {
+
+                    btn.classList.remove("selected");
+
+                });
+
+
+                this.classList.add("selected");
+
+
+                selectedSize =
+                    this.dataset.size;
+
+
+                document.getElementById("sizeMessage").style.display =
+                    "none";
+
+            });
+
+        });
+
+
+
+
+        /* =====================================================
+           ADD TO BAG
+        ====================================================== */
+
+        const addToBag =
+            document.getElementById("addToBag");
+
+
+        addToBag.addEventListener("click", function () {
+
+
+            if (!selectedSize) {
+
+                document.getElementById("sizeMessage").style.display =
+                    "block";
+
+                return;
+
+            }
+
+
+            if (!product) {
+
+                return;
+
+            }
+
+
+            let bag =
+                JSON.parse(
+                    localStorage.getItem("kltBag")
+                ) || [];
+
+
+            const existingProduct =
+                bag.find(item =>
+                    item.id === productId &&
+                    item.size === selectedSize
+                );
+
+
+            if (existingProduct) {
+
+                existingProduct.quantity += 1;
+
+            } else {
+
+                bag.push({
+
+                    id: productId,
+
+                    name: product.name,
+
+                    image: product.image,
+
+                    price: product.price,
+
+                    size: selectedSize,
+
+                    quantity: 1
+
+                });
+
+            }
+
+
+            localStorage.setItem(
+                "kltBag",
+                JSON.stringify(bag)
+            );
+
+
+            const bagMessage =
+                document.getElementById("bagMessage");
+
+
+            bagMessage.textContent =
+                "ADDED TO BAG ✓";
+
+
+            bagMessage.style.display =
+                "block";
+
+
+            setTimeout(() => {
+
+                bagMessage.style.display =
+                    "none";
+
+            }, 2500);
+
+        });
+
+
+
+
+        /* =====================================================
+           WISHLIST
+        ====================================================== */
+
+        const addWishlist =
+            document.getElementById("addWishlist");
+
+
+        addWishlist.addEventListener("click", function () {
+
+
+            if (!product) {
+
+                return;
+
+            }
+
+
+            let wishlist =
+                JSON.parse(
+                    localStorage.getItem("kltWishlist")
+                ) || [];
+
+
+            const alreadyAdded =
+                wishlist.some(item =>
+                    item.id === productId
+                );
+
+
+            if (!alreadyAdded) {
+
+                wishlist.push({
+
+                    id: productId,
+
+                    name: product.name,
+
+                    image: product.image,
+
+                    price: product.price
+
+                });
+
+
+                localStorage.setItem(
+                    "kltWishlist",
+                    JSON.stringify(wishlist)
+                );
+
+            }
+
+
+            this.textContent =
+                "♥ ADDED TO WISHLIST";
+
+
+        });
+
 
     </script>
 
