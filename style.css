@@ -65,15 +65,19 @@ body {
 
 .logo {
 
-    width: 60px;
+    width: auto;
 
-    font-size: 10px;
+    color: #111;
+
+    font-size: 17px;
 
     font-weight: 900;
 
-    line-height: 9px;
+    line-height: 1;
 
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
+
+    text-decoration: none;
 }
 
 
@@ -130,25 +134,34 @@ nav a {
 
 .search {
 
-    width: 120px;
+    width: 28px;
 
     height: 30px;
-
-    border-radius: 20px;
-
-    background: #f1f1ef;
 
     display: flex;
 
     align-items: center;
 
-    gap: 5px;
+    justify-content: center;
 
-    padding: 0 12px;
+    padding: 0;
 
-    color: #999;
+    background: transparent;
 
-    font-size: 10px;
+    color: #111;
+
+    font-size: 19px;
+
+    cursor: pointer;
+}
+
+.search span:first-child {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.search span:last-child {
+    display: none;
 }
 
 
@@ -165,620 +178,6 @@ nav a {
     color: #111;
 }
 
-
-/* =========================================
-   MAIN CONTAINER
-========================================= */
-
-.container {
-
-    width: calc(100% - 24px);
-
-    margin: 0 12px 12px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 8px;
-
-    height: 620px;
-
-}
-
-
-/* =========================================
-   LEFT COLUMN
-========================================= */
-
-.left-column {
-
-    min-width: 0;
-
-    display: grid;
-
-    grid-template-rows: 1.7fr 1fr;
-
-    gap: 8px;
-
-}
-
-
-/* =========================================
-   TEXT CARD
-========================================= */
-
-.text-card {
-
-    min-height: 0;
-
-    background: #d7d7d3;
-
-    border-radius: 22px;
-
-    padding: clamp(30px, 4vw, 65px);
-
-    position: relative;
-
-    overflow: hidden;
-
-}
-
-
-/* =========================================
-   HEADING
-========================================= */
-
-.heading {
-
-    width: 100%;
-
-}
-
-
-.heading h1 {
-
-    font-size: clamp(42px, 5.2vw, 88px);
-
-    line-height: 0.88;
-
-    font-weight: 900;
-
-    letter-spacing: -5px;
-
-}
-
-
-/* =========================================
-   FIRST LINE
-========================================= */
-
-.first-line {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-
-}
-
-
-.arrow {
-
-    font-size: clamp(42px, 5vw, 80px);
-
-    font-weight: 300;
-
-    line-height: 1;
-
-}
-
-
-/* =========================================
-   DESCRIPTION
-========================================= */
-
-.text-card p {
-
-    position: absolute;
-
-    left: clamp(30px, 4vw, 65px);
-
-    bottom: clamp(30px, 4vw, 55px);
-
-    max-width: 390px;
-
-    font-size: 13px;
-
-    line-height: 1.5;
-
-}
-
-
-/* =========================================
-   SMALL CARDS
-========================================= */
-
-.small-cards {
-
-    min-height: 0;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 8px;
-
-}
-
-
-.small-card {
-
-    position: relative;
-
-    min-width: 0;
-
-    min-height: 0;
-
-    border-radius: 22px;
-
-    overflow: hidden;
-
-    background: #ccc;
-
-}
-
-
-.small-card img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-}
-
-
-/* =========================================
-   SMALL CARD TEXT
-========================================= */
-
-.card-title {
-
-    position: absolute;
-
-    left: 25px;
-
-    bottom: 22px;
-
-    color: white;
-
-    font-size: clamp(18px, 2vw, 30px);
-
-    font-weight: 900;
-
-    letter-spacing: -1px;
-
-    z-index: 2;
-
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.hero {
-
-    min-width: 0;
-
-    height: 620px;
-
-    min-height: 0;
-
-    border-radius: 22px;
-
-    overflow: hidden;
-
-    position: relative;
-
-    background: #ccc;
-
-}
-
-
-.hero img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-}
-
-
-/* =========================================
-   SHOP BUTTON
-========================================= */
-
-.shop-button {
-
-    position: absolute;
-
-    top: 58%;
-
-    left: 55%;
-
-    transform: translate(-50%, -50%);
-
-    width: 82px;
-
-    height: 82px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.78);
-
-    color: white;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    line-height: 1;
-
-    cursor: pointer;
-
-}
-
-
-/* =========================================
-   HERO BUTTONS
-========================================= */
-
-.hero-actions {
-
-    position: absolute;
-
-    left: 25px;
-
-    right: 25px;
-
-    bottom: 20px;
-
-    display: flex;
-
-    justify-content: flex-end;
-
-    gap: 10px;
-
-}
-
-
-.learn-button,
-.contact-button {
-
-    height: 42px;
-
-    border: none;
-
-    border-radius: 25px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    padding: 0 10px 0 18px;
-
-    font-size: 9px;
-
-    cursor: pointer;
-
-}
-
-
-/* =========================================
-   LEARN
-========================================= */
-
-.learn-button {
-
-    width: 180px;
-
-    background: white;
-
-}
-
-
-.learn-button b {
-
-    width: 27px;
-
-    height: 27px;
-
-    border-radius: 50%;
-
-    background: #111;
-
-    color: white;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 14px;
-
-}
-
-
-/* =========================================
-   CONTACT
-========================================= */
-
-.contact-button {
-
-    width: 160px;
-
-    background: rgba(255, 255, 255, 0.78);
-
-}
-
-
-.contact-button b {
-
-    font-size: 10px;
-
-}
-
-
-/* =========================================
-   LARGE LAPTOP
-========================================= */
-
-@media (max-width: 1200px) {
-
-    nav {
-
-        gap: 25px;
-
-    }
-
-
-    nav a {
-
-        font-size: 9px;
-
-    }
-
-
-    .search {
-
-        width: 90px;
-
-    }
-
-
-    .text-card {
-
-        padding: 35px;
-
-    }
-
-
-    .text-card p {
-
-        left: 35px;
-
-    }
-
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 800px) {
-
-    .navbar {
-
-        height: 50px;
-
-    }
-
-
-    nav {
-
-        display: none;
-
-    }
-
-
-    .container {
-
-        grid-template-columns: 1fr;
-
-        height: auto;
-
-    }
-
-
-    .left-column {
-
-        grid-template-rows: auto auto;
-
-    }
-
-
-    .hero {
-
-        height: 600px;
-
-        min-height: 0;
-
-    }
-
-
-    .text-card {
-
-        min-height: 450px;
-
-    }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 550px) {
-
-    .navbar {
-
-        width: calc(100% - 14px);
-
-        margin: 7px;
-
-        padding: 0 13px;
-
-    }
-
-
-    .container {
-
-        width: calc(100% - 14px);
-
-        margin: 0 7px 7px;
-
-        height: auto;
-
-    }
-
-
-    .nav-right {
-
-        gap: 8px;
-
-    }
-
-
-    .search {
-
-        display: none;
-
-    }
-
-
-    .text-card {
-
-        min-height: 420px;
-
-        padding: 28px;
-
-        border-radius: 18px;
-
-    }
-
-
-    .heading h1 {
-
-        font-size: 44px;
-
-        letter-spacing: -3px;
-
-    }
-
-
-    .arrow {
-
-        font-size: 45px;
-
-    }
-
-
-    .text-card p {
-
-        left: 28px;
-
-        bottom: 28px;
-
-        max-width: 260px;
-
-        font-size: 10px;
-
-    }
-
-
-    .small-cards {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .small-card {
-
-        min-height: 240px;
-
-    }
-
-
-    .hero {
-
-        height: 560px;
-
-        min-height: 0;
-
-        border-radius: 18px;
-
-    }
-
-
-    .hero-actions {
-
-        left: 12px;
-
-        right: 12px;
-
-    }
-
-
-    .learn-button {
-
-        width: 50%;
-
-    }
-
-
-    .contact-button {
-
-        width: 50%;
-
-    }
-
-}
 
 /* =========================================================
    KLT MENSWEAR PAGE
@@ -899,25 +298,36 @@ nav a {
 
 .shop-search {
 
-    width: 120px;
+    width: 28px;
 
     height: 30px;
-
-    border-radius: 20px;
-
-    background: #f1f1ef;
 
     display: flex;
 
     align-items: center;
 
-    gap: 5px;
+    justify-content: center;
 
-    padding: 0 12px;
+    padding: 0;
 
-    color: #999;
+    background: transparent;
 
-    font-size: 10px;
+    color: #111;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+.shop-search span:first-child {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.shop-search span:last-child {
+    display: none;
 }
 
 
@@ -1621,7 +1031,7 @@ nav a {
 
     .shop-search {
 
-        display: none;
+        display: flex;
 
     }
 
@@ -3314,22 +2724,35 @@ summary::after {
     flex-direction: column;
 }
 
-.sale-hero-left > p:first-child {
+.sale-eyebrow {
     margin: 0;
     color: #777;
     font-size: 10px;
     letter-spacing: 1.5px;
 }
 
-.sale-hero-left h1 {
-    margin: 72px 0 0;
+.sale-title {
+    margin-top: 72px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.sale-title h1 {
+    margin: 0;
     font-size: clamp(80px, 9vw, 145px);
     line-height: 0.78;
     letter-spacing: -8px;
     font-weight: 900;
 }
 
-.sale-number {
+.sale-title span {
+    font-size: clamp(55px, 5vw, 90px);
+    line-height: 1;
+    color: #111;
+}
+
+.sale-percent {
     margin-top: 85px;
     font-size: clamp(75px, 8vw, 125px);
     line-height: 0.8;
@@ -3387,6 +2810,45 @@ summary::after {
     line-height: 1.2;
     z-index: 2;
 }
+
+/* ================= SALE SHOP BUTTON ================= */
+
+.sale-shop-button {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 20px;
+    min-height: 42px;
+    padding: 0 10px 0 18px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.88);
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 9px;
+    text-decoration: none;
+    z-index: 3;
+}
+
+.sale-shop-button b {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sale-shop-button:hover {
+    background: white;
+}
+
 
 /* ================= FILTER ================= */
 
@@ -3614,13 +3076,21 @@ summary::after {
         border-radius: 18px;
     }
 
-    .sale-hero-left h1 {
+    .sale-title {
         margin-top: 55px;
+        gap: 16px;
+    }
+
+    .sale-title h1 {
         font-size: 75px;
         letter-spacing: -5px;
     }
 
-    .sale-number {
+    .sale-title span {
+        font-size: 55px;
+    }
+
+    .sale-percent {
         margin-top: 55px;
         font-size: 70px;
         letter-spacing: -5px;
@@ -5279,3 +4749,527 @@ summary::after {
     }
 
 }
+
+/* =========================================================
+   KLT SEARCH PAGE
+========================================================= */
+
+.search-page {
+    width: calc(100% - 24px);
+    margin: 0 12px 30px;
+}
+
+.search-header {
+    min-height: 520px;
+    padding: 70px 5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #d7d7d3;
+    border-radius: 24px;
+    margin-top: 10px;
+}
+
+.search-heading p,
+.search-section-label span,
+.search-results-heading p {
+    margin: 0 0 18px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.search-heading h1 {
+    margin: 0;
+    font-size: clamp(70px, 10vw, 150px);
+    line-height: .78;
+    letter-spacing: -8px;
+    font-weight: 900;
+}
+
+.search-input-wrap {
+    width: min(760px, 100%);
+    height: 62px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid #888;
+}
+
+.search-input-wrap > span {
+    color: #777;
+    font-size: 20px;
+}
+
+.search-input-wrap input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #111;
+    font-family: inherit;
+    font-size: 17px;
+}
+
+.search-input-wrap input::placeholder {
+    color: #777;
+}
+
+.search-input-wrap button {
+    border: 0;
+    background: transparent;
+    color: #777;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.search-trending {
+    padding: 55px 5%;
+    border-bottom: 1px solid #aaa;
+}
+
+.search-section-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.search-section-label span {
+    margin: 0;
+}
+
+.search-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-tags button {
+    padding: 11px 20px;
+    border: 1px solid #bdbdb9;
+    border-radius: 30px;
+    background: transparent;
+    color: #111;
+    font-family: inherit;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.search-tags button:hover {
+    background: #111;
+    border-color: #111;
+    color: white;
+}
+
+.search-results-section {
+    padding: 100px 5% 120px;
+}
+
+.search-results-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 45px;
+}
+
+.search-results-heading p {
+    margin-bottom: 12px;
+}
+
+.search-results-heading h2 {
+    margin: 0;
+    font-size: clamp(50px, 7vw, 105px);
+    line-height: .82;
+    letter-spacing: -5px;
+    font-weight: 900;
+}
+
+.search-results-heading > span {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 18px;
+}
+
+.search-product-card {
+    min-width: 0;
+}
+
+.search-product-link {
+    display: block;
+    color: #111;
+    text-decoration: none;
+}
+
+.search-product-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #ddd;
+}
+
+.search-product-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.search-product-card:hover .search-product-image img {
+    transform: scale(1.04);
+}
+
+.search-product-image span {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 11px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.9);
+    color: #111;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.search-product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+.search-product-info h3 {
+    margin: 0;
+    color: #111;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.search-product-info strong {
+    color: #111;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.search-empty {
+    min-height: 520px;
+    padding: 80px 5%;
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #d7d7d3;
+}
+
+.search-empty p {
+    margin: 0 0 25px;
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.search-empty h2 {
+    margin: 0;
+    font-size: clamp(65px, 9vw, 130px);
+    line-height: .8;
+    letter-spacing: -7px;
+    font-weight: 900;
+}
+
+.search-empty span {
+    margin-top: 25px;
+    color: #666;
+    font-size: 12px;
+}
+
+.search-empty button {
+    margin-top: 30px;
+    padding: 12px 20px;
+    border: 1px solid #777;
+    border-radius: 30px;
+    background: transparent;
+    color: #111;
+    font-family: inherit;
+    font-size: 9px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.search-empty button:hover {
+    background: #111;
+    border-color: #111;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .search-header {
+        min-height: 500px;
+    }
+
+    .search-results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .search-page {
+        width: calc(100% - 14px);
+        margin: 0 7px 20px;
+    }
+
+    .search-header {
+        min-height: 480px;
+        padding: 40px 30px;
+        border-radius: 18px;
+    }
+
+    .search-heading h1 {
+        font-size: 70px;
+        letter-spacing: -5px;
+    }
+
+    .search-input-wrap {
+        height: 55px;
+    }
+
+    .search-input-wrap input {
+        font-size: 14px;
+    }
+
+    .search-trending {
+        padding: 40px 0;
+    }
+
+    .search-results-section {
+        padding: 70px 0;
+    }
+
+    .search-results-heading {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .search-results-heading h2 {
+        font-size: 52px;
+        letter-spacing: -4px;
+    }
+
+    .search-results-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 8px;
+    }
+
+    .search-product-image {
+        border-radius: 14px;
+    }
+
+    .search-product-info {
+        gap: 8px;
+    }
+
+    .search-product-info h3,
+    .search-product-info strong {
+        font-size: 11px;
+    }
+
+    .search-empty {
+        min-height: 450px;
+        padding: 60px 20px;
+    }
+
+    .search-empty h2 {
+        font-size: 70px;
+        letter-spacing: -5px;
+    }
+}
+
+
+/* =========================================================
+   KLT — FINAL GLOBAL CONSISTENCY
+   Shared fixes for all current HTML pages.
+========================================================= */
+
+/* ================= SHOP SEARCH ================= */
+
+.shop-search {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    border: 0;
+    outline: 0;
+}
+
+.shop-search:hover {
+    color: #111;
+    text-decoration: none;
+}
+
+.shop-search span {
+    pointer-events: none;
+}
+
+
+/* ================= SHOP ACTION BUTTONS ================= */
+
+.shop-actions button {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #111;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.shop-actions button:hover {
+    opacity: 0.65;
+}
+
+
+/* ================= FOOTER LINKS ================= */
+
+.shop-footer a,
+.shop-footer a:link,
+.shop-footer a:visited,
+.shop-footer a:hover,
+.shop-footer a:active {
+    color: #111;
+    text-decoration: none;
+}
+
+
+/* ================= PRODUCT LINKS ================= */
+
+.product-link,
+.product-link:link,
+.product-link:visited,
+.product-link:hover,
+.product-link:active {
+    display: block;
+    color: #111;
+    text-decoration: none;
+}
+
+
+/* ================= SALE PRODUCT LINKS ================= */
+
+.sale-product-link,
+.sale-product-link:link,
+.sale-product-link:visited,
+.sale-product-link:hover,
+.sale-product-link:active {
+    color: #111;
+    text-decoration: none;
+}
+
+
+/* ================= SEARCH PRODUCT LINKS ================= */
+
+.search-product-link,
+.search-product-link:link,
+.search-product-link:visited,
+.search-product-link:hover,
+.search-product-link:active {
+    color: #111;
+    text-decoration: none;
+}
+
+
+/* ================= KEYBOARD FOCUS ================= */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 1px solid #111;
+    outline-offset: 3px;
+}
+
+.search-input-wrap input:focus,
+.search-input-wrap input:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* ================= IMAGE SELECTION ================= */
+
+.product-image img,
+.sale-image img,
+.search-product-image img,
+.recommended-image img,
+.wishlist-image img,
+.bag-item-image img {
+    user-select: none;
+}
+
+
+/* ================= MOBILE SHOP ACTIONS ================= */
+
+@media (max-width: 650px) {
+
+    .shop-actions {
+        gap: 12px;
+    }
+
+    .shop-actions button {
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   END KLT GLOBAL CONSISTENCY
+========================================================= */
+
+
+/* =========================================================
+   KLT — SEARCH / HOMEPAGE VISUAL POLISH
+========================================================= */
+
+/* Search field stays minimal: no browser focus rectangle. */
+.search-input-wrap input,
+.search-input-wrap input:focus,
+.search-input-wrap input:focus-visible {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Search controls show the icon only. */
+.search,
+.shop-search {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+/* Homepage KLT logo matches the shop-page logo scale. */
+.navbar .logo {
+    width: auto;
+    color: #111;
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+/* =========================================================
+   END SEARCH / HOMEPAGE POLISH
+========================================================= */

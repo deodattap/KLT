@@ -21,9 +21,11 @@
 
     <header class="shop-navbar">
 
+
         <a href="index.html" class="shop-logo">
             KLT
         </a>
+
 
 
         <nav class="shop-nav">
@@ -47,9 +49,18 @@
         </nav>
 
 
+
         <div class="shop-actions">
 
-            <div class="shop-search">
+
+            <!-- SEARCH -->
+
+            <button
+                type="button"
+                class="shop-search"
+                onclick="window.location.href='search.html'"
+                aria-label="Search"
+            >
 
                 <span>⌕</span>
 
@@ -57,19 +68,35 @@
                     Search
                 </span>
 
-            </div>
+            </button>
 
 
-            <button aria-label="Wishlist">
+
+            <!-- WISHLIST -->
+
+            <button
+                type="button"
+                aria-label="Wishlist"
+                onclick="window.location.href='wishlist.html'"
+            >
                 ♡
             </button>
 
 
-            <button aria-label="Shopping bag">
+
+            <!-- SHOPPING BAG -->
+
+            <button
+                type="button"
+                aria-label="Shopping bag"
+                onclick="window.location.href='bag.html'"
+            >
                 ♧
             </button>
 
+
         </div>
+
 
     </header>
 
@@ -88,6 +115,7 @@
 
             <div class="product-main-image">
 
+
                 <img
                     id="productImage"
                     src=""
@@ -102,13 +130,18 @@
                     NEW
                 </span>
 
+
             </div>
+
 
 
             <div class="thumbnail-row">
 
 
-                <button class="thumbnail active">
+                <button
+                    class="thumbnail active"
+                    type="button"
+                >
 
                     <img
                         id="thumb1"
@@ -119,7 +152,11 @@
                 </button>
 
 
-                <button class="thumbnail">
+
+                <button
+                    class="thumbnail"
+                    type="button"
+                >
 
                     <img
                         id="thumb2"
@@ -130,7 +167,11 @@
                 </button>
 
 
-                <button class="thumbnail">
+
+                <button
+                    class="thumbnail"
+                    type="button"
+                >
 
                     <img
                         id="thumb3"
@@ -298,9 +339,7 @@
                 id="addWishlist"
                 type="button"
             >
-
                 ♡ ADD TO WISHLIST
-
             </button>
 
 
@@ -325,6 +364,7 @@
                 </details>
 
 
+
                 <details>
 
                     <summary>
@@ -338,6 +378,7 @@
                     </p>
 
                 </details>
+
 
 
                 <details>
@@ -413,6 +454,7 @@
 
             <article class="recommended-card">
 
+
                 <a href="product.html?product=mens-02">
 
                     <div class="recommended-image">
@@ -440,12 +482,14 @@
 
                 </a>
 
+
             </article>
 
 
 
 
             <article class="recommended-card">
+
 
                 <a href="product.html?product=womens-06">
 
@@ -474,12 +518,14 @@
 
                 </a>
 
+
             </article>
 
 
 
 
             <article class="recommended-card">
+
 
                 <a href="product.html?product=mens-06">
 
@@ -507,6 +553,7 @@
                     </div>
 
                 </a>
+
 
             </article>
 
@@ -857,10 +904,14 @@
         ====================================================== */
 
         const urlParams =
-            new URLSearchParams(window.location.search);
+            new URLSearchParams(
+                window.location.search
+            );
+
 
         const productId =
             urlParams.get("product");
+
 
         const product =
             products[productId];
@@ -875,56 +926,81 @@
         if (product) {
 
 
-            document.getElementById("productImage").src =
+            document.getElementById(
+                "productImage"
+            ).src =
                 product.image;
 
 
-            document.getElementById("productImage").alt =
+            document.getElementById(
+                "productImage"
+            ).alt =
                 product.name;
 
 
-            document.getElementById("thumb1").src =
+            document.getElementById(
+                "thumb1"
+            ).src =
                 product.image;
 
 
-            document.getElementById("thumb2").src =
+            document.getElementById(
+                "thumb2"
+            ).src =
                 product.image;
 
 
-            document.getElementById("thumb3").src =
+            document.getElementById(
+                "thumb3"
+            ).src =
                 product.image;
 
 
-            document.getElementById("productName").textContent =
+            document.getElementById(
+                "productName"
+            ).textContent =
                 product.name;
 
 
-            document.getElementById("productCategory").textContent =
+            document.getElementById(
+                "productCategory"
+            ).textContent =
                 product.category;
 
 
-            document.getElementById("productPrice").textContent =
+            document.getElementById(
+                "productPrice"
+            ).textContent =
                 product.price;
 
 
-            document.getElementById("productDescription").textContent =
+            document.getElementById(
+                "productDescription"
+            ).textContent =
                 product.description;
 
 
-            document.getElementById("productDetails").innerHTML =
+            document.getElementById(
+                "productDetails"
+            ).innerHTML =
                 product.details;
 
 
-            document.getElementById("productMaterial").innerHTML =
+            document.getElementById(
+                "productMaterial"
+            ).innerHTML =
                 product.material;
 
 
             document.title =
-                "KLT — " + product.name;
+                "KLT — " +
+                product.name;
 
 
             const badge =
-                document.getElementById("productBadge");
+                document.getElementById(
+                    "productBadge"
+                );
 
 
             if (product.badge) {
@@ -952,38 +1028,53 @@
         ====================================================== */
 
         const sizeButtons =
-            document.querySelectorAll(".sizes button");
+            document.querySelectorAll(
+                ".sizes button"
+            );
 
 
         let selectedSize = null;
 
 
-        sizeButtons.forEach(button => {
+        sizeButtons.forEach(
+            button => {
 
 
-            button.addEventListener("click", function () {
+                button.addEventListener(
+                    "click",
+                    function () {
 
 
-                sizeButtons.forEach(btn => {
+                        sizeButtons.forEach(
+                            btn => {
 
-                    btn.classList.remove("selected");
+                                btn.classList.remove(
+                                    "selected"
+                                );
 
-                });
-
-
-                this.classList.add("selected");
-
-
-                selectedSize =
-                    this.dataset.size;
+                            }
+                        );
 
 
-                document.getElementById("sizeMessage").style.display =
-                    "none";
+                        this.classList.add(
+                            "selected"
+                        );
 
-            });
 
-        });
+                        selectedSize =
+                            this.dataset.size;
+
+
+                        document.getElementById(
+                            "sizeMessage"
+                        ).style.display =
+                            "none";
+
+                    }
+                );
+
+            }
+        );
 
 
 
@@ -993,93 +1084,108 @@
         ====================================================== */
 
         const addToBag =
-            document.getElementById("addToBag");
-
-
-        addToBag.addEventListener("click", function () {
-
-
-            if (!selectedSize) {
-
-                document.getElementById("sizeMessage").style.display =
-                    "block";
-
-                return;
-
-            }
-
-
-            if (!product) {
-
-                return;
-
-            }
-
-
-            let bag =
-                JSON.parse(
-                    localStorage.getItem("kltBag")
-                ) || [];
-
-
-            const existingProduct =
-                bag.find(item =>
-                    item.id === productId &&
-                    item.size === selectedSize
-                );
-
-
-            if (existingProduct) {
-
-                existingProduct.quantity += 1;
-
-            } else {
-
-                bag.push({
-
-                    id: productId,
-
-                    name: product.name,
-
-                    image: product.image,
-
-                    price: product.price,
-
-                    size: selectedSize,
-
-                    quantity: 1
-
-                });
-
-            }
-
-
-            localStorage.setItem(
-                "kltBag",
-                JSON.stringify(bag)
+            document.getElementById(
+                "addToBag"
             );
 
 
-            const bagMessage =
-                document.getElementById("bagMessage");
+        addToBag.addEventListener(
+            "click",
+            function () {
 
 
-            bagMessage.textContent =
-                "ADDED TO BAG ✓";
+                if (!selectedSize) {
+
+                    document.getElementById(
+                        "sizeMessage"
+                    ).style.display =
+                        "block";
+
+                    return;
+
+                }
 
 
-            bagMessage.style.display =
-                "block";
+                if (!product) {
+
+                    return;
+
+                }
 
 
-            setTimeout(() => {
+                let bag =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "kltBag"
+                        )
+                    ) || [];
+
+
+                const existingProduct =
+                    bag.find(
+                        item =>
+                            item.id === productId &&
+                            item.size === selectedSize
+                    );
+
+
+                if (existingProduct) {
+
+                    existingProduct.quantity += 1;
+
+                } else {
+
+                    bag.push({
+
+                        id: productId,
+
+                        name: product.name,
+
+                        image: product.image,
+
+                        price: product.price,
+
+                        size: selectedSize,
+
+                        quantity: 1
+
+                    });
+
+                }
+
+
+                localStorage.setItem(
+                    "kltBag",
+                    JSON.stringify(bag)
+                );
+
+
+                const bagMessage =
+                    document.getElementById(
+                        "bagMessage"
+                    );
+
+
+                bagMessage.textContent =
+                    "ADDED TO BAG ✓";
+
 
                 bagMessage.style.display =
-                    "none";
+                    "block";
 
-            }, 2500);
 
-        });
+                setTimeout(
+                    () => {
+
+                        bagMessage.style.display =
+                            "none";
+
+                    },
+                    2500
+                );
+
+            }
+        );
 
 
 
@@ -1089,59 +1195,66 @@
         ====================================================== */
 
         const addWishlist =
-            document.getElementById("addWishlist");
+            document.getElementById(
+                "addWishlist"
+            );
 
 
-        addWishlist.addEventListener("click", function () {
+        addWishlist.addEventListener(
+            "click",
+            function () {
 
 
-            if (!product) {
+                if (!product) {
 
-                return;
+                    return;
+
+                }
+
+
+                let wishlist =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "kltWishlist"
+                        )
+                    ) || [];
+
+
+                const alreadyAdded =
+                    wishlist.some(
+                        item =>
+                            item.id === productId
+                    );
+
+
+                if (!alreadyAdded) {
+
+                    wishlist.push({
+
+                        id: productId,
+
+                        name: product.name,
+
+                        image: product.image,
+
+                        price: product.price
+
+                    });
+
+
+                    localStorage.setItem(
+                        "kltWishlist",
+                        JSON.stringify(wishlist)
+                    );
+
+                }
+
+
+                this.textContent =
+                    "♥ ADDED TO WISHLIST";
 
             }
-
-
-            let wishlist =
-                JSON.parse(
-                    localStorage.getItem("kltWishlist")
-                ) || [];
-
-
-            const alreadyAdded =
-                wishlist.some(item =>
-                    item.id === productId
-                );
-
-
-            if (!alreadyAdded) {
-
-                wishlist.push({
-
-                    id: productId,
-
-                    name: product.name,
-
-                    image: product.image,
-
-                    price: product.price
-
-                });
-
-
-                localStorage.setItem(
-                    "kltWishlist",
-                    JSON.stringify(wishlist)
-                );
-
-            }
-
-
-            this.textContent =
-                "♥ ADDED TO WISHLIST";
-
-
-        });
+        );
 
 
     </script>

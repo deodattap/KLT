@@ -1,510 +1,360 @@
-const shopButton = document.querySelector(".shop-button");
-
-const learnButton = document.querySelector(".learn-button");
-
-const contactButton = document.querySelector(".contact-button");
-
-
-shopButton.addEventListener("click", function () {
-
-    alert("Shop Now");
-
-});
-
-
-learnButton.addEventListener("click", function () {
-
-    alert("Learn More");
-
-});
-
-
-contactButton.addEventListener("click", function () {
-
-    alert("Contact Us");
-
-});
-
 /* =========================================================
-   PRODUCT PAGE
+   KLT — GLOBAL SCRIPT
+   Shared interactions across the website
 ========================================================= */
 
 
-/* ================= SIZE SELECTION ================= */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
-const sizeButtons = document.querySelectorAll(".sizes button");
-
-
-sizeButtons.forEach(function (button) {
-
-    button.addEventListener("click", function () {
-
-        sizeButtons.forEach(function (item) {
-
-            item.classList.remove("selected");
-
-        });
+document.addEventListener("DOMContentLoaded", function () {
 
 
-        button.classList.add("selected");
+    /* ================= SHOP BUTTON ================= */
 
-    });
+    const shopButton =
+        document.querySelector(".shop-button");
+
+
+    if (shopButton) {
+
+        shopButton.addEventListener(
+            "click",
+            function () {
+
+                window.location.href = "mens.html";
+
+            }
+        );
+
+    }
+
+
+
+    /* ================= LEARN MORE ================= */
+
+    const learnButton =
+        document.querySelector(".learn-button");
+
+
+    if (learnButton) {
+
+        learnButton.addEventListener(
+            "click",
+            function () {
+
+                window.location.href = "discover.html";
+
+            }
+        );
+
+    }
+
+
+
+    /* ================= CONTACT ================= */
+
+    const contactButton =
+        document.querySelector(".contact-button");
+
+
+    if (contactButton) {
+
+        contactButton.addEventListener(
+            "click",
+            function () {
+
+                /*
+                 * Contact page will be added later.
+                 * For now, take the user to Discover.
+                 */
+
+                window.location.href = "discover.html";
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       NEW SHOP NAVBAR
+    ===================================================== */
+
+
+    /* ================= SEARCH ================= */
+
+    const searchButton =
+        document.querySelector(".shop-search");
+
+
+    if (searchButton) {
+
+        searchButton.addEventListener(
+            "click",
+            function () {
+
+                window.location.href = "search.html";
+
+            }
+        );
+
+    }
+
+
+
+    /* ================= WISHLIST ================= */
+
+    const wishlistButton =
+        document.querySelector(
+            '.shop-actions button[aria-label="Wishlist"]'
+        );
+
+
+    if (wishlistButton) {
+
+        wishlistButton.addEventListener(
+            "click",
+            function () {
+
+                window.location.href =
+                    "wishlist.html";
+
+            }
+        );
+
+    }
+
+
+
+    /* ================= SHOPPING BAG ================= */
+
+    const bagButton =
+        document.querySelector(
+            '.shop-actions button[aria-label="Shopping bag"]'
+        );
+
+
+    if (bagButton) {
+
+        bagButton.addEventListener(
+            "click",
+            function () {
+
+                window.location.href =
+                    "bag.html";
+
+            }
+        );
+
+    }
+
+
+
+    /* =====================================================
+       OLD HOMEPAGE NAVBAR
+       Used only by index.html
+    ===================================================== */
+
+
+    const oldSearch =
+        document.querySelector(
+            ".nav-right .search"
+        );
+
+
+    if (oldSearch) {
+
+        oldSearch.addEventListener(
+            "click",
+            function () {
+
+                window.location.href =
+                    "search.html";
+
+            }
+        );
+
+    }
+
+
+
+    const oldNavButtons =
+        document.querySelectorAll(
+            ".nav-right button"
+        );
+
+
+    oldNavButtons.forEach(
+        function (button) {
+
+
+            const label =
+                button.getAttribute(
+                    "aria-label"
+                );
+
+
+            if (
+                label === "Wishlist"
+            ) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        window.location.href =
+                            "wishlist.html";
+
+                    }
+                );
+
+            }
+
+
+            if (
+                label === "Shopping Bag"
+            ) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        window.location.href =
+                            "bag.html";
+
+                    }
+                );
+
+            }
+
+        }
+    );
 
 });
 
 
 
-/* ================= IMAGE THUMBNAILS ================= */
+/* =========================================================
+   PRODUCT PAGE — IMAGE THUMBNAILS
+========================================================= */
 
-const thumbnails =
-    document.querySelectorAll(".thumbnail");
-
-
-const mainProductImage =
-    document.querySelector(".product-main-image img");
-
-
-thumbnails.forEach(function (thumbnail) {
-
-    thumbnail.addEventListener("click", function () {
-
-        const image =
-            thumbnail.querySelector("img");
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
 
-        mainProductImage.src =
-            image.src;
+        const thumbnails =
+            document.querySelectorAll(
+                ".thumbnail"
+            );
 
 
-        thumbnails.forEach(function (item) {
-
-            item.classList.remove("active");
-
-        });
-
-
-        thumbnail.classList.add("active");
-
-    });
-
-});
+        const mainProductImage =
+            document.querySelector(
+                ".product-main-image img"
+            );
 
 
+        /*
+         * Only run this on pages that
+         * actually contain product thumbnails.
+         */
 
-/* ================= ADD TO BAG ================= */
-
-const addToBag =
-    document.getElementById("addToBag");
-
-
-if (addToBag) {
-
-    addToBag.addEventListener("click", function () {
-
-        const selectedSize =
-            document.querySelector(".sizes .selected");
-
-
-        if (!selectedSize) {
-
-            alert("Please select a size.");
+        if (
+            !thumbnails.length ||
+            !mainProductImage
+        ) {
 
             return;
 
         }
 
 
-        const product = {
-
-            name: "Relaxed Essential",
-
-            price: 1999,
-
-            size: selectedSize.textContent,
-
-            image: "assets/1.jpg"
-
-        };
+        thumbnails.forEach(
+            function (thumbnail) {
 
 
-        localStorage.setItem(
-            "kltCart",
-            JSON.stringify(product)
+                thumbnail.addEventListener(
+                    "click",
+                    function () {
+
+
+                        const image =
+                            thumbnail.querySelector(
+                                "img"
+                            );
+
+
+                        if (!image) {
+                            return;
+                        }
+
+
+                        mainProductImage.src =
+                            image.src;
+
+
+                        thumbnails.forEach(
+                            function (item) {
+
+                                item.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        thumbnail.classList.add(
+                            "active"
+                        );
+
+                    }
+                );
+
+            }
         );
 
-
-        addToBag.querySelector("span").textContent =
-            "ADDED TO BAG ✓";
-
-
-        setTimeout(function () {
-
-            addToBag.querySelector("span").textContent =
-                "ADD TO BAG";
-
-        }, 2000);
-
-    });
-
-}
-
-
-
-/* ================= WISHLIST ================= */
-
-const addWishlist =
-    document.getElementById("addWishlist");
-
-
-if (addWishlist) {
-
-    addWishlist.addEventListener("click", function () {
-
-        addWishlist.textContent =
-            "♥ ADDED TO WISHLIST";
-
-    });
-
-}
-
-/* =========================================================
-   KLT PRODUCT DATA
-========================================================= */
-
-const products = {
-
-    "mens-01": {
-
-        name: "OVERSIZED SHIRT",
-
-        category: "KLT / MENSWEAR",
-
-        price: "₹2,499",
-
-        image: "assets/mens/product-01.jpg",
-
-        description:
-            "A relaxed oversized shirt designed for everyday styling.",
-
-        details:
-            "Relaxed fit<br>Everyday silhouette<br>Easy layering"
-
-    },
-
-
-    "mens-02": {
-
-        name: "RELAXED T-SHIRT",
-
-        category: "KLT / MENSWEAR",
-
-        price: "₹1,799",
-
-        image: "assets/mens/product-02.jpg",
-
-        description:
-            "An effortless everyday T-shirt with a comfortable relaxed fit.",
-
-        details:
-            "Relaxed fit<br>Soft everyday construction<br>Easy styling"
-
-    },
-
-
-    "mens-03": {
-
-        name: "UTILITY JACKET",
-
-        category: "KLT / MENSWEAR",
-
-        price: "₹3,999",
-
-        image: "assets/mens/product-03.jpg",
-
-        description:
-            "A structured utility jacket built for everyday movement.",
-
-        details:
-            "Structured fit<br>Utility-inspired design<br>Layering piece"
-
-    },
-
-
-    "mens-04": {
-
-        name: "WIDE-LEG PANTS",
-
-        category: "KLT / MENSWEAR",
-
-        price: "₹2,699",
-
-        image: "assets/mens/product-04.jpg",
-
-        description:
-            "Relaxed wide-leg pants designed with an effortless silhouette.",
-
-        details:
-            "Wide-leg fit<br>Relaxed silhouette<br>Everyday comfort"
-
-    },
-
-
-    "mens-05": {
-
-        name: "KNIT SWEATSHIRT",
-
-        category: "KLT / MENSWEAR",
-
-        price: "₹2,999",
-
-        image: "assets/mens/product-05.jpg",
-
-        description:
-            "A soft knit layer designed for comfortable everyday wear.",
-
-        details:
-            "Relaxed fit<br>Soft knit construction<br>Easy layering"
-
-    },
-
-
-    "mens-06": {
-
-        name: "UTILITY SET",
-
-        category: "KLT / MENSWEAR",
-
-        price: "₹4,499",
-
-        image: "assets/mens/product-06.jpg",
-
-        description:
-            "A complete coordinated set combining utility and everyday style.",
-
-        details:
-            "Complete set<br>Relaxed silhouette<br>Coordinated styling"
-
-    },
-
-
-    "womens-01": {
-
-        name: "OVERSIZED TOP",
-
-        category: "KLT / WOMENSWEAR",
-
-        price: "₹1,999",
-
-        image: "assets/womens/product-01.jpg",
-
-        description:
-            "A relaxed oversized top designed for effortless everyday styling.",
-
-        details:
-            "Relaxed silhouette<br>Comfortable fit<br>Everyday styling"
-
-    },
-
-
-    "womens-02": {
-
-        name: "STATEMENT JACKET",
-
-        category: "KLT / WOMENSWEAR",
-
-        price: "₹3,499",
-
-        image: "assets/womens/product-02.jpg",
-
-        description:
-            "A statement jacket with a strong structured silhouette.",
-
-        details:
-            "Structured fit<br>Statement silhouette<br>Layering piece"
-
-    },
-
-
-    "womens-03": {
-
-        name: "WIDE-LEG PANTS",
-
-        category: "KLT / WOMENSWEAR",
-
-        price: "₹2,699",
-
-        image: "assets/womens/product-03.jpg",
-
-        description:
-            "Wide-leg pants designed with a relaxed and fluid silhouette.",
-
-        details:
-            "Wide-leg fit<br>Relaxed silhouette<br>Everyday comfort"
-
-    },
-
-
-    "womens-04": {
-
-        name: "MINIMAL DRESS",
-
-        category: "KLT / WOMENSWEAR",
-
-        price: "₹2,999",
-
-        image: "assets/womens/product-04.jpg",
-
-        description:
-            "A clean minimal dress designed for effortless movement.",
-
-        details:
-            "Easy silhouette<br>Minimal design<br>Everyday styling"
-
-    },
-
-
-    "womens-05": {
-
-        name: "SOFT KNIT",
-
-        category: "KLT / WOMENSWEAR",
-
-        price: "₹2,799",
-
-        image: "assets/womens/product-05.jpg",
-
-        description:
-            "A soft knit layer designed for comfortable everyday wear.",
-
-        details:
-            "Soft construction<br>Relaxed fit<br>Comfortable layering"
-
-    },
-
-
-    "womens-06": {
-
-        name: "KNIT BUTTON-UP",
-
-        category: "KLT / WOMENSWEAR",
-
-        price: "₹2,499",
-
-        image: "assets/womens/product-06.jpg",
-
-        description:
-            "A relaxed knit button-up combining comfort with a clean silhouette.",
-
-        details:
-            "Relaxed fit<br>Knit construction<br>Button-up design"
-
     }
-
-};
+);
 
 
 
 /* =========================================================
-   LOAD SELECTED PRODUCT
+   KLT — GENERAL LINK SAFETY
 ========================================================= */
 
-const productPage =
-    document.getElementById("productImage");
+/*
+ * Prevent buttons placed inside product links
+ * from accidentally opening the product page.
+ *
+ * The actual wishlist functionality is handled
+ * by the individual product/page scripts.
+ */
+
+document.addEventListener(
+    "click",
+    function (event) {
 
 
-if (productPage) {
+        const wishlist =
+            event.target.closest(
+                ".wishlist"
+            );
 
 
-    const params =
-        new URLSearchParams(window.location.search);
+        if (!wishlist) {
+            return;
+        }
 
 
-    const productId =
-        params.get("product");
+        event.preventDefault();
 
 
-    const product =
-        products[productId];
-
-
-    if (product) {
-
-
-        /* IMAGE */
-
-        const image =
-            document.getElementById("productImage");
-
-
-        image.src =
-            product.image;
-
-
-        image.alt =
-            product.name;
-
-
-
-        /* THUMBNAILS */
-
-        document.getElementById("thumb1").src =
-            product.image;
-
-
-        document.getElementById("thumb2").src =
-            product.image;
-
-
-        document.getElementById("thumb3").src =
-            product.image;
-
-
-
-        /* NAME */
-
-        document.getElementById("productName")
-            .textContent =
-            product.name;
-
-
-
-        /* CATEGORY */
-
-        document.getElementById("productCategory")
-            .textContent =
-            product.category;
-
-
-
-        /* PRICE */
-
-        document.getElementById("productPrice")
-            .textContent =
-            product.price;
-
-
-
-        /* DESCRIPTION */
-
-        document.getElementById("productDescription")
-            .textContent =
-            product.description;
-
-
-
-        /* DETAILS */
-
-        document.getElementById("productDetails")
-            .innerHTML =
-            product.details;
-
-
-        /* PAGE TITLE */
-
-        document.title =
-            "KLT — " + product.name;
-
+        event.stopPropagation();
 
     }
-
-}
+);

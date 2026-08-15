@@ -17,14 +17,22 @@
 <body>
 
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
     <header class="shop-navbar">
+
+
+        <!-- LOGO -->
 
         <a href="index.html" class="shop-logo">
             KLT
         </a>
 
+
+
+        <!-- NAVIGATION -->
 
         <nav class="shop-nav">
 
@@ -47,9 +55,20 @@
         </nav>
 
 
+
+        <!-- RIGHT SIDE -->
+
         <div class="shop-actions">
 
-            <div class="shop-search">
+
+            <!-- SEARCH -->
+
+            <button
+                type="button"
+                class="shop-search"
+                onclick="window.location.href='search.html'"
+                aria-label="Search"
+            >
 
                 <span>⌕</span>
 
@@ -57,46 +76,62 @@
                     Search
                 </span>
 
-            </div>
+            </button>
 
+
+
+            <!-- WISHLIST -->
 
             <button
                 type="button"
                 aria-label="Wishlist"
+                onclick="window.location.href='wishlist.html'"
             >
                 ♡
             </button>
 
 
+
+            <!-- BAG -->
+
             <button
                 type="button"
-                aria-label="Shopping bag"
                 class="bag-nav-button"
+                aria-label="Shopping bag"
+                onclick="window.location.href='bag.html'"
             >
                 ♧
             </button>
 
+
         </div>
+
 
     </header>
 
 
 
 
-    <!-- ================= BAG PAGE ================= -->
+    <!-- =====================================================
+         BAG PAGE
+    ====================================================== -->
 
     <main class="bag-page">
 
 
-        <!-- ================= HEADER ================= -->
+        <!-- =================================================
+             HEADER
+        ================================================== -->
 
         <section class="bag-header">
+
 
             <div>
 
                 <p>
                     KLT / 04
                 </p>
+
 
                 <h1>
                     YOUR BAG
@@ -109,17 +144,22 @@
                 0 ITEMS
             </span>
 
+
         </section>
 
 
 
 
-        <!-- ================= BAG CONTENT ================= -->
+        <!-- =================================================
+             BAG CONTENT
+        ================================================== -->
 
         <section class="bag-layout">
 
 
-            <!-- ================= PRODUCTS ================= -->
+            <!-- =================================================
+                 PRODUCTS
+            ================================================== -->
 
             <div
                 class="bag-items"
@@ -130,7 +170,9 @@
 
 
 
-            <!-- ================= SUMMARY ================= -->
+            <!-- =================================================
+                 SUMMARY
+            ================================================== -->
 
             <aside class="bag-summary">
 
@@ -140,11 +182,13 @@
                 </p>
 
 
+
                 <div class="summary-row">
 
                     <span>
                         SUBTOTAL
                     </span>
+
 
                     <strong id="subtotal">
                         ₹0
@@ -153,11 +197,13 @@
                 </div>
 
 
+
                 <div class="summary-row">
 
                     <span>
                         SHIPPING
                     </span>
+
 
                     <span id="shipping">
                         —
@@ -166,7 +212,9 @@
                 </div>
 
 
+
                 <div class="summary-divider"></div>
+
 
 
                 <div class="summary-total">
@@ -175,11 +223,13 @@
                         TOTAL
                     </span>
 
+
                     <strong id="total">
                         ₹0
                     </strong>
 
                 </div>
+
 
 
                 <button
@@ -192,11 +242,13 @@
                         CHECKOUT
                     </span>
 
+
                     <b>
                         →
                     </b>
 
                 </button>
+
 
 
                 <p class="shipping-note">
@@ -215,13 +267,16 @@
 
 
 
-        <!-- ================= EMPTY BAG ================= -->
+        <!-- =================================================
+             EMPTY BAG
+        ================================================== -->
 
         <section
             class="empty-bag"
             id="emptyBag"
             style="display:none;"
         >
+
 
             <p>
                 KLT / YOUR BAG
@@ -245,6 +300,7 @@
                 CONTINUE SHOPPING →
             </a>
 
+
         </section>
 
 
@@ -253,7 +309,9 @@
 
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer class="shop-footer">
 
@@ -263,26 +321,41 @@
         </div>
 
 
+
         <div>
 
-            <p>MENSWEAR</p>
+            <p>
+                MENSWEAR
+            </p>
 
-            <p>WOMENSWEAR</p>
+            <p>
+                WOMENSWEAR
+            </p>
 
-            <p>SALE</p>
+            <p>
+                SALE
+            </p>
 
         </div>
 
 
+
         <div>
 
-            <p>DISCOVER</p>
+            <p>
+                DISCOVER
+            </p>
 
-            <p>CONTACT</p>
+            <p>
+                CONTACT
+            </p>
 
-            <p>INSTAGRAM</p>
+            <p>
+                INSTAGRAM
+            </p>
 
         </div>
+
 
 
         <div class="footer-big">
@@ -299,7 +372,9 @@
 
 
 
-    <!-- ================= BAG SCRIPT ================= -->
+    <!-- =====================================================
+         BAG SCRIPT
+    ====================================================== -->
 
     <script>
 
@@ -352,9 +427,9 @@
         function getPrice(price) {
 
             return Number(
-                price
+                String(price)
                     .replace("₹", "")
-                    .replace(",", "")
+                    .replace(/,/g, "")
             );
 
         }
@@ -386,25 +461,34 @@
             bagItems.innerHTML = "";
 
 
+            /* ================= EMPTY BAG ================= */
+
             if (bag.length === 0) {
+
 
                 bagItems.style.display =
                     "none";
 
+
                 emptyBag.style.display =
                     "flex";
+
 
                 bagCount.textContent =
                     "0 ITEMS";
 
+
                 subtotalElement.textContent =
                     "₹0";
+
 
                 shippingElement.textContent =
                     "—";
 
+
                 totalElement.textContent =
                     "₹0";
+
 
                 return;
 
@@ -413,6 +497,7 @@
 
             bagItems.style.display =
                 "flex";
+
 
             emptyBag.style.display =
                 "none";
@@ -425,129 +510,152 @@
             const totalItems =
                 bag.reduce(
                     (total, item) =>
-                        total + item.quantity,
+                        total +
+                        Number(item.quantity || 0),
                     0
                 );
 
 
             bagCount.textContent =
                 totalItems +
-                (totalItems === 1
-                    ? " ITEM"
-                    : " ITEMS");
+                (
+                    totalItems === 1
+                        ? " ITEM"
+                        : " ITEMS"
+                );
 
 
 
 
             /* ================= PRODUCTS ================= */
 
-            bag.forEach((item, index) => {
+            bag.forEach(
+                (item, index) => {
 
 
-                const price =
-                    getPrice(item.price);
+                    const price =
+                        getPrice(item.price);
 
 
-                const itemTotal =
-                    price * item.quantity;
+                    const quantity =
+                        Number(item.quantity) || 1;
 
 
-                const article =
-                    document.createElement("article");
+                    const itemTotal =
+                        price * quantity;
 
 
-                article.className =
-                    "bag-item";
+                    const article =
+                        document.createElement(
+                            "article"
+                        );
 
 
-                article.innerHTML = `
-
-                    <div class="bag-item-image">
-
-                        <img
-                            src="${item.image}"
-                            alt="${item.name}"
-                        >
-
-                    </div>
+                    article.className =
+                        "bag-item";
 
 
-                    <div class="bag-item-info">
+                    article.innerHTML = `
 
-                        <div class="bag-item-top">
+                        <div class="bag-item-image">
 
-                            <div>
-
-                                <p class="bag-category">
-                                    KLT / COLLECTION
-                                </p>
-
-                                <h2>
-                                    ${item.name}
-                                </h2>
-
-                                <p class="bag-size">
-                                    SIZE / ${item.size}
-                                </p>
-
-                            </div>
-
-
-                            <strong>
-                                ${formatPrice(itemTotal)}
-                            </strong>
-
-                        </div>
-
-
-                        <div class="bag-item-bottom">
-
-                            <div class="quantity-control">
-
-                                <button
-                                    type="button"
-                                    data-action="decrease"
-                                    data-index="${index}"
-                                >
-                                    −
-                                </button>
-
-
-                                <span>
-                                    ${item.quantity}
-                                </span>
-
-
-                                <button
-                                    type="button"
-                                    data-action="increase"
-                                    data-index="${index}"
-                                >
-                                    +
-                                </button>
-
-                            </div>
-
-
-                            <button
-                                class="remove-item"
-                                type="button"
-                                data-action="remove"
-                                data-index="${index}"
+                            <img
+                                src="${item.image}"
+                                alt="${item.name}"
                             >
-                                REMOVE
-                            </button>
 
                         </div>
 
-                    </div>
 
-                `;
+                        <div class="bag-item-info">
 
 
-                bagItems.appendChild(article);
+                            <div class="bag-item-top">
 
-            });
+                                <div>
+
+                                    <p class="bag-category">
+                                        KLT / COLLECTION
+                                    </p>
+
+
+                                    <h2>
+                                        ${item.name}
+                                    </h2>
+
+
+                                    <p class="bag-size">
+                                        SIZE / ${item.size || "N/A"}
+                                    </p>
+
+                                </div>
+
+
+                                <strong>
+                                    ${formatPrice(itemTotal)}
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="bag-item-bottom">
+
+
+                                <div class="quantity-control">
+
+
+                                    <button
+                                        type="button"
+                                        data-action="decrease"
+                                        data-index="${index}"
+                                        aria-label="Decrease quantity"
+                                    >
+                                        −
+                                    </button>
+
+
+                                    <span>
+                                        ${quantity}
+                                    </span>
+
+
+                                    <button
+                                        type="button"
+                                        data-action="increase"
+                                        data-index="${index}"
+                                        aria-label="Increase quantity"
+                                    >
+                                        +
+                                    </button>
+
+
+                                </div>
+
+
+
+                                <button
+                                    class="remove-item"
+                                    type="button"
+                                    data-action="remove"
+                                    data-index="${index}"
+                                >
+                                    REMOVE
+                                </button>
+
+
+                            </div>
+
+
+                        </div>
+
+                    `;
+
+
+                    bagItems.appendChild(article);
+
+                }
+            );
 
 
 
@@ -560,7 +668,7 @@
                         total +
                         (
                             getPrice(item.price) *
-                            item.quantity
+                            (Number(item.quantity) || 1)
                         ),
                     0
                 );
@@ -569,7 +677,10 @@
             let shipping = 0;
 
 
-            if (subtotal > 0 && subtotal < 2999) {
+            if (
+                subtotal > 0 &&
+                subtotal < 2999
+            ) {
 
                 shipping = 99;
 
@@ -577,7 +688,8 @@
 
 
             const total =
-                subtotal + shipping;
+                subtotal +
+                shipping;
 
 
             subtotalElement.textContent =
@@ -608,18 +720,20 @@
 
 
                 const button =
-                    event.target.closest("button");
+                    event.target.closest(
+                        "button"
+                    );
 
 
                 if (!button) {
-
                     return;
-
                 }
 
 
                 const index =
-                    Number(button.dataset.index);
+                    Number(
+                        button.dataset.index
+                    );
 
 
                 const action =
@@ -630,7 +744,8 @@
                     action === "increase"
                 ) {
 
-                    bag[index].quantity += 1;
+                    bag[index].quantity =
+                        (Number(bag[index].quantity) || 1) + 1;
 
                 }
 
@@ -639,7 +754,8 @@
                     action === "decrease"
                 ) {
 
-                    bag[index].quantity -= 1;
+                    bag[index].quantity =
+                        (Number(bag[index].quantity) || 1) - 1;
 
 
                     if (

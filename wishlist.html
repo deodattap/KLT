@@ -49,15 +49,17 @@
 
         <div class="shop-actions">
 
-            <div class="shop-search">
-
+            <a
+                href="search.html"
+                class="shop-search"
+                aria-label="Search KLT"
+            >
                 <span>⌕</span>
 
                 <span>
                     Search
                 </span>
-
-            </div>
+            </a>
 
 
             <button
@@ -515,6 +517,23 @@
         ====================================================== */
 
         updateWishlist();
+
+
+        /* =====================================================
+           SEARCH NAVIGATION
+        ====================================================== */
+
+        const searchButton =
+            document.querySelector(".shop-search");
+
+        if (searchButton) {
+            searchButton.addEventListener(
+                "click",
+                function () {
+                    window.location.href = "search.html";
+                }
+            );
+        }
 
 
     </script>

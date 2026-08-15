@@ -21,9 +21,11 @@
 
     <header class="shop-navbar">
 
+
         <a href="index.html" class="shop-logo">
             KLT
         </a>
+
 
 
         <nav class="shop-nav">
@@ -47,9 +49,18 @@
         </nav>
 
 
+
         <div class="shop-actions">
 
-            <div class="shop-search">
+
+            <!-- SEARCH -->
+
+            <button
+                type="button"
+                class="shop-search"
+                onclick="window.location.href='search.html'"
+                aria-label="Search"
+            >
 
                 <span>⌕</span>
 
@@ -57,19 +68,35 @@
                     Search
                 </span>
 
-            </div>
+            </button>
 
 
-            <button aria-label="Wishlist">
+
+            <!-- WISHLIST -->
+
+            <button
+                type="button"
+                aria-label="Wishlist"
+                onclick="window.location.href='wishlist.html'"
+            >
                 ♡
             </button>
 
 
-            <button aria-label="Shopping bag">
+
+            <!-- SHOPPING BAG -->
+
+            <button
+                type="button"
+                aria-label="Shopping bag"
+                onclick="window.location.href='bag.html'"
+            >
                 ♧
             </button>
 
+
         </div>
+
 
     </header>
 
@@ -168,6 +195,7 @@
 
                 </a>
 
+
             </div>
 
 
@@ -228,9 +256,11 @@
 
 
                     <h2>
+
                         LESS,
                         <br>
                         NOT MORE.
+
                     </h2>
 
                 </div>
@@ -278,6 +308,7 @@
                             <button
                                 class="wishlist"
                                 type="button"
+                                aria-label="Add to wishlist"
                                 onclick="event.preventDefault()"
                             >
                                 ♡
@@ -353,6 +384,7 @@
                             <button
                                 class="wishlist"
                                 type="button"
+                                aria-label="Add to wishlist"
                                 onclick="event.preventDefault()"
                             >
                                 ♡
@@ -428,6 +460,7 @@
                             <button
                                 class="wishlist"
                                 type="button"
+                                aria-label="Add to wishlist"
                                 onclick="event.preventDefault()"
                             >
                                 ♡
@@ -503,6 +536,7 @@
                             <button
                                 class="wishlist"
                                 type="button"
+                                aria-label="Add to wishlist"
                                 onclick="event.preventDefault()"
                             >
                                 ♡
@@ -578,6 +612,7 @@
                             <button
                                 class="wishlist"
                                 type="button"
+                                aria-label="Add to wishlist"
                                 onclick="event.preventDefault()"
                             >
                                 ♡
@@ -653,6 +688,7 @@
                             <button
                                 class="wishlist"
                                 type="button"
+                                aria-label="Add to wishlist"
                                 onclick="event.preventDefault()"
                             >
                                 ♡
@@ -698,6 +734,7 @@
 
 
             </div>
+
 
         </section>
 
@@ -756,9 +793,7 @@
             <div>
 
                 <p>MENSWEAR</p>
-
                 <p>WOMENSWEAR</p>
-
                 <p>SALE</p>
 
             </div>
@@ -767,9 +802,7 @@
             <div>
 
                 <p>DISCOVER</p>
-
                 <p>CONTACT</p>
-
                 <p>INSTAGRAM</p>
 
             </div>
@@ -797,94 +830,115 @@
     <script>
 
         const filterButtons =
-            document.querySelectorAll(".sale-filter button");
+            document.querySelectorAll(
+                ".sale-filter button"
+            );
+
 
         const saleCards =
-            document.querySelectorAll(".sale-card");
+            document.querySelectorAll(
+                ".sale-card"
+            );
 
 
-        filterButtons.forEach(button => {
+        filterButtons.forEach(
+            button => {
 
-            button.addEventListener("click", function () {
-
-
-                filterButtons.forEach(btn => {
-
-                    btn.classList.remove(
-                        "sale-filter-active"
-                    );
-
-                });
+                button.addEventListener(
+                    "click",
+                    function () {
 
 
-                this.classList.add(
-                    "sale-filter-active"
+                        filterButtons.forEach(
+                            btn => {
+
+                                btn.classList.remove(
+                                    "sale-filter-active"
+                                );
+
+                            }
+                        );
+
+
+                        this.classList.add(
+                            "sale-filter-active"
+                        );
+
+
+                        const filter =
+                            this.dataset.filter;
+
+
+                        saleCards.forEach(
+                            card => {
+
+
+                                const category =
+                                    card.dataset.category;
+
+
+                                const price =
+                                    Number(
+                                        card.dataset.price
+                                    );
+
+
+                                let show =
+                                    false;
+
+
+                                if (
+                                    filter === "all"
+                                ) {
+
+                                    show = true;
+
+                                }
+
+
+                                if (
+                                    filter === "mens" &&
+                                    category === "mens"
+                                ) {
+
+                                    show = true;
+
+                                }
+
+
+                                if (
+                                    filter === "womens" &&
+                                    category === "womens"
+                                ) {
+
+                                    show = true;
+
+                                }
+
+
+                                if (
+                                    filter === "under" &&
+                                    price < 2000
+                                ) {
+
+                                    show = true;
+
+                                }
+
+
+                                card.style.display =
+                                    show
+                                        ? ""
+                                        : "none";
+
+                            }
+                        );
+
+                    }
                 );
 
-
-                const filter =
-                    this.dataset.filter;
-
-
-                saleCards.forEach(card => {
-
-
-                    const category =
-                        card.dataset.category;
-
-
-                    const price =
-                        Number(card.dataset.price);
-
-
-                    let show = false;
-
-
-                    if (filter === "all") {
-
-                        show = true;
-
-                    }
-
-
-                    if (
-                        filter === "mens" &&
-                        category === "mens"
-                    ) {
-
-                        show = true;
-
-                    }
-
-
-                    if (
-                        filter === "womens" &&
-                        category === "womens"
-                    ) {
-
-                        show = true;
-
-                    }
-
-
-                    if (
-                        filter === "under" &&
-                        price < 2000
-                    ) {
-
-                        show = true;
-
-                    }
-
-
-                    card.style.display =
-                        show ? "" : "none";
-
-                });
-
-            });
-
-        });
+            }
+        );
 
     </script>
 
