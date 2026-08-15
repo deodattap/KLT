@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLT — Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="shop-navbar">
+
+    <a href="index.html" class="shop-logo">KLT</a>
+
+    <nav class="shop-nav">
+        <a href="mens.html">MENSWEAR</a>
+        <a href="womens.html">WOMENSWEAR</a>
+        <a href="sale.html">SALE</a>
+        <a href="discover.html">DISCOVER</a>
+    </nav>
+
+    <div class="shop-actions">
+
+        <a href="search.html" class="shop-search" aria-label="Search KLT">
+            <span>⌕</span>
+            <span>Search</span>
+        </a>
+
+        <button type="button" aria-label="Wishlist"
+            onclick="window.location.href='wishlist.html'">♡</button>
+
+        <button type="button" aria-label="Shopping bag"
+            onclick="window.location.href='bag.html'">♧</button>
+
+    </div>
+</header>
+
+
+<main class="checkout-page">
+
+    <section class="checkout-header">
+        <div>
+            <p>KLT / CHECKOUT</p>
+            <h1>MAKE IT<br>YOURS.</h1>
+        </div>
+
+        <span>04 / ORDER</span>
+    </section>
+
+
+    <section class="checkout-layout">
+
+        <div class="checkout-form">
+
+            <div class="checkout-section">
+                <div class="checkout-section-heading">
+                    <p>01 / YOUR DETAILS</p>
+                </div>
+
+                <div class="checkout-fields">
+
+                    <label>
+                        <span>FULL NAME</span>
+                        <input id="fullName" type="text" placeholder="Your name">
+                    </label>
+
+                    <label>
+                        <span>EMAIL</span>
+                        <input id="email" type="email" placeholder="you@example.com">
+                    </label>
+
+                    <label>
+                        <span>PHONE</span>
+                        <input id="phone" type="tel" placeholder="+91">
+                    </label>
+
+                </div>
+            </div>
+
+
+            <div class="checkout-section">
+                <div class="checkout-section-heading">
+                    <p>02 / DELIVERY</p>
+                </div>
+
+                <div class="checkout-fields">
+
+                    <label>
+                        <span>ADDRESS</span>
+                        <input id="address" type="text" placeholder="House / street / area">
+                    </label>
+
+                    <div class="checkout-field-row">
+
+                        <label>
+                            <span>CITY</span>
+                            <input id="city" type="text" placeholder="City">
+                        </label>
+
+                        <label>
+                            <span>STATE</span>
+                            <input id="state" type="text" placeholder="State">
+                        </label>
+
+                        <label>
+                            <span>PIN CODE</span>
+                            <input id="pin" type="text" inputmode="numeric" maxlength="6" placeholder="000000">
+                        </label>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="checkout-section">
+
+                <div class="checkout-section-heading">
+                    <p>03 / PAYMENT</p>
+                </div>
+
+                <div class="payment-options">
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="UPI" checked>
+                        <span>UPI</span>
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="CARD">
+                        <span>CARD</span>
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="COD">
+                        <span>CASH ON DELIVERY</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <aside class="checkout-summary">
+
+            <p class="checkout-summary-label">KLT / ORDER SUMMARY</p>
+
+            <div id="checkoutItems"></div>
+
+            <div class="checkout-summary-line">
+                <span>SUBTOTAL</span>
+                <strong id="checkoutSubtotal">₹0</strong>
+            </div>
+
+            <div class="checkout-summary-line">
+                <span>SHIPPING</span>
+                <strong id="checkoutShipping">—</strong>
+            </div>
+
+            <div class="checkout-summary-divider"></div>
+
+            <div class="checkout-summary-total">
+                <span>TOTAL</span>
+                <strong id="checkoutTotal">₹0</strong>
+            </div>
+
+            <p id="checkoutMessage" class="checkout-message"></p>
+
+            <button id="placeOrder" class="place-order-button" type="button">
+                <span>PLACE ORDER</span>
+                <b>→</b>
+            </button>
+
+            <p class="checkout-note">
+                By placing your order, you agree to the KLT
+                terms and shopping policy.
+            </p>
+
+        </aside>
+
+    </section>
+
+</main>
+
+
+<footer class="shop-footer">
+
+    <div class="footer-logo">KLT</div>
+
+    <div>
+        <p><a href="mens.html">MENSWEAR</a></p>
+        <p><a href="womens.html">WOMENSWEAR</a></p>
+        <p><a href="sale.html">SALE</a></p>
+    </div>
+
+    <div>
+        <p><a href="discover.html">DISCOVER</a></p>
+        <p>CONTACT</p>
+        <p>INSTAGRAM</p>
+    </div>
+
+    <div class="footer-big">
+        FOR<br>EVERYONE.
+    </div>
+
+</footer>
+
+
+<script>
+
+const bag =
+    JSON.parse(localStorage.getItem("kltBag")) || [];
+
+const checkoutItems =
+    document.getElementById("checkoutItems");
+
+const subtotalElement =
+    document.getElementById("checkoutSubtotal");
+
+const shippingElement =
+    document.getElementById("checkoutShipping");
+
+const totalElement =
+    document.getElementById("checkoutTotal");
+
+const message =
+    document.getElementById("checkoutMessage");
+
+
+function getPrice(price) {
+
+    return Number(
+        String(price)
+            .replace("₹", "")
+            .replace(/,/g, "")
+    );
+
+}
+
+
+function formatPrice(price) {
+
+    return "₹" + price.toLocaleString("en-IN");
+
+}
+
+
+function calculateOrder() {
+
+    let subtotal = 0;
+
+    checkoutItems.innerHTML = "";
+
+    if (bag.length === 0) {
+
+        checkoutItems.innerHTML = `
+            <p class="checkout-empty">
+                YOUR BAG IS EMPTY.
+            </p>
+        `;
+
+        subtotalElement.textContent = "₹0";
+        shippingElement.textContent = "—";
+        totalElement.textContent = "₹0";
+
+        return;
+
+    }
+
+
+    bag.forEach(item => {
+
+        const quantity =
+            Number(item.quantity) || 1;
+
+        const price =
+            getPrice(item.price);
+
+        subtotal += price * quantity;
+
+        const row =
+            document.createElement("div");
+
+        row.className =
+            "checkout-item";
+
+        row.innerHTML = `
+            <div>
+                <strong>${item.name}</strong>
+                <span>SIZE / ${item.size || "N/A"} · QTY / ${quantity}</span>
+            </div>
+            <b>${formatPrice(price * quantity)}</b>
+        `;
+
+        checkoutItems.appendChild(row);
+
+    });
+
+
+    const shipping =
+        subtotal > 0 && subtotal < 2999
+            ? 99
+            : 0;
+
+    const total =
+        subtotal + shipping;
+
+
+    subtotalElement.textContent =
+        formatPrice(subtotal);
+
+    shippingElement.textContent =
+        shipping === 0
+            ? "FREE"
+            : formatPrice(shipping);
+
+    totalElement.textContent =
+        formatPrice(total);
+
+}
+
+
+calculateOrder();
+
+
+document
+    .getElementById("placeOrder")
+    .addEventListener("click", function () {
+
+        message.textContent = "";
+
+        if (bag.length === 0) {
+
+            message.textContent =
+                "Your bag is empty.";
+
+            return;
+
+        }
+
+
+        const requiredFields = [
+            ["fullName", "FULL NAME"],
+            ["email", "EMAIL"],
+            ["phone", "PHONE"],
+            ["address", "ADDRESS"],
+            ["city", "CITY"],
+            ["state", "STATE"],
+            ["pin", "PIN CODE"]
+        ];
+
+
+        for (const [id, label] of requiredFields) {
+
+            const field =
+                document.getElementById(id);
+
+            if (!field.value.trim()) {
+
+                message.textContent =
+                    `Please enter your ${label.toLowerCase()}.`;
+
+                field.focus();
+
+                return;
+
+            }
+
+        }
+
+
+        const pin =
+            document.getElementById("pin").value.trim();
+
+        if (!/^\d{6}$/.test(pin)) {
+
+            message.textContent =
+                "Please enter a valid 6-digit PIN code.";
+
+            document.getElementById("pin").focus();
+
+            return;
+
+        }
+
+
+        const subtotal =
+            bag.reduce(
+                (sum, item) =>
+                    sum +
+                    getPrice(item.price) *
+                    (Number(item.quantity) || 1),
+                0
+            );
+
+        const shipping =
+            subtotal > 0 && subtotal < 2999
+                ? 99
+                : 0;
+
+        const total =
+            subtotal + shipping;
+
+
+        const orderNumber =
+            "#KLT" +
+            Math.floor(
+                100000 +
+                Math.random() * 900000
+            );
+
+
+        const itemCount =
+            bag.reduce(
+                (sum, item) =>
+                    sum +
+                    (Number(item.quantity) || 1),
+                0
+            );
+
+
+        const payment =
+            document.querySelector(
+                'input[name="payment"]:checked'
+            ).value;
+
+
+        localStorage.setItem(
+            "kltOrder",
+            JSON.stringify({
+                orderNumber,
+                items: itemCount,
+                total: formatPrice(total),
+                payment,
+                customer: {
+                    name:
+                        document.getElementById("fullName").value.trim(),
+                    email:
+                        document.getElementById("email").value.trim(),
+                    phone:
+                        document.getElementById("phone").value.trim()
+                },
+                shippingAddress: {
+                    address:
+                        document.getElementById("address").value.trim(),
+                    city:
+                        document.getElementById("city").value.trim(),
+                    state:
+                        document.getElementById("state").value.trim(),
+                    pin
+                }
+            })
+        );
+
+
+        localStorage.setItem(
+            "kltOrderNumber",
+            orderNumber
+        );
+
+
+        /* Clear the bag only after the order is created. */
+        localStorage.removeItem("kltBag");
+
+
+        window.location.href =
+            "order-success.html";
+
+    });
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
