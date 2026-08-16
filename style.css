@@ -6171,3 +6171,587 @@ a:focus-visible {
         font-size: 10px;
     }
 }
+
+
+/* =========================================================
+   KLT — SIZE GUIDE
+   Product page modal
+========================================================= */
+
+.size-guide-trigger {
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid #111;
+    background: transparent;
+    color: #111;
+    font: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.size-guide-trigger:hover {
+    opacity: .6;
+}
+
+.size-guide-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.size-guide-modal.is-open {
+    display: block;
+}
+
+.size-guide-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 17, 17, .38);
+    backdrop-filter: blur(3px);
+}
+
+.size-guide-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(620px, calc(100% - 32px));
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    transform: translate(-50%, -50%);
+    padding: 38px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    background: #f5f5f2;
+    color: #111;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .16);
+}
+
+.size-guide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #aaa;
+}
+
+.size-guide-header p {
+    margin: 0 0 22px;
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.size-guide-header h2 {
+    margin: 0;
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: .78;
+    letter-spacing: -5px;
+    font-weight: 900;
+}
+
+.size-guide-close {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    background: transparent;
+    color: #111;
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.size-guide-close:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+.size-guide-table-wrap {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+.size-guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.size-guide-table th,
+.size-guide-table td {
+    padding: 17px 12px;
+    border-bottom: 1px solid #d0d0cc;
+}
+
+.size-guide-table thead th {
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.size-guide-table tbody th {
+    color: #111;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.size-guide-table tbody td {
+    color: #222;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.size-guide-table tbody tr:last-child th,
+.size-guide-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.size-guide-footer {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+}
+
+.size-guide-footer p {
+    max-width: 360px;
+    margin: 0;
+    color: #666;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.size-guide-footer button {
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid #111;
+    background: transparent;
+    color: #111;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   KLT — TRACK ORDER
+========================================================= */
+
+.track-page {
+    width: calc(100% - 24px);
+    margin: 0 12px 40px;
+    padding-bottom: 70px;
+}
+
+.track-hero {
+    min-height: 470px;
+    margin-top: 10px;
+    padding: 55px 5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #d7d7d3;
+    border-radius: 24px;
+}
+
+.track-eyebrow {
+    margin: 0;
+    color: #666;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.track-hero h1 {
+    margin: auto 0 0;
+    color: #111;
+    font-size: clamp(65px, 9vw, 135px);
+    line-height: .78;
+    letter-spacing: -7px;
+    font-weight: 900;
+}
+
+.track-search-section {
+    padding: 75px 5% 60px;
+}
+
+.track-search-label {
+    margin: 0 0 22px;
+    color: #777;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.track-search {
+    max-width: 760px;
+    display: flex;
+    gap: 12px;
+}
+
+.track-search input {
+    flex: 1;
+    min-width: 0;
+    height: 58px;
+    padding: 0 18px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: #f5f5f2;
+    color: #111;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.track-search input:focus {
+    border-color: #111;
+    background: #fff;
+}
+
+.track-search input::placeholder {
+    color: #999;
+}
+
+.track-button {
+    min-width: 190px;
+    height: 58px;
+    padding: 0 12px 0 22px;
+    border: none;
+    border-radius: 30px;
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+
+.track-button span:last-child {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.track-button:hover {
+    opacity: .82;
+}
+
+.track-message {
+    min-height: 20px;
+    margin: 15px 0 0;
+    color: #444;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.track-result {
+    display: none;
+    padding: 0 5%;
+}
+
+.track-result.is-visible {
+    display: block;
+}
+
+.track-result-header {
+    padding: 30px 0;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.track-result-header p {
+    margin: 0 0 12px;
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.track-result-header h2 {
+    margin: 0;
+    color: #111;
+    font-size: clamp(30px, 4vw, 55px);
+    line-height: .9;
+    letter-spacing: -2px;
+    font-weight: 900;
+}
+
+.track-result-total {
+    text-align: right;
+}
+
+.track-result-total span {
+    display: block;
+    margin-bottom: 8px;
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.track-result-total strong {
+    color: #111;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.track-timeline {
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.track-step {
+    position: relative;
+    padding-right: 25px;
+}
+
+.track-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 30px;
+    right: 0;
+    height: 1px;
+    background: #bbb;
+}
+
+.track-step.done:not(:last-child)::after {
+    background: #111;
+}
+
+.track-dot {
+    position: relative;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    background: #f5f5f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.track-step.done .track-dot {
+    border-color: #111;
+    background: #111;
+    color: #fff;
+}
+
+.track-step.current .track-dot {
+    border-color: #111;
+    box-shadow: 0 0 0 5px #d7d7d3;
+}
+
+.track-step p {
+    margin: 0 0 8px;
+    color: #777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.track-step strong {
+    color: #111;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.track-items {
+    border-top: 1px solid #aaa;
+}
+
+.track-items-heading {
+    padding: 25px 0;
+    color: #777;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.track-item {
+    padding: 18px 0;
+    border-top: 1px solid #d0d0cc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.track-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.track-item-info strong {
+    color: #111;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.track-item-info span {
+    color: #777;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .8px;
+}
+
+.track-item-price {
+    color: #111;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.track-back {
+    display: inline-flex;
+    margin-top: 40px;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid #111;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   SIZE GUIDE + TRACK ORDER — RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .size-guide-panel {
+        width: calc(100% - 20px);
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+    .size-guide-header {
+        padding-bottom: 24px;
+    }
+
+    .size-guide-header h2 {
+        font-size: 55px;
+        letter-spacing: -4px;
+    }
+
+    .size-guide-close {
+        width: 38px;
+        height: 38px;
+    }
+
+    .size-guide-table th,
+    .size-guide-table td {
+        padding: 15px 8px;
+    }
+
+    .size-guide-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .track-page {
+        width: calc(100% - 14px);
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    .track-hero {
+        min-height: 400px;
+        padding: 35px 30px;
+        border-radius: 18px;
+    }
+
+    .track-hero h1 {
+        font-size: 65px;
+        letter-spacing: -5px;
+    }
+
+    .track-search-section {
+        padding: 55px 5% 45px;
+    }
+
+    .track-search {
+        flex-direction: column;
+    }
+
+    .track-button {
+        width: 100%;
+    }
+
+    .track-result-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .track-result-total {
+        text-align: left;
+    }
+
+    .track-timeline {
+        display: block;
+        padding: 45px 0;
+    }
+
+    .track-step {
+        min-height: 75px;
+        padding: 0 0 25px 55px;
+    }
+
+    .track-step:not(:last-child)::after {
+        top: 30px;
+        left: 14px;
+        right: auto;
+        width: 1px;
+        height: calc(100% - 5px);
+    }
+
+    .track-dot {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+}
