@@ -5,235 +5,359 @@
 
 
 /* =========================================================
-   NAVIGATION
+   KLT — LOADING ANIMATION
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
 
+    /*
+     * Create the loader dynamically so we do not need
+     * to add loader HTML to every page.
+     */
 
-    /* ================= SHOP BUTTON ================= */
+    const loader =
+        document.createElement("div");
 
-    const shopButton =
-        document.querySelector(".shop-button");
+    loader.className =
+        "klt-loader";
 
 
-    if (shopButton) {
+    loader.innerHTML = `
 
-        shopButton.addEventListener(
-            "click",
-            function () {
+        <div class="klt-loader-content">
 
-                window.location.href = "mens.html";
+            <div class="klt-loader-logo">
+                KLT
+            </div>
 
-            }
-        );
+            <div class="klt-loader-line">
+                <span></span>
+            </div>
 
-    }
+            <div class="klt-loader-text">
+                LOADING
+            </div>
 
+        </div>
 
+    `;
 
-    /* ================= LEARN MORE ================= */
 
-    const learnButton =
-        document.querySelector(".learn-button");
+    /*
+     * Add loader to the page immediately.
+     */
 
+    document.documentElement.prepend(
+        loader
+    );
 
-    if (learnButton) {
 
-        learnButton.addEventListener(
-            "click",
-            function () {
+    /*
+     * Prevent scrolling while the loader
+     * is visible.
+     */
 
-                window.location.href = "discover.html";
+    document.documentElement.style
+        .overflow = "hidden";
 
-            }
-        );
 
-    }
+    /*
+     * Remove the loader after the page
+     * has finished loading.
+     */
 
+    window.addEventListener(
+        "load",
+        function () {
 
+            setTimeout(
+                function () {
 
-    /* ================= CONTACT ================= */
+                    loader.classList.add(
+                        "klt-loader-hidden"
+                    );
 
-    const contactButton =
-        document.querySelector(".contact-button");
 
+                    document.documentElement.style
+                        .overflow = "";
 
-    if (contactButton) {
 
-        contactButton.addEventListener(
-            "click",
-            function () {
+                    /*
+                     * Remove the loader completely
+                     * after the fade-out animation.
+                     */
 
-                /*
-                 * Contact page will be added later.
-                 * For now, take the user to Discover.
-                 */
+                    setTimeout(
+                        function () {
 
-                window.location.href = "discover.html";
+                            if (loader.parentNode) {
 
-            }
-        );
+                                loader.parentNode.removeChild(
+                                    loader
+                                );
 
-    }
+                            }
 
+                        },
+                        500
+                    );
 
-
-    /* =====================================================
-       NEW SHOP NAVBAR
-    ===================================================== */
-
-
-    /* ================= SEARCH ================= */
-
-    const searchButton =
-        document.querySelector(".shop-search");
-
-
-    if (searchButton) {
-
-        searchButton.addEventListener(
-            "click",
-            function () {
-
-                window.location.href = "search.html";
-
-            }
-        );
-
-    }
-
-
-
-    /* ================= WISHLIST ================= */
-
-    const wishlistButton =
-        document.querySelector(
-            '.shop-actions button[aria-label="Wishlist"]'
-        );
-
-
-    if (wishlistButton) {
-
-        wishlistButton.addEventListener(
-            "click",
-            function () {
-
-                window.location.href =
-                    "wishlist.html";
-
-            }
-        );
-
-    }
-
-
-
-    /* ================= SHOPPING BAG ================= */
-
-    const bagButton =
-        document.querySelector(
-            '.shop-actions button[aria-label="Shopping bag"]'
-        );
-
-
-    if (bagButton) {
-
-        bagButton.addEventListener(
-            "click",
-            function () {
-
-                window.location.href =
-                    "bag.html";
-
-            }
-        );
-
-    }
-
-
-
-    /* =====================================================
-       OLD HOMEPAGE NAVBAR
-       Used only by index.html
-    ===================================================== */
-
-
-    const oldSearch =
-        document.querySelector(
-            ".nav-right .search"
-        );
-
-
-    if (oldSearch) {
-
-        oldSearch.addEventListener(
-            "click",
-            function () {
-
-                window.location.href =
-                    "search.html";
-
-            }
-        );
-
-    }
-
-
-
-    const oldNavButtons =
-        document.querySelectorAll(
-            ".nav-right button"
-        );
-
-
-    oldNavButtons.forEach(
-        function (button) {
-
-
-            const label =
-                button.getAttribute(
-                    "aria-label"
-                );
-
-
-            if (
-                label === "Wishlist"
-            ) {
-
-                button.addEventListener(
-                    "click",
-                    function () {
-
-                        window.location.href =
-                            "wishlist.html";
-
-                    }
-                );
-
-            }
-
-
-            if (
-                label === "Shopping Bag"
-            ) {
-
-                button.addEventListener(
-                    "click",
-                    function () {
-
-                        window.location.href =
-                            "bag.html";
-
-                    }
-                );
-
-            }
+                },
+                550
+            );
 
         }
     );
 
-});
+})();
+
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* ================= SHOP BUTTON ================= */
+
+        const shopButton =
+            document.querySelector(
+                ".shop-button"
+            );
+
+
+        if (shopButton) {
+
+            shopButton.addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "mens.html";
+
+                }
+            );
+
+        }
+
+
+
+        /* ================= LEARN MORE ================= */
+
+        const learnButton =
+            document.querySelector(
+                ".learn-button"
+            );
+
+
+        if (learnButton) {
+
+            learnButton.addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "discover.html";
+
+                }
+            );
+
+        }
+
+
+
+        /* ================= CONTACT ================= */
+
+        const contactButton =
+            document.querySelector(
+                ".contact-button"
+            );
+
+
+        if (contactButton) {
+
+            contactButton.addEventListener(
+                "click",
+                function () {
+
+                    /*
+                     * Contact page will be added later.
+                     * For now, take the user to Discover.
+                     */
+
+                    window.location.href =
+                        "discover.html";
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           NEW SHOP NAVBAR
+        ===================================================== */
+
+
+        /* ================= SEARCH ================= */
+
+        const searchButton =
+            document.querySelector(
+                ".shop-search"
+            );
+
+
+        if (searchButton) {
+
+            searchButton.addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "search.html";
+
+                }
+            );
+
+        }
+
+
+
+        /* ================= WISHLIST ================= */
+
+        const wishlistButton =
+            document.querySelector(
+                '.shop-actions button[aria-label="Wishlist"]'
+            );
+
+
+        if (wishlistButton) {
+
+            wishlistButton.addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "wishlist.html";
+
+                }
+            );
+
+        }
+
+
+
+        /* ================= SHOPPING BAG ================= */
+
+        const bagButton =
+            document.querySelector(
+                '.shop-actions button[aria-label="Shopping bag"]'
+            );
+
+
+        if (bagButton) {
+
+            bagButton.addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "bag.html";
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           OLD HOMEPAGE NAVBAR
+           Used only by index.html
+        ===================================================== */
+
+
+        const oldSearch =
+            document.querySelector(
+                ".nav-right .search"
+            );
+
+
+        if (oldSearch) {
+
+            oldSearch.addEventListener(
+                "click",
+                function () {
+
+                    window.location.href =
+                        "search.html";
+
+                }
+            );
+
+        }
+
+
+
+        const oldNavButtons =
+            document.querySelectorAll(
+                ".nav-right button"
+            );
+
+
+        oldNavButtons.forEach(
+            function (button) {
+
+
+                const label =
+                    button.getAttribute(
+                        "aria-label"
+                    );
+
+
+                if (
+                    label === "Wishlist"
+                ) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            window.location.href =
+                                "wishlist.html";
+
+                        }
+                    );
+
+                }
+
+
+                if (
+                    label === "Shopping Bag"
+                ) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            window.location.href =
+                                "bag.html";
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    }
+);
 
 
 
@@ -289,7 +413,9 @@ document.addEventListener(
 
 
                         if (!image) {
+
                             return;
+
                         }
 
 
@@ -347,7 +473,9 @@ document.addEventListener(
 
 
         if (!wishlist) {
+
             return;
+
         }
 
 
